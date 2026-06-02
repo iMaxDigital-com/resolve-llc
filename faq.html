@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — Resolve Advisory</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .faq-hero {
+      display: grid;
+      grid-template-columns: 40fr 60fr;
+      min-height: calc(100vh - var(--nav-h));
+    }
+    .faq-hero__text {
+      padding: clamp(60px,8vw,100px) var(--pad-x);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .faq-hero__image { position: relative; overflow: hidden; }
+
+    /* FAQ accordion */
+    .faq-body {
+      padding: clamp(70px,9vw,110px) var(--pad-x);
+      background: var(--cream);
+    }
+    .faq-body__inner { max-width: var(--max-w); margin: 0 auto; }
+    .faq-group { margin-bottom: 0; }
+    .faq-group + .faq-group { border-top: 1px solid var(--divider); margin-top: 0; padding-top: 0; }
+    .faq-group__header {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 48px;
+      padding: 48px 0 0;
+    }
+    .faq-group__label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(28,28,40,0.4);
+      padding-top: 4px;
+    }
+    .faq-items { grid-column: 2; }
+    .faq-item {
+      border-bottom: 1px solid var(--divider);
+    }
+    .faq-item:last-child { margin-bottom: 48px; }
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px 0;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: var(--font-serif);
+      font-size: clamp(16px,1.6vw,20px);
+      font-weight: 400;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--gold); }
+    .faq-question__icon {
+      font-size: 20px;
+      font-weight: 300;
+      color: rgba(28,28,40,0.4);
+      flex-shrink: 0;
+      transition: transform 0.3s, color 0.2s;
+      line-height: 1;
+      width: 20px; text-align: center;
+    }
+    .faq-item.open .faq-question__icon { transform: rotate(45deg); color: var(--gold); }
+    .faq-answer {
+      display: none;
+      padding: 4px 0 24px;
+      max-width: 680px;
+    }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-answer p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.9;
+      color: rgba(28,28,40,0.68);
+    }
+    .faq-answer p + p { margin-top: 0.8em; }
+
+    /* Bottom CTA */
+    .faq-footer-cta {
+      background: var(--cream-mid);
+      padding: clamp(60px,8vw,96px) var(--pad-x);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+    .faq-footer-cta__text {
+      font-family: var(--font-serif);
+      font-size: clamp(26px,3vw,42px);
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 960px) {
+      .faq-hero { grid-template-columns: 1fr; }
+      .faq-hero__image { order: 2; min-height: 300px; }
+      .faq-group__header { grid-template-columns: 1fr; gap: 8px; }
+      .faq-items { grid-column: 1; }
+      .faq-footer-cta { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="page">
+
+  <nav class="nav nav--light">
+    <a href="index.html" class="nav__wordmark">Resolve</a>
+    <div class="nav__links">
+      <a href="how-it-works.html">How it works</a>
+      <a href="situations.html">Situations</a>
+      <a href="about.html">About</a>
+      <a href="insights.html">Insights</a>
+      <a href="faq.html" class="active">FAQ</a>
+    </div>
+    <a href="/cdn-cgi/l/email-protection#a2c3c3c9c7d0d1e2d0c7d1cdced4c78fc3c6d4cbd1cdd0db8cc1cdcf" class="nav__cta">Request a conversation</a>
+    <button class="nav__hamburger" aria-label="Open menu" onclick="this.closest('.nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="faq-hero">
+    <div class="faq-hero__text">
+      <span class="label">FAQ</span>
+      <div class="rule"></div>
+      <h1 class="h1" style="margin-bottom:28px;">Frequently asked questions.</h1>
+      <div class="rule" style="width:28px;"></div>
+      <div class="body-text" style="max-width:380px;">
+        <p>The questions below address some of the practical aspects of working with Resolve.</p>
+      </div>
+    </div>
+    <div class="faq-hero__image">
+      <div class="img-ph" style="height:100%;min-height:calc(100vh - var(--nav-h));background:#C4BAB0;"><span>Atmospheric interior image placeholder</span></div>
+    </div>
+  </section>
+
+  <!-- FAQ BODY -->
+  <div class="faq-body">
+    <div class="faq-body__inner">
+
+      <!-- Working Together -->
+      <div class="faq-group">
+        <div class="faq-group__header">
+          <div class="faq-group__label">Working Together</div>
+          <div class="faq-items">
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                What kinds of situations do you work on?
+                <span class="faq-question__icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Resolve works with individuals and business leaders navigating conflict, tension, or difficult decisions — in business and in personal life.</p>
+                <p>This includes partnership disputes, investor conflicts, leadership tension, family conflict, divorce-adjacent situations, and any moment where a high-stakes conversation or decision needs careful thought.</p>
+                <p>[Replace with final copy from Word document]</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                How does the relationship begin?
+                <span class="faq-question__icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>It begins with a short conversation — typically 20–30 minutes — to understand the situation and whether Resolve is the right fit.</p>
+                <p>If it feels right on both sides, we determine together what level of involvement makes sense.</p>
+                <p>[Replace with final copy from Word document]</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                Do you work with both sides?
+                <span class="faq-question__icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>No. Resolve works with one side only. This is not mediation.</p>
+                <p>The work is about helping you understand your situation clearly and move forward with intention. That requires an undivided focus on your position, your interests, and your goals.</p>
+                <p>[Replace with final copy from Word document]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Engagement Structure -->
+      <div class="faq-group">
+        <div class="faq-group__header">
+          <div class="faq-group__label">Engagement Structure</div>
+          <div class="faq-items">
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                Is this mediation?
+                <span class="faq-question__icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>No. Mediation is a process in which a neutral third party works with all sides to reach a shared resolution. Resolve is the opposite — a dedicated advisor working exclusively on behalf of one side.</p>
+                <p>[Replace with final copy from Word document]</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                Do you work alongside attorneys or other advisors?
+                <span class="faq-question__icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Resolve often works alongside legal counsel, financial advisors, or therapists — complementing their work by providing strategic perspective and clarity on the human dynamics at play.</p>
+                <p>[Replace with final copy from Word document]</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                Can you stay behind the scenes?
+                <span class="faq-question__icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Many clients prefer that the advisory relationship remains entirely private. Resolve can operate fully behind the scenes — advising without any external visibility.</p>
+                <p>[Replace with final copy from Word document]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confidentiality -->
+      <div class="faq-group">
+        <div class="faq-group__header">
+          <div class="faq-group__label">Confidentiality</div>
+          <div class="faq-items">
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                Are conversations confidential?
+                <span class="faq-question__icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. All conversations and engagements are strictly confidential. Discretion is fundamental to this work.</p>
+                <p>[Replace with final copy from Word document]</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                How selective is Resolve about clients?
+                <span class="faq-question__icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Intentionally selective. Not every conflict is appropriate for this kind of advisory relationship. The work requires honesty, openness, discipline, and a genuine willingness to pursue clarity rather than escalation.</p>
+                <p>[Replace with final copy from Word document]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fees -->
+      <div class="faq-group">
+        <div class="faq-group__header">
+          <div class="faq-group__label">Fees</div>
+          <div class="faq-items">
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                How are engagements structured?
+                <span class="faq-question__icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Engagements begin with a short introductory conversation at no charge. If there is a strong fit, work typically begins with a minimum engagement of $2,600, which may be applied toward ongoing advisory work.</p>
+                <p>[Replace with final copy from Word document]</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                What does a typical engagement look like?
+                <span class="faq-question__icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>There is no typical engagement. Some clients need a single strategic conversation. Others require ongoing advisory work over weeks or months as a situation develops.</p>
+                <p>The scope and structure are determined together, based on what the situation actually requires.</p>
+                <p>[Replace with final copy from Word document]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="faq-footer-cta">
+    <p class="faq-footer-cta__text">If it feels like the right fit,<br>let's start a conversation.</p>
+    <a href="/cdn-cgi/l/email-protection#1c7d7d77796e6f5c6e796f73706a79317d786a756f736e65327f7371" class="btn btn--dark">Request a conversation</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="footer__wordmark">Resolve</span>
+        <p class="footer__tagline">Strategic advisory for complex situations and difficult conversations.</p>
+      </div>
+      <div>
+        <span class="footer__col-head">Navigation</span>
+        <div class="footer__links">
+          <a href="about.html">About</a>
+          <a href="situations.html">Situations</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="insights.html">Insights</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer__col-head">Legal</span>
+        <div class="footer__links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer__col-head">Contact</span>
+        <div class="footer__links">
+          <a href="/cdn-cgi/l/email-protection#0f6e6e646a7d7c4f7d6a7c6063796a226e6b79667c607d76216c6062"><span class="__cf_email__" data-cfemail="e98888828c9b9aa99b8c9a86859f8cc4888d9f809a869b90c78a8684">[email&#160;protected]</span></a>
+        </div>
+        <p style="font-size:11px;font-weight:300;color:rgba(253,250,247,0.38);line-height:1.7;margin-top:14px;">Confidential inquiries only.<br>All communications are strictly confidential.</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2024 Resolve Advisory. All rights reserved.</span>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+  </script>
+</body>
+</html>

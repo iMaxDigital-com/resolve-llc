@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Resolve Advisory</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── About Hero: split portrait ── */
+    .about-hero {
+      display: grid;
+      grid-template-columns: 47fr 53fr;
+      min-height: calc(100vh - var(--nav-h));
+    }
+    .about-hero__text {
+      padding: clamp(60px, 8vw, 100px) var(--pad-x);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid var(--divider);
+    }
+    .about-hero__main {}
+    .about-hero__pullquote {
+      font-family: var(--font-serif);
+      font-size: clamp(18px, 2vw, 26px);
+      font-weight: 400;
+      line-height: 1.45;
+      color: rgba(28,28,40,0.75);
+      max-width: 320px;
+      padding: 36px 0 36px 32px;
+      border-left: 1px solid var(--divider);
+      font-style: italic;
+    }
+    .about-hero__pullquote em { font-style: italic; color: var(--text); }
+    .about-hero__pillars {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      padding-top: 36px;
+      border-top: 1px solid var(--divider);
+      margin-top: auto;
+    }
+    .about-hero__pillar {}
+    .about-hero__pillar-icon {
+      width: 32px; height: 32px;
+      margin-bottom: 14px;
+    }
+    .about-hero__pillar-title {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+    .about-hero__pillar-body {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(28,28,40,0.6);
+    }
+    .about-hero__image {
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero__image .img-ph {
+      height: 100%;
+      min-height: calc(100vh - var(--nav-h));
+      background: #C8BFBA;
+    }
+    .about-hero__cta { margin-top: 36px; }
+
+    /* ── About 2: How I see conflict ── */
+    .about-2 {
+      display: grid;
+      grid-template-columns: 47fr 53fr;
+      min-height: 70vh;
+      border-top: 1px solid var(--divider);
+    }
+    .about-2__text {
+      padding: clamp(60px, 8vw, 100px) var(--pad-x);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .about-2__image { position: relative; overflow: hidden; }
+
+    /* ── Principles ── */
+    .principles {
+      padding: clamp(60px, 8vw, 100px) var(--pad-x);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      width: 100%;
+    }
+    .principle {
+      display: grid;
+      grid-template-columns: 70px 1fr 1fr;
+      gap: 0 56px;
+      padding: 60px 0;
+      border-top: 1px solid var(--divider);
+    }
+    .principle:last-child { border-bottom: 1px solid var(--divider); }
+    .principle__num {
+      font-family: var(--font-serif);
+      font-size: 44px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .principle__num-line {
+      width: 22px; height: 1px;
+      background: var(--gold);
+      margin-top: 10px;
+    }
+    .principle__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 2.5vw, 34px);
+      font-weight: 400;
+      line-height: 1.2;
+      padding-top: 4px;
+    }
+    .principle__body {
+      font-size: 13.5px;
+      font-weight: 300;
+      line-height: 1.9;
+      color: rgba(28,28,40,0.68);
+      padding-top: 4px;
+    }
+    .principle__body p + p { margin-top: 1em; }
+
+    @media (max-width: 960px) {
+      .about-hero, .about-2 { grid-template-columns: 1fr; }
+      .about-hero__image { min-height: 360px; order: -1; }
+      .about-hero__image .img-ph { min-height: 360px; }
+      .about-2__image { min-height: 300px; }
+      .about-hero__pillars { grid-template-columns: 1fr; gap: 28px; }
+      .principle { grid-template-columns: 50px 1fr; }
+      .principle__body { grid-column: 2; }
+    }
+    @media (max-width: 600px) {
+      .principle { grid-template-columns: 1fr; gap: 16px; }
+    }
+  </style>
+</head>
+<body class="page">
+
+  <nav class="nav nav--light" id="nav">
+    <a href="index.html" class="nav__wordmark">Resolve</a>
+    <div class="nav__links">
+      <a href="how-it-works.html">How it works</a>
+      <a href="situations.html">Situations</a>
+      <a href="about.html" class="active">About</a>
+      <a href="insights.html">Insights</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="/cdn-cgi/l/email-protection#86e7e7ede3f4f5c6f4e3f5e9eaf0e3abe7e2f0eff5e9f4ffa8e5e9eb" class="nav__cta">Request a conversation</a>
+    <button class="nav__hamburger" aria-label="Open menu" onclick="this.closest('.nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero">
+    <div class="about-hero__text">
+      <div class="about-hero__main">
+        <span class="label">About</span>
+        <div class="rule"></div>
+        <h1 class="h1" style="margin-bottom:28px;">Who I am.<br>How I think.</h1>
+        <div class="body-text" style="max-width:420px;">
+          <p>For more than two decades I have advised individuals, families, and business leaders through their most difficult conflicts.</p>
+          <p>My background is in investing. My experience is in people. And my focus is on helping you move forward with clarity, perspective, and control.</p>
+        </div>
+        <div class="about-hero__pullquote">
+          Most conflicts don't need to be won.<br>They need to be <em>resolved.</em>
+          <div class="rule" style="margin-top:18px;margin-bottom:0;"></div>
+        </div>
+      </div>
+      <div>
+        <div class="about-hero__pillars">
+          <div class="about-hero__pillar">
+            <svg class="about-hero__pillar-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1" style="color:var(--gold);">
+              <circle cx="16" cy="10" r="5"/><path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10"/>
+            </svg>
+            <div class="about-hero__pillar-title">Investor Perspective</div>
+            <div class="about-hero__pillar-body">I bring the discipline of investing to complex human situations.</div>
+          </div>
+          <div class="about-hero__pillar">
+            <svg class="about-hero__pillar-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1" style="color:var(--gold);">
+              <circle cx="11" cy="10" r="4"/><circle cx="21" cy="10" r="4"/>
+              <path d="M3 28c0-4.418 3.582-8 8-8"/><path d="M21 20c4.418 0 8 3.582 8 8"/>
+            </svg>
+            <div class="about-hero__pillar-title">Human Understanding</div>
+            <div class="about-hero__pillar-body">Decades of experience listening, analyzing, and advising in high-stakes situations.</div>
+          </div>
+          <div class="about-hero__pillar">
+            <svg class="about-hero__pillar-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1" style="color:var(--gold);">
+              <path d="M16 4 C10 8 6 12 6 18 C6 24 10 28 16 28 C22 28 26 24 26 18 C26 12 22 8 16 4Z"/>
+              <path d="M16 14 C14 16 14 20 16 22 C18 20 18 16 16 14Z"/>
+            </svg>
+            <div class="about-hero__pillar-title">Life Experience</div>
+            <div class="about-hero__pillar-body">Business, marriage, parenting, partnership. I understand how lives intersect.</div>
+          </div>
+        </div>
+        <div class="about-hero__cta">
+          <a href="/cdn-cgi/l/email-protection#73121218160100330116001c1f05165e1217051a001c010a5d101c1e" class="btn btn--dark">Request a conversation</a>
+        </div>
+      </div>
+    </div>
+    <div class="about-hero__image">
+      <div class="img-ph" style="height:100%;"><span>Portrait image placeholder</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT 2: How I see conflict -->
+  <section class="about-2">
+    <div class="about-2__text">
+      <span class="label">About</span>
+      <div class="rule"></div>
+      <h2 class="h2" style="margin-bottom:32px;">How I see conflict</h2>
+      <div class="body-text" style="max-width:400px;">
+        <p>Conflict is a natural part of business and life. What causes lasting damage is avoidance, escalation, and a loss of perspective.</p>
+        <p>Most difficult situations become harder because people react before they fully understand what is happening — beneath the surface, emotionally, structurally, or relationally.</p>
+        <p>Over time, communication narrows. Positions harden. Trust deteriorates. Perspective disappears.</p>
+        <p>But even difficult situations often become more workable once they are understood clearly.</p>
+        <p>That does not mean every conflict resolves easily. It means clarity changes what becomes possible.</p>
+      </div>
+    </div>
+    <div class="about-2__image">
+      <div class="img-ph" style="height:100%;min-height:560px;background:#C8BFB5;"><span>Architectural archway image placeholder</span></div>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <div style="background:var(--cream);">
+    <div class="principles">
+      <div class="principle">
+        <div>
+          <div class="principle__num">01</div>
+          <div class="principle__num-line"></div>
+        </div>
+        <div class="principle__heading">Conflict is rarely only about the surface issue.</div>
+        <div class="principle__body">
+          <p>Business conflicts often involve identity, trust, control, fear, history, or misalignment that has developed over years.</p>
+          <p>Family conflicts often carry decades of emotional context beneath a single conversation or event.</p>
+          <p>Part of the work is learning to recognize what is actually driving the situation — not only what is being said on the surface.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div>
+          <div class="principle__num">02</div>
+          <div class="principle__num-line"></div>
+        </div>
+        <div class="principle__heading">The objective is not victory.</div>
+        <div class="principle__body">
+          <p>Winning can come at a significant cost: relationships, reputation, emotional exhaustion, years of unnecessary escalation.</p>
+          <p>The goal is not surrender. And it is not passivity.</p>
+          <p>The goal is resolution that allows movement, clarity, dignity, and perspective.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div>
+          <div class="principle__num">03</div>
+          <div class="principle__num-line"></div>
+        </div>
+        <div class="principle__heading">Clarity changes what becomes possible.</div>
+        <div class="principle__body">
+          <p>When people feel heard, understood, and respected, new options emerge.</p>
+          <p>When perspective returns, decisions improve.</p>
+          <p>When communication opens, relationships can heal and situations can move forward.</p>
+          <p>This is the foundation of the work I do.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <p class="cta-banner__text">If it feels like the right fit, let's start a conversation.</p>
+    <a href="/cdn-cgi/l/email-protection#ee8f8f858b9c9dae9c8b9d8182988bc38f8a98879d819c97c08d8183" class="btn btn--dark">Request a conversation</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="footer__wordmark">Resolve</span>
+        <p class="footer__tagline">Strategic advisory for complex situations and difficult conversations.</p>
+      </div>
+      <div>
+        <span class="footer__col-head">Navigation</span>
+        <div class="footer__links">
+          <a href="about.html">About</a>
+          <a href="situations.html">Situations</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="insights.html">Insights</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer__col-head">Legal</span>
+        <div class="footer__links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer__col-head">Contact</span>
+        <div class="footer__links">
+          <a href="/cdn-cgi/l/email-protection#a0c1c1cbc5d2d3e0d2c5d3cfccd6c58dc1c4d6c9d3cfd2d98ec3cfcd"><span class="__cf_email__" data-cfemail="b3d2d2d8d6c1c0f3c1d6c0dcdfc5d69ed2d7c5dac0dcc1ca9dd0dcde">[email&#160;protected]</span></a>
+        </div>
+        <p style="font-size:11px;font-weight:300;color:rgba(253,250,247,0.38);line-height:1.7;margin-top:14px;">Confidential inquiries only.<br>All communications are strictly confidential.</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2024 Resolve Advisory. All rights reserved.</span>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

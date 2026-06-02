@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works — Resolve Advisory</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Hero split */
+    .hiw-hero {
+      display: grid;
+      grid-template-columns: 40fr 60fr;
+      min-height: calc(100vh - var(--nav-h));
+    }
+    .hiw-hero__text {
+      padding: clamp(60px,8vw,100px) var(--pad-x);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .hiw-hero__image { position: relative; overflow: hidden; }
+
+    /* Process section */
+    .process {
+      padding: clamp(70px,9vw,110px) var(--pad-x);
+      background: var(--cream);
+    }
+    .process__inner { max-width: var(--max-w); margin: 0 auto; }
+    .process__label {
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .process__rule {
+      width: 42px; height: 1px;
+      background: var(--gold);
+      margin: 0 auto 60px;
+    }
+    .process__cols {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 0;
+      border-top: 1px solid var(--divider);
+    }
+    .process__step {
+      padding: 48px 40px 48px 0;
+      border-right: 1px solid var(--divider);
+    }
+    .process__step:last-child { border-right: none; padding-right: 0; }
+    .process__num {
+      font-family: var(--font-serif);
+      font-size: 56px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .process__num-rule { width: 28px; height: 1px; background: var(--gold); margin-bottom: 20px; }
+    .process__step-title {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .process__step-body {
+      font-size: 13.5px;
+      font-weight: 300;
+      line-height: 1.9;
+      color: rgba(28,28,40,0.68);
+    }
+    .process__step-body p { margin-bottom: 0.6em; }
+    .process__step-list {
+      margin-top: 10px;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .process__step-list li {
+      font-size: 13.5px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(28,28,40,0.65);
+      padding-left: 14px;
+      position: relative;
+    }
+    .process__step-list li::before {
+      content: '·';
+      position: absolute; left: 0;
+      color: var(--gold);
+    }
+
+    /* Selectivity / Engagement */
+    .engagement {
+      background: var(--charcoal);
+      padding: clamp(70px,9vw,110px) var(--pad-x);
+    }
+    .engagement__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-top: 1px solid rgba(253,250,247,0.1);
+    }
+    .engagement__col {
+      padding: 56px 56px 56px 0;
+      border-right: 1px solid rgba(253,250,247,0.1);
+    }
+    .engagement__col:last-child { border-right: none; padding-right: 0; padding-left: 56px; }
+    .engagement__title {
+      font-family: var(--font-serif);
+      font-size: clamp(28px,3vw,40px);
+      font-weight: 400;
+      color: var(--warm-white);
+      margin-bottom: 16px;
+    }
+    .engagement__rule { width: 36px; height: 1px; background: var(--gold); margin-bottom: 24px; }
+    .engagement__body {
+      font-size: 13.5px;
+      font-weight: 300;
+      line-height: 1.9;
+      color: rgba(253,250,247,0.62);
+    }
+    .engagement__body p + p { margin-top: 1em; }
+    .engagement__list {
+      margin-top: 16px;
+      display: flex; flex-direction: column; gap: 7px;
+    }
+    .engagement__list li {
+      font-size: 13.5px; font-weight: 300;
+      color: rgba(253,250,247,0.62);
+      padding-left: 14px; position: relative;
+      line-height: 1.7;
+    }
+    .engagement__list li::before { content: '·'; position: absolute; left: 0; color: var(--gold); }
+    .engagement__price {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--warm-white);
+      margin-top: 24px;
+    }
+    .engagement__price-note {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(253,250,247,0.45);
+      margin-top: 6px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 960px) {
+      .hiw-hero { grid-template-columns: 1fr; }
+      .hiw-hero__image { order: 2; min-height: 300px; }
+      .process__cols { grid-template-columns: 1fr; }
+      .process__step { border-right: none; border-bottom: 1px solid var(--divider); padding-right: 0; }
+      .process__step:last-child { border-bottom: none; }
+      .engagement__inner { grid-template-columns: 1fr; }
+      .engagement__col { border-right: none; border-bottom: 1px solid rgba(253,250,247,0.1); padding-right: 0; }
+      .engagement__col:last-child { border-bottom: none; padding-left: 0; }
+    }
+  </style>
+</head>
+<body class="page">
+
+  <nav class="nav nav--light">
+    <a href="index.html" class="nav__wordmark">Resolve</a>
+    <div class="nav__links">
+      <a href="how-it-works.html" class="active">How it works</a>
+      <a href="situations.html">Situations</a>
+      <a href="about.html">About</a>
+      <a href="insights.html">Insights</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="/cdn-cgi/l/email-protection#63020208061110231106100c0f15064e0207150a100c111a4d000c0e" class="nav__cta">Request a conversation</a>
+    <button class="nav__hamburger" aria-label="Open menu" onclick="this.closest('.nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hiw-hero">
+    <div class="hiw-hero__text">
+      <span class="label">How It Works</span>
+      <div class="rule"></div>
+      <h1 class="h1" style="margin-bottom:28px;">How the work begins.</h1>
+      <div class="rule" style="width:28px;"></div>
+      <div class="body-text" style="max-width:400px;">
+        <p>Every situation is different.</p>
+        <p>Some clients need a single strategic conversation. Others need ongoing perspective over time.</p>
+        <p>The work begins with a short initial conversation. If it feels like the right fit, we decide together what level of involvement makes sense.</p>
+        <p>Some situations benefit from perspective immediately. Others require deeper ongoing work.</p>
+        <p>Part of the work is slowing situations down enough for perspective to return.</p>
+      </div>
+    </div>
+    <div class="hiw-hero__image">
+      <div class="img-ph" style="height:100%;min-height:calc(100vh - var(--nav-h));background:#C4BAB0;"><span>Atmospheric interior image placeholder</span></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <div class="process">
+    <div class="process__inner">
+      <div class="process__label">The Process</div>
+      <div class="process__rule"></div>
+      <div class="process__cols">
+        <div class="process__step">
+          <div class="process__num">01</div>
+          <div class="process__num-rule"></div>
+          <div class="process__step-title">Initial conversation</div>
+          <div class="process__step-body">
+            <p>A brief discussion to understand:</p>
+          </div>
+          <ul class="process__step-list">
+            <li>the situation</li>
+            <li>the dynamics</li>
+            <li>what feels unresolved</li>
+            <li>whether Resolve is the right fit</li>
+          </ul>
+        </div>
+        <div class="process__step" style="padding-left:40px;">
+          <div class="process__num">02</div>
+          <div class="process__num-rule"></div>
+          <div class="process__step-title">Perspective and strategy</div>
+          <div class="process__step-body"><p>Clarifying:</p></div>
+          <ul class="process__step-list">
+            <li>communication</li>
+            <li>timing</li>
+            <li>emotional dynamics</li>
+            <li>risks</li>
+            <li>next steps</li>
+          </ul>
+          <div class="process__step-body" style="margin-top:18px;">
+            <p>Helping clients think more clearly before acting reactively.</p>
+          </div>
+        </div>
+        <div class="process__step" style="padding-left:40px;">
+          <div class="process__num">03</div>
+          <div class="process__num-rule"></div>
+          <div class="process__step-title">Ongoing advisory, when needed</div>
+          <div class="process__step-body">
+            <p>Some situations resolve quickly. Others unfold over time.</p>
+            <p>Support may remain:</p>
+          </div>
+          <ul class="process__step-list">
+            <li>occasional</li>
+            <li>strategic</li>
+            <li>active</li>
+            <li>behind the scenes</li>
+          </ul>
+          <div class="process__step-body" style="margin-top:12px;"><p>depending on the situation.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SELECTIVITY + ENGAGEMENT -->
+  <div class="engagement">
+    <div class="engagement__inner">
+      <div class="engagement__col">
+        <div class="engagement__title">Selectivity</div>
+        <div class="engagement__rule"></div>
+        <div class="engagement__body">
+          <p>Resolve is intentionally selective about the situations and people it works with.</p>
+          <p>Not every conflict is appropriate for this kind of advisory relationship.</p>
+          <p>The work depends on:</p>
+        </div>
+        <ul class="engagement__list">
+          <li>honesty</li>
+          <li>openness</li>
+          <li>discipline</li>
+          <li>willingness to pursue clarity rather than escalation</li>
+        </ul>
+      </div>
+      <div class="engagement__col">
+        <div class="engagement__title">Engagement</div>
+        <div class="engagement__rule"></div>
+        <div class="engagement__body">
+          <p>All engagements begin with a short initial conversation.</p>
+          <p>If there appears to be a strong fit, work typically begins with a minimum engagement of $2,600, which may be applied toward ongoing advisory work.</p>
+        </div>
+        <div class="engagement__price">$2,600</div>
+        <div class="engagement__price-note">Minimum engagement. Applied toward ongoing work.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <p class="cta-banner__text">Some situations simply benefit from thoughtful outside perspective.</p>
+    <a href="/cdn-cgi/l/email-protection#badbdbd1dfc8c9fac8dfc9d5d6ccdf97dbdeccd3c9d5c8c394d9d5d7" class="btn btn--dark">Request a conversation</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="footer__wordmark">Resolve</span>
+        <p class="footer__tagline">Strategic advisory for complex situations and difficult conversations.</p>
+      </div>
+      <div>
+        <span class="footer__col-head">Navigation</span>
+        <div class="footer__links">
+          <a href="about.html">About</a>
+          <a href="situations.html">Situations</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="insights.html">Insights</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer__col-head">Legal</span>
+        <div class="footer__links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer__col-head">Contact</span>
+        <div class="footer__links">
+          <a href="/cdn-cgi/l/email-protection#5031313b352223102235233f3c26357d31342639233f22297e333f3d"><span class="__cf_email__" data-cfemail="5c3d3d37392e2f1c2e392f33302a39713d382a352f332e25723f3331">[email&#160;protected]</span></a>
+        </div>
+        <p style="font-size:11px;font-weight:300;color:rgba(253,250,247,0.38);line-height:1.7;margin-top:14px;">Confidential inquiries only.<br>All communications are strictly confidential.</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2024 Resolve Advisory. All rights reserved.</span>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
