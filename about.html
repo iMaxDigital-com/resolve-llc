@@ -9,11 +9,13 @@
     /* ── About Hero: split portrait ── */
     .about-hero {
       display: grid;
-      grid-template-columns: 47fr 53fr;
-      min-height: calc(100vh - var(--nav-h));
+      grid-template-columns: 50fr 50fr;
+      height: calc(100vh - var(--nav-h));
+      min-height: 620px;
+      overflow: hidden;
     }
     .about-hero__text {
-      padding: clamp(60px, 8vw, 100px) var(--pad-x);
+      padding: clamp(42px, 5vw, 68px) var(--pad-x);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -34,23 +36,24 @@
     .about-hero__main {}
     .about-hero__pullquote {
       font-family: var(--font-serif);
-      font-size: clamp(18px, 2vw, 26px);
+      font-size: clamp(17px, 1.65vw, 23px);
       font-weight: 400;
-      line-height: 1.45;
+      line-height: 1.28;
       color: rgba(28,28,40,0.75);
-      max-width: 320px;
-      padding: 36px 0 36px 32px;
+      max-width: 420px;
+      padding: 22px 0 22px 28px;
       border-left: 1px solid var(--divider);
       font-style: italic;
+      margin-top: 22px;
     }
     .about-hero__pullquote em { font-style: italic; color: var(--text); }
     .about-hero__pillars {
       display: grid;
       grid-template-columns: repeat(3,1fr);
-      gap: 20px;
-      padding-top: 36px;
+      gap: 18px;
+      padding-top: 24px;
       border-top: 1px solid var(--divider);
-      margin-top: auto;
+      margin-top: 28px;
     }
     .about-hero__pillar {}
     .about-hero__pillar-icon {
@@ -79,36 +82,38 @@
       background: #C8BFBA;
     }
     .about-hero__image .site-image {
-      min-height: calc(100vh - var(--nav-h));
+      min-height: 100%;
     }
-    .about-hero__portrait-inset {
-      position: absolute;
-      right: clamp(22px, 4vw, 56px);
-      bottom: clamp(22px, 4vw, 56px);
-      width: clamp(112px, 13vw, 176px);
-      aspect-ratio: 3 / 4;
-      object-fit: cover;
-      object-position: center top;
-      border: 1px solid rgba(253,250,247,0.7);
-      box-shadow: 0 18px 50px rgba(28,28,40,0.2);
-    }
-    .about-hero__cta { margin-top: 36px; }
+    .about-hero__cta { margin-top: 24px; }
 
     /* ── About 2: How I see conflict ── */
     .about-2 {
       display: grid;
-      grid-template-columns: 47fr 53fr;
-      min-height: 70vh;
-      border-top: 1px solid var(--divider);
+      grid-template-columns: 50fr 50fr;
+      min-height: 80vh;
+      border-top: 1px solid rgba(28,28,40,0.06);
+      background: var(--cream);
     }
     .about-2__text {
       padding: clamp(60px, 8vw, 100px) var(--pad-x);
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
     }
     .about-2__image { position: relative; overflow: hidden; }
-    .about-2__image .site-image { min-height: 560px; }
+    .about-2__image::before {
+      content: '';
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: clamp(90px, 12vw, 180px);
+      background: linear-gradient(90deg, var(--cream) 0%, rgba(243,237,230,0.72) 34%, rgba(243,237,230,0) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .about-2__image .site-image {
+      min-height: 80vh;
+      object-position: center center;
+    }
 
     /* ── Principles ── */
     .principles {
@@ -155,11 +160,12 @@
 
     @media (max-width: 960px) {
       .about-hero, .about-2 { grid-template-columns: 1fr; }
+      .about-hero { height: auto; min-height: 0; overflow: visible; }
       .about-hero__image { min-height: 360px; order: -1; }
       .about-hero__image .img-ph { min-height: 360px; }
       .about-hero__image .site-image { min-height: 360px; }
-      .about-hero__portrait-inset { width: 118px; }
       .about-2__image { min-height: 300px; }
+      .about-2__image::before { display: none; }
       .about-hero__pillars { grid-template-columns: 1fr; gap: 28px; }
       .principle { grid-template-columns: 50px 1fr; }
       .principle__body { grid-column: 2; }
@@ -200,7 +206,7 @@
         </div>
         <div class="about-hero__pullquote">
           Most conflicts don't need to be won.<br>They need to be <em>resolved.</em>
-          <div class="rule" style="margin-top:18px;margin-bottom:0;"></div>
+          <div class="rule" style="margin-top:12px;margin-bottom:0;"></div>
         </div>
       </div>
       <div>
@@ -236,7 +242,6 @@
     </div>
     <div class="about-hero__image">
       <img class="site-image site-image--right" src="assets/images/about-page-1-image-and-photo.webp" alt="Andrew Akers in a suit standing against a soft architectural background">
-      <img class="about-hero__portrait-inset" src="assets/images/andrew-akers-glh.webp" alt="Portrait of Andrew Akers">
     </div>
   </section>
 
@@ -246,12 +251,12 @@
       <span class="label">About</span>
       <div class="rule"></div>
       <h2 class="h2" style="margin-bottom:32px;">How I see conflict</h2>
-      <div class="body-text" style="max-width:400px;">
-        <p>Conflict is a natural part of business and life. What causes lasting damage is avoidance, escalation, and a loss of perspective.</p>
-        <p>Most difficult situations become harder because people react before they fully understand what is happening — beneath the surface, emotionally, structurally, or relationally.</p>
-        <p>Over time, communication narrows. Positions harden. Trust deteriorates. Perspective disappears.</p>
-        <p>But even difficult situations often become more workable once they are understood clearly.</p>
-        <p>That does not mean every conflict resolves easily. It means clarity changes what becomes possible.</p>
+      <div class="body-text" style="max-width:500px;">
+        <p>Conflict is a natural part of business and life.<br>What causes lasting damage is avoidance,<br>escalation, and a loss of perspective.</p>
+        <p>Most difficult situations become harder because people<br>react before they fully understand what is happening —<br>beneath the surface, emotionally, structurally,<br>or relationally.</p>
+        <p>Over time, communication narrows.<br>Positions harden.<br>Trust deteriorates.<br>Perspective disappears.</p>
+        <p>But even difficult situations often become more<br>workable once they are understood clearly.</p>
+        <p>That does not mean every conflict resolves easily.<br>It means clarity changes what becomes possible.</p>
       </div>
     </div>
     <div class="about-2__image">
