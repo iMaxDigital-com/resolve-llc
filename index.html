@@ -53,10 +53,10 @@
       margin-bottom: 34px;
     }
     .hero__body {
-      font-size: 15px;
-      font-weight: 300;
+      font-size: clamp(15px, 1.05vw, 16px);
+      font-weight: 400;
       line-height: 1.85;
-      color: rgba(253,250,247,0.65);
+      color: rgba(253,250,247,0.82);
       max-width: 440px;
     }
     .hero__body p + p { margin-top: 1em; }
@@ -111,11 +111,12 @@
     }
     .home-2__heading em { font-style: italic; }
     .home-2__footer-tag {
-      margin-top: 36px;
-      font-size: 11px;
-      letter-spacing: 0.2em;
+      margin-top: 46px;
+      font-size: clamp(14px, 1.25vw, 18px);
+      font-weight: 500;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: rgba(28,28,40,0.5);
+      color: rgba(28,28,40,0.74);
     }
     .home-2__footer-rule {
       width: 42px; height: 1px;
@@ -142,7 +143,7 @@
       font-family: var(--font-serif);
       font-size: clamp(17px, 1.8vw, 22px);
       font-style: italic;
-      font-weight: 300;
+      font-weight: 400;
       color: var(--gold);
       margin-top: 28px;
       max-width: 380px;
@@ -151,10 +152,13 @@
 
     /* ── Home 4: Most conflicts escalate ── */
     .home-4 {
-      background: var(--charcoal);
-      padding: clamp(80px, 10vw, 130px) var(--pad-x);
+      background: transparent;
+      min-height: 80vh;
+      padding: clamp(70px, 9vw, 110px) var(--pad-x);
       position: relative;
       overflow: hidden;
+      display: flex;
+      align-items: center;
     }
     .home-4__bg {
       position: absolute;
@@ -162,15 +166,14 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.22;
-      mix-blend-mode: screen;
+      opacity: 1;
     }
     .home-4__inner {
-      max-width: var(--max-w);
+      max-width: 1320px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.75fr);
+      gap: clamp(56px, 7vw, 96px);
       align-items: center;
       position: relative;
       z-index: 1;
@@ -181,18 +184,19 @@
       font-size: clamp(38px, 4.5vw, 62px);
       font-weight: 400;
       line-height: 1.08;
-      color: var(--warm-white);
+      color: var(--text);
       margin-bottom: 32px;
     }
     .home-4__body {
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 1.9;
-      color: rgba(253,250,247,0.6);
+      font-size: clamp(15px, 1.15vw, 17px);
+      font-weight: 400;
+      line-height: 1.85;
+      color: rgba(28,28,40,0.94);
+      max-width: 660px;
     }
     .home-4__body p + p { margin-top: 1.1em; }
     .home-4__right {
-      border-left: 1px solid rgba(253,250,247,0.1);
+      border-left: 1px solid rgba(28,28,40,0.16);
       padding-left: 60px;
     }
     .home-4__quote {
@@ -201,7 +205,7 @@
       font-weight: 300;
       font-style: italic;
       line-height: 1.5;
-      color: rgba(253,250,247,0.75);
+      color: rgba(28,28,40,0.86);
     }
     .home-4__quote-rule {
       width: 40px; height: 1px;
@@ -235,10 +239,10 @@
       margin-bottom: 24px;
     }
     .home-5__intro {
-      font-size: 14px;
-      font-weight: 300;
+      font-size: clamp(15px, 1.05vw, 16px);
+      font-weight: 400;
       line-height: 1.85;
-      color: rgba(28,28,40,0.68);
+      color: rgba(28,28,40,0.8);
       max-width: 640px;
     }
     .home-5__intro p + p { margin-top: 0.9em; }
@@ -255,9 +259,10 @@
     .home-5__col:last-child { border-right: none; padding-right: 0; }
     .home-5__col h3 {
       font-family: var(--font-serif);
-      font-size: 28px;
-      font-weight: 400;
-      margin-bottom: 16px;
+      font-size: clamp(34px, 3.4vw, 48px);
+      font-weight: 500;
+      line-height: 1.05;
+      margin-bottom: 20px;
     }
     .home-5__col-rule {
       width: 28px; height: 1px;
@@ -268,10 +273,10 @@
       display: flex; flex-direction: column; gap: 14px;
     }
     .home-5__col li {
-      font-size: 13.5px;
-      font-weight: 300;
+      font-size: clamp(14.5px, 1vw, 15.5px);
+      font-weight: 400;
       line-height: 1.7;
-      color: rgba(28,28,40,0.7);
+      color: rgba(28,28,40,0.82);
     }
 
     @media (max-width: 960px) {
@@ -280,7 +285,7 @@
       .home-2__image { min-height: 300px; }
       .home-3__image { order: -1; }
       .home-4__inner { grid-template-columns: 1fr; gap: 40px; }
-      .home-4__right { border-left: none; padding-left: 0; border-top: 1px solid rgba(253,250,247,0.1); padding-top: 40px; }
+      .home-4__right { border-left: none; padding-left: 0; border-top: 1px solid rgba(28,28,40,0.16); padding-top: 40px; }
       .home-5__cols { grid-template-columns: 1fr; }
       .home-5__col { border-right: none; border-bottom: 1px solid var(--divider); padding-right: 0; }
       .home-5__col:last-child { border-bottom: none; }
@@ -357,14 +362,16 @@
       <img class="site-image site-image--left" src="assets/images/home-page-3.webp" alt="Quiet interior with chair, bookshelves, and warm window light">
     </div>
     <div class="home-3__text">
-      <span class="label">How I work</span>
       <div class="rule"></div>
-      <h2 class="h2" style="max-width:400px;">I work with one side.</h2>
+      <h2 class="h2" style="max-width:400px;">I work with<br>one side.</h2>
       <div class="rule"></div>
       <div class="body-text" style="max-width:440px;">
-        <p>I am not a mediator. A mediator works with all parties to find a shared agreement. I work with you.</p>
-        <p>My job is to help you understand what is really happening, think through your options carefully, and act with intention rather than reaction.</p>
-        <p>This requires clarity about what you actually want — and discipline about how you pursue it.</p>
+        <p>This is not mediation.</p>
+        <p>I do not attempt to balance competing interests or facilitate a neutral outcome.</p>
+        <p>My role is to advise you — bringing perspective, judgment, and structure to situations where clarity is often lost.</p>
+        <p>Sometimes the work happens quietly behind the scenes. Sometimes it requires more direct involvement.</p>
+        <p>The approach depends on the situation.</p>
+        <p>The objective does not:</p>
       </div>
       <p class="home-3__italic">to help you move forward clearly and deliberately.</p>
     </div>
@@ -375,14 +382,14 @@
     <img class="home-4__bg" src="assets/images/home-page-4.webp" alt="">
     <div class="home-4__inner">
       <div class="home-4__left">
-        <span class="label" style="color:rgba(184,145,106,0.8);">Perspective</span>
         <div class="rule" style="background:rgba(184,145,106,0.6);"></div>
-        <h2 class="home-4__heading">Most conflicts escalate for a simple reason.</h2>
+        <h2 class="home-4__heading">Most conflicts<br>escalate for a<br>simple reason.</h2>
         <div class="home-4__body">
           <p>People react before they understand.</p>
-          <p>Before the full picture is clear. Before the other person's position is truly understood. Before the cost of escalation has been weighed.</p>
-          <p>Part of the work is slowing situations down enough for perspective to return.</p>
-          <p>Some situations benefit from perspective immediately. Others require deeper ongoing work.</p>
+          <p>They respond to tone instead of substance. To emotion instead of structure. To the latest interaction instead of the underlying pattern.</p>
+          <p>Over time, the situation narrows. Communication becomes reactive. Positions harden. Options disappear.</p>
+          <p>Part of the work is slowing things down — creating enough clarity and perspective for better decisions to become possible.</p>
+          <p>This requires discipline, timing, and restraint.</p>
         </div>
       </div>
       <div class="home-4__right">
@@ -397,7 +404,6 @@
     <img class="home-5__bg" src="assets/images/home-page-5.webp" alt="">
     <div class="home-5__inner">
       <div class="home-5__header">
-        <span class="label">Where this work is most useful</span>
         <div class="rule"></div>
         <h2 class="home-5__heading">Some conflicts appear suddenly. Others develop slowly over time.</h2>
         <div class="home-5__intro">
