@@ -32,15 +32,16 @@
       padding: calc(var(--nav-h) + 60px) var(--pad-x) 80px;
       position: relative;
       z-index: 2;
-      max-width: 720px;
+      max-width: 840px;
     }
     .hero__headline {
       font-family: var(--font-serif);
-      font-size: clamp(40px, 5vw, 72px);
+      font-size: clamp(38px, 4.8vw, 72px);
       font-weight: 400;
       line-height: 1.07;
       color: var(--warm-white);
-      margin-bottom: 36px;
+      margin-bottom: 42px;
+      max-width: 760px;
     }
     .hero__headline em {
       font-style: italic;
@@ -49,7 +50,7 @@
     .hero__rule {
       width: 40px; height: 1px;
       background: rgba(253,250,247,0.35);
-      margin-bottom: 28px;
+      margin-bottom: 34px;
     }
     .hero__body {
       font-size: 15px;
@@ -59,7 +60,7 @@
       max-width: 440px;
     }
     .hero__body p + p { margin-top: 1em; }
-    .hero__cta { margin-top: 44px; }
+    .hero__cta { margin-top: 54px; }
     .hero__image {
       position: absolute;
       inset: 0;
@@ -284,6 +285,11 @@
       .home-5__col { border-right: none; border-bottom: 1px solid var(--divider); padding-right: 0; }
       .home-5__col:last-child { border-bottom: none; }
     }
+    @media (max-width: 520px) {
+      .hero__headline {
+        font-size: clamp(34px, 11vw, 44px);
+      }
+    }
   </style>
 </head>
 <body class="page page--hero">
@@ -317,7 +323,7 @@
         <p>This is not about victory.<br>It is about restoring clarity, dignity, and a path forward.</p>
       </div>
       <div class="hero__cta">
-        <a href="/cdn-cgi/l/email-protection#93f2f2f8f6e1e0d3e1f6e0fcffe5f6bef2f7e5fae0fce1eabdf0fcfe" class="btn btn--outline-light">Request a conversation</a>
+        <a href="/cdn-cgi/l/email-protection#93f2f2f8f6e1e0d3e1f6e0fcffe5f6bef2f7e5fae0fce1eabdf0fcfe" class="btn btn--hero-light">Request a conversation</a>
       </div>
     </div>
     <div class="hero__image">

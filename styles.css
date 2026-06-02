@@ -227,6 +227,8 @@ button { font-family: inherit; cursor: pointer; }
 .btn--outline:hover { background: var(--text); color: var(--cream); }
 .btn--outline-light { background: transparent; border: 1px solid rgba(253,250,247,0.6); color: var(--warm-white); }
 .btn--outline-light:hover { background: var(--warm-white); color: var(--charcoal); }
+.btn--hero-light { background: var(--warm-white); border: 1px solid var(--warm-white); color: var(--charcoal); }
+.btn--hero-light:hover { background: var(--warm-white); color: var(--charcoal); opacity: 0.86; }
 .btn--text-link {
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
