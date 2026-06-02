@@ -58,6 +58,10 @@
       background: #2a2520;
       height: 100%;
     }
+    .hero__image .site-image {
+      min-height: 100vh;
+      opacity: 0.92;
+    }
     .hero__image .img-ph span { color: rgba(253,250,247,0.2); }
 
     /* ── Home 2: A different way ── */
@@ -73,6 +77,7 @@
       justify-content: center;
     }
     .home-2__image { position: relative; overflow: hidden; }
+    .home-2__image .site-image { min-height: 560px; }
     .home-2__tagline {
       font-size: 11px;
       font-weight: 400;
@@ -110,6 +115,7 @@
     }
     .home-3__image { position: relative; overflow: hidden; }
     .home-3__image .img-ph { background: #C4BDB5; height: 100%; min-height: 560px; }
+    .home-3__image .site-image { min-height: 560px; }
     .home-3__text {
       padding: clamp(70px, 9vw, 110px) var(--pad-x);
       display: flex;
@@ -134,6 +140,15 @@
       position: relative;
       overflow: hidden;
     }
+    .home-4__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.22;
+      mix-blend-mode: screen;
+    }
     .home-4__inner {
       max-width: var(--max-w);
       margin: 0 auto;
@@ -141,6 +156,8 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
     .home-4__left {}
     .home-4__heading {
@@ -183,7 +200,15 @@
       position: relative;
       overflow: hidden;
     }
-    .home-5__inner { max-width: var(--max-w); margin: 0 auto; }
+    .home-5__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.24;
+    }
+    .home-5__inner { max-width: var(--max-w); margin: 0 auto; position: relative; z-index: 1; }
     .home-5__header { margin-bottom: 60px; }
     .home-5__heading {
       font-family: var(--font-serif);
@@ -281,7 +306,7 @@
       </div>
     </div>
     <div class="hero__image">
-      <div class="img-ph" style="height:100%;min-height:100vh;"><span>Atmospheric door / light image placeholder</span></div>
+      <img class="site-image site-image--right" src="assets/images/hero-page-1.webp" alt="Light entering through a doorway in a quiet architectural interior">
     </div>
   </section>
 
@@ -301,14 +326,14 @@
       <div class="home-2__footer-rule"></div>
     </div>
     <div class="home-2__image">
-      <div class="img-ph" style="height:100%;min-height:560px;"><span>Architectural interior image placeholder</span></div>
+      <img class="site-image site-image--right" src="assets/images/home-page-2.webp" alt="Sunlit stone wall and architectural opening">
     </div>
   </section>
 
   <!-- HOME 3: I work with one side -->
   <section class="home-3">
     <div class="home-3__image">
-      <div class="img-ph" style="background:#BDB5AD;"><span>Interior atmosphere image placeholder</span></div>
+      <img class="site-image site-image--left" src="assets/images/home-page-3.webp" alt="Quiet interior with chair, bookshelves, and warm window light">
     </div>
     <div class="home-3__text">
       <span class="label">How I work</span>
@@ -326,6 +351,7 @@
 
   <!-- HOME 4: Most conflicts escalate -->
   <section class="home-4">
+    <img class="home-4__bg" src="assets/images/home-page-4.webp" alt="">
     <div class="home-4__inner">
       <div class="home-4__left">
         <span class="label" style="color:rgba(184,145,106,0.8);">Perspective</span>
@@ -347,6 +373,7 @@
 
   <!-- HOME 5: Where this work is most useful -->
   <section class="home-5">
+    <img class="home-5__bg" src="assets/images/home-page-5.webp" alt="">
     <div class="home-5__inner">
       <div class="home-5__header">
         <span class="label">Where this work is most useful</span>

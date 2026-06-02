@@ -18,6 +18,18 @@
       flex-direction: column;
       justify-content: space-between;
       border-right: 1px solid var(--divider);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .about-hero__text-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.13;
+      z-index: -1;
     }
     .about-hero__main {}
     .about-hero__pullquote {
@@ -66,6 +78,20 @@
       min-height: calc(100vh - var(--nav-h));
       background: #C8BFBA;
     }
+    .about-hero__image .site-image {
+      min-height: calc(100vh - var(--nav-h));
+    }
+    .about-hero__portrait-inset {
+      position: absolute;
+      right: clamp(22px, 4vw, 56px);
+      bottom: clamp(22px, 4vw, 56px);
+      width: clamp(112px, 13vw, 176px);
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center top;
+      border: 1px solid rgba(253,250,247,0.7);
+      box-shadow: 0 18px 50px rgba(28,28,40,0.2);
+    }
     .about-hero__cta { margin-top: 36px; }
 
     /* ── About 2: How I see conflict ── */
@@ -82,6 +108,7 @@
       justify-content: flex-start;
     }
     .about-2__image { position: relative; overflow: hidden; }
+    .about-2__image .site-image { min-height: 560px; }
 
     /* ── Principles ── */
     .principles {
@@ -130,6 +157,8 @@
       .about-hero, .about-2 { grid-template-columns: 1fr; }
       .about-hero__image { min-height: 360px; order: -1; }
       .about-hero__image .img-ph { min-height: 360px; }
+      .about-hero__image .site-image { min-height: 360px; }
+      .about-hero__portrait-inset { width: 118px; }
       .about-2__image { min-height: 300px; }
       .about-hero__pillars { grid-template-columns: 1fr; gap: 28px; }
       .principle { grid-template-columns: 50px 1fr; }
@@ -160,6 +189,7 @@
   <!-- ABOUT HERO -->
   <section class="about-hero">
     <div class="about-hero__text">
+      <img class="about-hero__text-bg" src="assets/images/about-page-1-image.webp" alt="">
       <div class="about-hero__main">
         <span class="label">About</span>
         <div class="rule"></div>
@@ -205,7 +235,8 @@
       </div>
     </div>
     <div class="about-hero__image">
-      <div class="img-ph" style="height:100%;"><span>Portrait image placeholder</span></div>
+      <img class="site-image site-image--right" src="assets/images/about-page-1-image-and-photo.webp" alt="Andrew Akers in a suit standing against a soft architectural background">
+      <img class="about-hero__portrait-inset" src="assets/images/andrew-akers-glh.webp" alt="Portrait of Andrew Akers">
     </div>
   </section>
 
@@ -224,7 +255,7 @@
       </div>
     </div>
     <div class="about-2__image">
-      <div class="img-ph" style="height:100%;min-height:560px;background:#C8BFB5;"><span>Architectural archway image placeholder</span></div>
+      <img class="site-image" src="assets/images/about-page-2-image-4.webp" alt="Quiet architectural corridor with arches and warm stone walls">
     </div>
   </section>
 
