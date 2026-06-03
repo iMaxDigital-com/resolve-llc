@@ -9,10 +9,13 @@
     .faq-hero {
       display: grid;
       grid-template-columns: 50fr 50fr;
-      min-height: calc(100vh - var(--nav-h));
+      height: calc(100svh - var(--nav-h));
+      min-height: calc(100svh - var(--nav-h));
+      max-height: calc(100svh - var(--nav-h));
     }
+    .faq-hero > * { min-height: 0; }
     .faq-hero__text {
-      padding: clamp(60px,8vw,100px) var(--pad-x);
+      padding: clamp(52px,7vw,90px) var(--pad-x);
       display: flex; flex-direction: column; justify-content: center;
     }
     .faq-hero__image {
@@ -23,9 +26,10 @@
     .faq-hero__image .site-image {
       width: 100%;
       height: 100%;
-      min-height: calc(100vh - var(--nav-h));
+      min-height: 0;
       object-fit: cover;
       object-position: center center;
+      display: block;
     }
 
     /* FAQ accordion */
@@ -118,7 +122,7 @@
     }
 
     @media (max-width: 960px) {
-      .faq-hero { grid-template-columns: 1fr; }
+      .faq-hero { grid-template-columns: 1fr; height: auto; min-height: 0; max-height: none; }
       .faq-hero__image { order: 2; min-height: 300px; }
       .faq-hero__image .site-image { min-height: 340px; }
       .faq-group__header { grid-template-columns: 1fr; gap: 8px; }
