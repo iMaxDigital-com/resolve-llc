@@ -29,7 +29,7 @@
       object-position: center center;
     }
 
-    /* Featured article */
+    /* Featured insight */
     .featured {
       padding: clamp(70px,9vw,110px) var(--pad-x);
       background: var(--cream);
@@ -42,25 +42,13 @@
       gap: 72px;
       align-items: center;
     }
-    .featured__img-wrap { position: relative; }
-    .featured__img-wrap .img-ph { min-height: 480px; background: #C0B7AF; }
-    .featured__badge {
-      position: absolute;
-      top: 16px; left: 16px;
-      background: rgba(28,28,40,0.75);
-      color: var(--warm-white);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 5px 10px;
+    .featured__img-wrap {
+      position: relative;
+      overflow: hidden;
     }
-    .featured__text {}
-    .featured__category {
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 14px;
+    .featured__img-wrap .site-image {
+      min-height: 480px;
+      object-fit: cover;
     }
     .featured__title {
       font-family: var(--font-serif);
@@ -69,7 +57,12 @@
       line-height: 1.1;
       margin-bottom: 20px;
     }
-    .featured__rule { width: 36px; height: 1px; background: var(--gold); margin-bottom: 20px; }
+    .featured__rule {
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 20px;
+    }
     .featured__excerpt {
       font-size: clamp(15px, 1.05vw, 16px);
       font-weight: 400;
@@ -78,63 +71,12 @@
       margin-bottom: 28px;
     }
 
-    /* Latest grid */
-    .latest {
-      padding: clamp(60px,8vw,96px) var(--pad-x);
-      background: var(--cream-mid);
-    }
-    .latest__inner { max-width: var(--max-w); margin: 0 auto; }
-    .latest__header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 40px;
-    }
-    .latest__title {
-      font-family: var(--font-serif);
-      font-size: clamp(22px,2.4vw,32px);
-      font-weight: 400;
-    }
-    .latest__grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 28px;
-    }
-    .article-card { background: var(--cream); }
-    .article-card__img { position: relative; overflow: hidden; }
-    .article-card__img .img-ph { min-height: 200px; background: #C8BFB5; }
-    .article-card__body { padding: 24px 24px 28px; }
-    .article-card__cat {
-      font-size: 9.5px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-    .article-card__title {
-      font-family: var(--font-serif);
-      font-size: clamp(17px,1.8vw,22px);
-      font-weight: 400;
-      line-height: 1.25;
-      margin-bottom: 10px;
-    }
-    .article-card__rule { width: 24px; height: 1px; background: var(--gold); margin-bottom: 12px; }
-    .article-card__read {
-      font-size: 11px;
-      font-weight: 400;
-      color: rgba(28,28,40,0.62);
-      letter-spacing: 0.04em;
-    }
-
     @media (max-width: 960px) {
       .ins-hero { grid-template-columns: 1fr; }
       .ins-hero__image { order: 2; min-height: 300px; }
+      .ins-hero__image .site-image { min-height: 340px; }
       .featured__inner { grid-template-columns: 1fr; gap: 36px; }
-      .latest__grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 600px) {
-      .latest__grid { grid-template-columns: 1fr; }
-      .latest__header { flex-direction: column; gap: 12px; }
+      .featured__img-wrap .site-image { min-height: 340px; }
     }
   </style>
 </head>
@@ -171,112 +113,26 @@
     </div>
   </section>
 
-  <!-- FEATURED ARTICLE -->
+  <!-- INSIGHT COMPLEMENT -->
   <div class="featured">
     <div class="featured__inner">
       <div class="featured__img-wrap">
-        <div class="img-ph" style="min-height:480px;background:#C0B0A4;"><span>Featured article image placeholder</span></div>
-        <span class="featured__badge">Featured</span>
+        <img class="site-image" src="assets/images/home-page-4.webp" alt="Quiet architectural doorway with warm light and shadow">
       </div>
       <div class="featured__text">
-        <div class="featured__category">Perspective</div>
         <h2 class="featured__title">Most conflicts escalate for a simple reason.</h2>
         <div class="featured__rule"></div>
         <p class="featured__excerpt">Escalation is rarely about what people are arguing about. It's about what's underneath it.</p>
-        <a href="#" class="btn--text-link">Read article &nbsp;→</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- LATEST ARTICLES -->
-  <div class="latest">
-    <div class="latest__inner">
-      <div class="latest__header">
-        <h2 class="latest__title">Latest from the blog</h2>
-        <a href="#" class="btn--text-link">View all articles &nbsp;→</a>
-      </div>
-      <div class="latest__grid">
-
-        <div class="article-card">
-          <div class="article-card__img">
-            <div class="img-ph" style="min-height:200px;background:#C4B8AE;"><span>Article image</span></div>
-          </div>
-          <div class="article-card__body">
-            <div class="article-card__cat">Communication</div>
-            <div class="article-card__title">Clarity before communication.</div>
-            <div class="article-card__rule"></div>
-            <div class="article-card__read">6 min read</div>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-card__img">
-            <div class="img-ph" style="min-height:200px;background:#B8AFA8;"><span>Article image</span></div>
-          </div>
-          <div class="article-card__body">
-            <div class="article-card__cat">Decision-Making</div>
-            <div class="article-card__title">Timing matters more than people think.</div>
-            <div class="article-card__rule"></div>
-            <div class="article-card__read">5 min read</div>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-card__img">
-            <div class="img-ph" style="min-height:200px;background:#C0BAAF;"><span>Article image</span></div>
-          </div>
-          <div class="article-card__body">
-            <div class="article-card__cat">Perspective</div>
-            <div class="article-card__title">The hidden cost of needing to win.</div>
-            <div class="article-card__rule"></div>
-            <div class="article-card__read">4 min read</div>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-card__img">
-            <div class="img-ph" style="min-height:200px;background:#BEB5AC;"><span>Article image</span></div>
-          </div>
-          <div class="article-card__body">
-            <div class="article-card__cat">Conflict</div>
-            <div class="article-card__title">Conflict narrows perspective.</div>
-            <div class="article-card__rule"></div>
-            <div class="article-card__read">4 min read</div>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-card__img">
-            <div class="img-ph" style="min-height:200px;background:#C8C0B8;"><span>Article image</span></div>
-          </div>
-          <div class="article-card__body">
-            <div class="article-card__cat">Communication</div>
-            <div class="article-card__title">Most people are arguing about the wrong thing.</div>
-            <div class="article-card__rule"></div>
-            <div class="article-card__read">6 min read</div>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-card__img">
-            <div class="img-ph" style="min-height:200px;background:#C0B8B0;"><span>Article image</span></div>
-          </div>
-          <div class="article-card__body">
-            <div class="article-card__cat">Perspective</div>
-            <div class="article-card__title">The first conversation rarely contains the real conflict.</div>
-            <div class="article-card__rule"></div>
-            <div class="article-card__read">5 min read</div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
 
   <!-- CTA BANNER -->
   <div class="cta-banner">
-    <p class="cta-banner__text">Thoughtful perspective can change the direction of a situation.</p>
-    <a href="/cdn-cgi/l/email-protection#2b4a4a404e59586b594e5844475d4e064a4f5d425844595205484446" class="btn btn--dark">Request a conversation</a>
+    <div class="cta-banner__inner">
+      <p class="cta-banner__text">Thoughtful perspective can change the direction of a situation.</p>
+      <a href="/cdn-cgi/l/email-protection#2b4a4a404e59586b594e5844475d4e064a4f5d425844595205484446" class="btn btn--dark">Request a conversation</a>
+    </div>
   </div>
 
   <!-- FOOTER -->
@@ -308,7 +164,7 @@
         <div class="footer__links">
           <a href="/cdn-cgi/l/email-protection#a7c6c6ccc2d5d4e7d5c2d4c8cbd1c28ac6c3d1ced4c8d5de89c4c8ca"><span class="__cf_email__" data-cfemail="294848424c5b5a695b4c5a46455f4c04484d5f405a465b50074a4644">[email&#160;protected]</span></a>
         </div>
-        <p style="font-size:11px;font-weight:300;color:rgba(253,250,247,0.38);line-height:1.7;margin-top:14px;">Confidential inquiries only.<br>All communications are strictly confidential.</p>
+        <p style="font-size:12px;font-weight:400;color:rgba(253,250,247,0.62);line-height:1.7;margin-top:14px;">Confidential inquiries only.<br>All communications are strictly confidential.</p>
       </div>
     </div>
     <div class="footer__bottom">

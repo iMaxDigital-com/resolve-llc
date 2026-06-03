@@ -100,11 +100,11 @@
       object-fit: cover;
     }
     .home-2__tagline {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 400;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: rgba(28,28,40,0.4);
+      color: rgba(28,28,40,0.68);
       margin-bottom: 20px;
     }
     .home-2__heading {
@@ -212,7 +212,7 @@
     .home-4__quote {
       font-family: var(--font-serif);
       font-size: clamp(20px, 2.2vw, 28px);
-      font-weight: 300;
+      font-weight: 400;
       font-style: italic;
       line-height: 1.5;
       color: rgba(28,28,40,0.86);
@@ -293,11 +293,16 @@
       .home-2, .home-3 { grid-template-columns: 1fr; }
       .hero__image { min-height: 300px; }
       .home-2__image { min-height: 300px; }
+      .home-2__image .site-image,
+      .home-3__image .site-image {
+        min-height: 340px;
+      }
       .home-3__image { order: -1; }
       .home-4__inner { grid-template-columns: 1fr; gap: 40px; }
       .home-4__right { border-left: none; padding-left: 0; border-top: 1px solid rgba(28,28,40,0.16); padding-top: 40px; }
       .home-5__cols { grid-template-columns: 1fr; }
       .home-5__col { border-right: none; border-bottom: 1px solid var(--divider); padding-right: 0; }
+      .home-5__col[style] { padding-left: 0 !important; }
       .home-5__col:last-child { border-bottom: none; }
     }
     @media (max-width: 520px) {
@@ -457,8 +462,10 @@
 
   <!-- CTA BANNER -->
   <div class="cta-banner">
-    <p class="cta-banner__text">If it feels like the right fit, let's start a conversation.</p>
-    <a href="/cdn-cgi/l/email-protection#6504040e001716251700160a091300480401130c160a171c4b060a08" class="btn btn--dark">Request a conversation</a>
+    <div class="cta-banner__inner">
+      <p class="cta-banner__text">If it feels like the right fit, let's start a conversation.</p>
+      <a href="/cdn-cgi/l/email-protection#6504040e001716251700160a091300480401130c160a171c4b060a08" class="btn btn--dark">Request a conversation</a>
+    </div>
   </div>
 
   <!-- FOOTER -->
@@ -490,7 +497,7 @@
         <div class="footer__links">
           <a href="/cdn-cgi/l/email-protection#ddbcbcb6b8afae9dafb8aeb2b1abb8f0bcb9abb4aeb2afa4f3beb2b0"><span class="__cf_email__" data-cfemail="0a6b6b616f78794a786f7965667c6f276b6e7c637965787324696567">[email&#160;protected]</span></a>
         </div>
-        <p style="font-size:11px;font-weight:300;color:rgba(253,250,247,0.38);line-height:1.7;margin-top:14px;">Confidential inquiries only.<br>All communications are strictly confidential.</p>
+        <p style="font-size:12px;font-weight:400;color:rgba(253,250,247,0.62);line-height:1.7;margin-top:14px;">Confidential inquiries only.<br>All communications are strictly confidential.</p>
       </div>
     </div>
     <div class="footer__bottom">

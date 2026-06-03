@@ -35,6 +35,9 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
 button { font-family: inherit; cursor: pointer; }
+p, li, h1, h2, h3, h4, a, button {
+  overflow-wrap: break-word;
+}
 
 /* ── Navigation ── */
 .nav {
@@ -151,9 +154,9 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ── Section label ── */
 .label {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold);
 }
@@ -195,11 +198,11 @@ button { font-family: inherit; cursor: pointer; }
   color: rgba(253,250,247,0.82);
 }
 .tagline {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(28,28,40,0.5);
+  color: rgba(28,28,40,0.68);
 }
 .tagline--gold {
   color: var(--gold);
@@ -211,12 +214,12 @@ button { font-family: inherit; cursor: pointer; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  height: 50px;
+  min-height: 50px;
   padding: 0 30px;
   font-family: var(--font-sans);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: 0.22s;
   border: none;
@@ -231,7 +234,7 @@ button { font-family: inherit; cursor: pointer; }
 .btn--hero-light:hover { background: var(--warm-white); color: var(--charcoal); opacity: 0.86; }
 .btn--text-link {
   display: inline-flex; align-items: center; gap: 6px;
-  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--gold); background: none; border: none; padding: 0;
   height: auto; font-weight: 400;
   transition: gap 0.2s;
@@ -250,10 +253,10 @@ button { font-family: inherit; cursor: pointer; }
   padding: 24px;
 }
 .img-ph span {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(28,28,40,0.3);
+  color: rgba(28,28,40,0.56);
   max-width: 150px;
   line-height: 1.8;
 }
@@ -361,7 +364,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ── Footer ── */
 .footer {
   background: var(--charcoal);
-  color: rgba(253,250,247,0.8);
+  color: rgba(253,250,247,0.86);
   padding: 64px var(--pad-x) 32px;
 }
 .footer__grid {
@@ -383,17 +386,17 @@ button { font-family: inherit; cursor: pointer; }
   display: block;
 }
 .footer__tagline {
-  font-size: 11.5px;
-  font-weight: 300;
+  font-size: 12.5px;
+  font-weight: 400;
   line-height: 1.8;
-  color: rgba(253,250,247,0.42);
+  color: rgba(253,250,247,0.62);
   max-width: 180px;
 }
 .footer__col-head {
-  font-size: 9px;
-  letter-spacing: 0.18em;
+  font-size: 11px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(253,250,247,0.35);
+  color: rgba(253,250,247,0.56);
   margin-bottom: 18px;
   display: block;
 }
@@ -403,9 +406,9 @@ button { font-family: inherit; cursor: pointer; }
   gap: 11px;
 }
 .footer__links a {
-  font-size: 12.5px;
-  font-weight: 300;
-  color: rgba(253,250,247,0.65);
+  font-size: 13.5px;
+  font-weight: 400;
+  color: rgba(253,250,247,0.78);
   transition: color 0.2s;
 }
 .footer__links a:hover { color: var(--warm-white); }
@@ -418,7 +421,7 @@ button { font-family: inherit; cursor: pointer; }
   justify-content: space-between;
   align-items: center;
   font-size: 11px;
-  color: rgba(253,250,247,0.3);
+  color: rgba(253,250,247,0.52);
 }
 
 /* ── Responsive ── */
@@ -438,8 +441,14 @@ button { font-family: inherit; cursor: pointer; }
   .cta-banner__inner { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 600px) {
+  :root { --pad-x: clamp(22px, 6vw, 28px); }
+  .h1 { font-size: clamp(40px, 12vw, 52px); }
+  .h2 { font-size: clamp(34px, 10vw, 44px); }
+  .btn { width: 100%; justify-content: center; text-align: center; }
+  .nav__wordmark { font-size: 18px; letter-spacing: 0.22em; }
   .footer__grid { grid-template-columns: 1fr; gap: 36px; }
   .footer__bottom { flex-direction: column; gap: 10px; text-align: center; }
   .numbered-item { grid-template-columns: 1fr; }
+  .numbered-item > *:last-child { grid-column: auto; }
   .numbered-item__num { font-size: 36px; }
 }

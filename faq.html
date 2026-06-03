@@ -43,10 +43,10 @@
       padding: 48px 0 0;
     }
     .faq-group__label {
-      font-size: 10px;
-      letter-spacing: 0.18em;
+      font-size: 11px;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: rgba(28,28,40,0.4);
+      color: rgba(28,28,40,0.64);
       padding-top: 4px;
     }
     .faq-items { grid-column: 2; }
@@ -75,7 +75,7 @@
     .faq-question__icon {
       font-size: 20px;
       font-weight: 300;
-      color: rgba(28,28,40,0.4);
+      color: rgba(28,28,40,0.64);
       flex-shrink: 0;
       transition: transform 0.3s, color 0.2s;
       line-height: 1;
@@ -100,6 +100,11 @@
     .faq-footer-cta {
       background: var(--cream-mid);
       padding: clamp(60px,8vw,96px) var(--pad-x);
+    }
+    .faq-footer-cta__inner {
+      max-width: var(--max-w);
+      width: 100%;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 48px;
@@ -115,9 +120,10 @@
     @media (max-width: 960px) {
       .faq-hero { grid-template-columns: 1fr; }
       .faq-hero__image { order: 2; min-height: 300px; }
+      .faq-hero__image .site-image { min-height: 340px; }
       .faq-group__header { grid-template-columns: 1fr; gap: 8px; }
       .faq-items { grid-column: 1; }
-      .faq-footer-cta { grid-template-columns: 1fr; }
+      .faq-footer-cta__inner { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -303,8 +309,10 @@
 
   <!-- BOTTOM CTA -->
   <div class="faq-footer-cta">
-    <p class="faq-footer-cta__text">If it feels like the right fit,<br>let's start a conversation.</p>
-    <a href="/cdn-cgi/l/email-protection#1c7d7d77796e6f5c6e796f73706a79317d786a756f736e65327f7371" class="btn btn--dark">Request a conversation</a>
+    <div class="faq-footer-cta__inner">
+      <p class="faq-footer-cta__text">If it feels like the right fit,<br>let's start a conversation.</p>
+      <a href="/cdn-cgi/l/email-protection#1c7d7d77796e6f5c6e796f73706a79317d786a756f736e65327f7371" class="btn btn--dark">Request a conversation</a>
+    </div>
   </div>
 
   <!-- FOOTER -->
@@ -336,7 +344,7 @@
         <div class="footer__links">
           <a href="/cdn-cgi/l/email-protection#0f6e6e646a7d7c4f7d6a7c6063796a226e6b79667c607d76216c6062"><span class="__cf_email__" data-cfemail="e98888828c9b9aa99b8c9a86859f8cc4888d9f809a869b90c78a8684">[email&#160;protected]</span></a>
         </div>
-        <p style="font-size:11px;font-weight:300;color:rgba(253,250,247,0.38);line-height:1.7;margin-top:14px;">Confidential inquiries only.<br>All communications are strictly confidential.</p>
+        <p style="font-size:12px;font-weight:400;color:rgba(253,250,247,0.62);line-height:1.7;margin-top:14px;">Confidential inquiries only.<br>All communications are strictly confidential.</p>
       </div>
     </div>
     <div class="footer__bottom">
