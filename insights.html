@@ -9,14 +9,25 @@
     /* Hero */
     .ins-hero {
       display: grid;
-      grid-template-columns: 40fr 60fr;
+      grid-template-columns: 50fr 50fr;
       min-height: calc(100vh - var(--nav-h));
     }
     .ins-hero__text {
       padding: clamp(60px,8vw,100px) var(--pad-x);
       display: flex; flex-direction: column; justify-content: center;
     }
-    .ins-hero__image { position: relative; overflow: hidden; }
+    .ins-hero__image {
+      position: relative;
+      overflow: hidden;
+      min-width: 0;
+    }
+    .ins-hero__image .site-image {
+      width: 100%;
+      height: 100%;
+      min-height: calc(100vh - var(--nav-h));
+      object-fit: cover;
+      object-position: center center;
+    }
 
     /* Featured article */
     .featured {
@@ -156,7 +167,7 @@
       </div>
     </div>
     <div class="ins-hero__image">
-      <div class="img-ph" style="height:100%;min-height:calc(100vh - var(--nav-h));background:#BEB5AC;"><span>Atmospheric desk / study image placeholder</span></div>
+      <img class="site-image" src="assets/images/home-page-3.webp" alt="Quiet study interior with chair, shelves, and warm window light">
     </div>
   </section>
 

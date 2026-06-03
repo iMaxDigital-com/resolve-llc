@@ -8,14 +8,25 @@
   <style>
     .faq-hero {
       display: grid;
-      grid-template-columns: 40fr 60fr;
+      grid-template-columns: 50fr 50fr;
       min-height: calc(100vh - var(--nav-h));
     }
     .faq-hero__text {
       padding: clamp(60px,8vw,100px) var(--pad-x);
       display: flex; flex-direction: column; justify-content: center;
     }
-    .faq-hero__image { position: relative; overflow: hidden; }
+    .faq-hero__image {
+      position: relative;
+      overflow: hidden;
+      min-width: 0;
+    }
+    .faq-hero__image .site-image {
+      width: 100%;
+      height: 100%;
+      min-height: calc(100vh - var(--nav-h));
+      object-fit: cover;
+      object-position: center center;
+    }
 
     /* FAQ accordion */
     .faq-body {
@@ -139,7 +150,7 @@
       </div>
     </div>
     <div class="faq-hero__image">
-      <div class="img-ph" style="height:100%;min-height:calc(100vh - var(--nav-h));background:#C4BAB0;"><span>Atmospheric interior image placeholder</span></div>
+      <img class="site-image" src="assets/images/home-page-5.webp" alt="Quiet wall with soft natural shadows">
     </div>
   </section>
 

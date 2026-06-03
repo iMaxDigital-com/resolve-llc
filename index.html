@@ -83,7 +83,7 @@
     /* ── Home 2: A different way ── */
     .home-2 {
       display: grid;
-      grid-template-columns: 55fr 45fr;
+      grid-template-columns: 50fr 50fr;
       min-height: 80vh;
     }
     .home-2__text {
@@ -92,8 +92,13 @@
       flex-direction: column;
       justify-content: center;
     }
-    .home-2__image { position: relative; overflow: hidden; }
-    .home-2__image .site-image { min-height: 560px; }
+    .home-2__image { position: relative; overflow: hidden; min-width: 0; }
+    .home-2__image .site-image {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      object-fit: cover;
+    }
     .home-2__tagline {
       font-size: 11px;
       font-weight: 400;
@@ -130,9 +135,14 @@
       grid-template-columns: 1fr 1fr;
       min-height: 80vh;
     }
-    .home-3__image { position: relative; overflow: hidden; }
+    .home-3__image { position: relative; overflow: hidden; min-width: 0; }
     .home-3__image .img-ph { background: #C4BDB5; height: 100%; min-height: 560px; }
-    .home-3__image .site-image { min-height: 560px; }
+    .home-3__image .site-image {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      object-fit: cover;
+    }
     .home-3__text {
       padding: clamp(70px, 9vw, 110px) var(--pad-x);
       display: flex;

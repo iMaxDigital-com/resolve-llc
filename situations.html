@@ -8,7 +8,7 @@
   <style>
     .sit-hero {
       display: grid;
-      grid-template-columns: 40fr 60fr;
+      grid-template-columns: 50fr 50fr;
       min-height: calc(100vh - var(--nav-h));
     }
     .sit-hero__text {
@@ -17,7 +17,18 @@
       flex-direction: column;
       justify-content: center;
     }
-    .sit-hero__image { position: relative; overflow: hidden; }
+    .sit-hero__image {
+      position: relative;
+      overflow: hidden;
+      min-width: 0;
+    }
+    .sit-hero__image .site-image {
+      width: 100%;
+      height: 100%;
+      min-height: calc(100vh - var(--nav-h));
+      object-fit: cover;
+      object-position: center center;
+    }
 
     /* Cards grid */
     .situations-grid {
@@ -116,7 +127,7 @@
       </div>
     </div>
     <div class="sit-hero__image">
-      <div class="img-ph" style="height:100%;min-height:calc(100vh - var(--nav-h));background:#C8BFBA;"><span>Atmospheric interior room image placeholder</span></div>
+      <img class="site-image" src="assets/images/situations-hero.webp" alt="Sunlit interior room with a chair and warm architectural shadows">
     </div>
   </section>
 
