@@ -29,54 +29,10 @@
       object-position: center center;
     }
 
-    /* Featured insight */
-    .featured {
-      padding: clamp(70px,9vw,110px) var(--pad-x);
-      background: var(--cream);
-    }
-    .featured__inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: center;
-    }
-    .featured__img-wrap {
-      position: relative;
-      overflow: hidden;
-    }
-    .featured__img-wrap .site-image {
-      min-height: 480px;
-      object-fit: cover;
-    }
-    .featured__title {
-      font-family: var(--font-serif);
-      font-size: clamp(28px,3.2vw,46px);
-      font-weight: 400;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-    .featured__rule {
-      width: 36px;
-      height: 1px;
-      background: var(--gold);
-      margin-bottom: 20px;
-    }
-    .featured__excerpt {
-      font-size: clamp(17px, 1.18vw, 19px);
-      font-weight: 400;
-      line-height: 1.78;
-      color: rgba(28,28,40,0.86);
-      margin-bottom: 28px;
-    }
-
     @media (max-width: 960px) {
       .ins-hero { grid-template-columns: 1fr; }
       .ins-hero__image { order: 2; min-height: 300px; }
       .ins-hero__image .site-image { min-height: 340px; }
-      .featured__inner { grid-template-columns: 1fr; gap: 36px; }
-      .featured__img-wrap .site-image { min-height: 340px; }
     }
   </style>
 </head>
@@ -116,28 +72,6 @@
     </div>
   </section>
 
-  <!-- INSIGHT COMPLEMENT -->
-  <div class="featured">
-    <div class="featured__inner">
-      <div class="featured__img-wrap">
-        <img class="site-image" src="assets/images/home-page-4.webp" alt="Quiet architectural doorway with warm light and shadow">
-      </div>
-      <div class="featured__text">
-        <h2 class="featured__title">Most conflicts escalate for a simple reason.</h2>
-        <div class="featured__rule"></div>
-        <p class="featured__excerpt">Escalation is rarely about what people are arguing about. It's about what's underneath it.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA BANNER -->
-  <div class="cta-banner">
-    <div class="cta-banner__inner">
-      <p class="cta-banner__text">Thoughtful perspective can change the direction of a situation.</p>
-      <a href="/cdn-cgi/l/email-protection#2b4a4a404e59586b594e5844475d4e064a4f5d425844595205484446" class="btn btn--dark">Request a conversation</a>
-    </div>
-  </div>
-
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__grid">
@@ -156,11 +90,8 @@
         </div>
       </div>
       <div>
-        <span class="footer__col-head">Legal</span>
-        <div class="footer__links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-        </div>
+        <span class="footer__col-head">Disclaimer</span>
+        <p class="footer__disclaimer">Resolve Advisory does not provide legal, tax, investment, psychological, or therapeutic advice.</p>
       </div>
       <div>
         <span class="footer__col-head">Contact</span>
@@ -168,7 +99,6 @@
           <a href="tel:+19177508987">P: +1 917 750 8987</a>
           <a href="mailto:aakers@resolve-advisory.com">E: aakers@resolve-advisory.com</a>
         </div>
-        <p style="font-size:13.5px;font-weight:400;color:rgba(253,250,247,0.62);line-height:1.7;margin-top:14px;">Address<br>18 6th Avenue #3417,<br>Brooklyn, New York, 11217</p>
       </div>
     </div>
     <div class="footer__bottom">
