@@ -11,6 +11,10 @@
       display: grid;
       grid-template-columns: 60fr 40fr;
       min-height: max(620px, calc(100vh - var(--nav-h)));
+      background-image: url('assets/images/about-page-1-image-and-photo.webp');
+      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
       overflow: visible;
     }
     .about-hero__text {
@@ -19,19 +23,11 @@
       flex-direction: column;
       justify-content: space-between;
       gap: 40px;
-      border-right: 1px solid var(--divider);
+      background: rgba(243,237,230,0.9);
+      border-right: 1px solid rgba(28,28,40,0.12);
       position: relative;
       overflow: visible;
       isolation: isolate;
-    }
-    .about-hero__text-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.13;
-      z-index: -1;
     }
     .about-hero__main {}
     .about-hero__pullquote {
@@ -75,18 +71,6 @@
     .about-hero__image {
       position: relative;
       overflow: hidden;
-    }
-    .about-hero__image .img-ph {
-      height: 100%;
-      min-height: calc(100vh - var(--nav-h));
-      background: #C8BFBA;
-    }
-    .about-hero__image .site-image {
-      min-height: 100%;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: right -200px center;
     }
     .about-hero__cta { margin-top: 24px; }
 
@@ -164,10 +148,9 @@
 
     @media (max-width: 960px) {
       .about-hero, .about-2 { grid-template-columns: 1fr; }
-      .about-hero { height: auto; min-height: 0; overflow: visible; }
+      .about-hero { height: auto; min-height: 0; overflow: visible; background-position: center top; }
       .about-hero__image { min-height: 360px; order: -1; }
-      .about-hero__image .img-ph { min-height: 360px; }
-      .about-hero__image .site-image { min-height: 360px; }
+      .about-hero__text { background: rgba(243,237,230,0.94); }
       .about-2__image { min-height: 300px; }
       .about-2__image .site-image { min-height: 340px; }
       .about-2__image::before { display: none; }
@@ -204,7 +187,6 @@
   <!-- ABOUT HERO -->
   <section class="about-hero">
     <div class="about-hero__text">
-      <img class="about-hero__text-bg" src="assets/images/about-page-1-image.webp" alt="">
       <div class="about-hero__main">
         <span class="label">About</span>
         <div class="rule"></div>
@@ -250,9 +232,7 @@
         </div>
       </div>
     </div>
-    <div class="about-hero__image">
-      <img class="site-image site-image--right" src="assets/images/about-page-1-image-and-photo.webp" alt="Andrew Akers in a suit standing against a soft architectural background">
-    </div>
+    <div class="about-hero__image" aria-hidden="true"></div>
   </section>
 
   <!-- ABOUT 2: How I see conflict -->
