@@ -68,7 +68,13 @@ p, li, h1, h2, h3, h4, a, button {
   height: auto;
   display: block;
 }
-.nav--dark .nav__wordmark img,
+.nav__wordmark .nav__logo--light { display: none; }
+.nav--dark .nav__logo--dark { display: none; }
+.nav--dark .nav__logo--light { display: block; }
+.nav--light .nav__logo--dark,
+.nav.open .nav__logo--dark { display: block; }
+.nav--light .nav__logo--light,
+.nav.open .nav__logo--light { display: none; }
 .footer__wordmark img {
   filter: drop-shadow(0 0 1px rgba(253,250,247,0.72));
 }
