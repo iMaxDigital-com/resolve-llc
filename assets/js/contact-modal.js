@@ -63,10 +63,15 @@
           </div>
           <label class="contact-modal__confirm">
             <input type="checkbox" data-contact-confirm>
-            <span>I've read the above text.</span>
+            <span><strong>I've read the above text.</strong></span>
           </label>
+          <button class="btn btn--dark contact-modal__continue" type="button" data-contact-continue disabled>Continue to the form</button>
         </div>
-        <div class="contact-modal__form" data-contact-form></div>
+        <div class="contact-modal__form-step" data-contact-form-step>
+          <button class="contact-modal__back" type="button" data-contact-back>Back to note</button>
+          <h2 class="contact-modal__form-title">Schedule a Short Initial Conversation</h2>
+          <div class="contact-modal__form" data-contact-form></div>
+        </div>
       </div>
     `;
 
@@ -113,12 +118,15 @@
     const modal = createModal();
     const dialog = modal.querySelector('.contact-modal__dialog');
     const checkbox = modal.querySelector('[data-contact-confirm]');
+    const continueButton = modal.querySelector('[data-contact-continue]');
+    const backButton = modal.querySelector('[data-contact-back]');
     const formContainer = modal.querySelector('[data-contact-form]');
     let lastFocusedElement = null;
 
     function openModal(event) {
       event.preventDefault();
       lastFocusedElement = document.activeElement;
+      modal.classList.remove('is-form-step');
       modal.classList.add('is-open');
       document.body.classList.add('modal-open');
       dialog.focus();
@@ -146,7 +154,21 @@
 
     checkbox.addEventListener('change', () => {
       modal.classList.toggle('has-confirmed', checkbox.checked);
-      if (checkbox.checked) renderForm(formContainer);
+      continueButton.disabled = !checkbox.checked;
+    });
+
+    continueButton.addEventListener('click', () => {
+      if (!checkbox.checked) return;
+      modal.classList.add('is-form-step');
+      renderForm(formContainer);
+      dialog.scrollTop = 0;
+      backButton.focus();
+    });
+
+    backButton.addEventListener('click', () => {
+      modal.classList.remove('is-form-step');
+      dialog.scrollTop = 0;
+      continueButton.focus();
     });
 
     document.addEventListener('keydown', (event) => {

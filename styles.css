@@ -397,8 +397,8 @@ body.modal-open { overflow: hidden; }
 .contact-modal__dialog {
   position: relative;
   z-index: 1;
-  width: min(100%, 760px);
-  max-height: min(92vh, 860px);
+  width: min(100%, 780px);
+  max-height: min(94vh, 900px);
   overflow: auto;
   background: var(--cream);
   color: var(--text);
@@ -460,28 +460,65 @@ body.modal-open { overflow: hidden; }
 .contact-modal__confirm {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin-top: 26px;
-  font-size: 15px;
+  gap: 16px;
+  margin-top: 30px;
+  padding: 18px 20px;
+  border: 1px solid rgba(184,145,106,0.46);
+  border-radius: 8px;
+  background: rgba(253,250,247,0.68);
+  box-shadow: inset 4px 0 0 var(--gold);
+  font-size: 17px;
   line-height: 1.5;
-  color: rgba(28,28,40,0.88);
+  color: var(--text);
 }
 .contact-modal__confirm input {
-  width: 18px;
-  height: 18px;
-  margin-top: 2px;
+  width: 24px;
+  height: 24px;
+  margin-top: 0;
   accent-color: var(--gold);
   flex-shrink: 0;
 }
-.contact-modal__form {
+.contact-modal__continue {
+  margin-top: 18px;
+}
+.contact-modal__continue:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+.contact-modal__form-step {
   display: none;
-  height: 592px;
-  margin: 0 clamp(18px, 5vw, 52px) clamp(24px, 5vw, 52px);
+  padding: clamp(34px, 5vw, 52px);
+}
+.contact-modal.is-form-step .contact-modal__intro { display: none; }
+.contact-modal.is-form-step .contact-modal__form-step { display: block; }
+.contact-modal.is-form-step .contact-modal__dialog {
+  width: min(100%, 940px);
+}
+.contact-modal__back {
+  border: none;
+  background: transparent;
+  color: rgba(28,28,40,0.72);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0;
+  margin-bottom: 18px;
+}
+.contact-modal__back:hover { color: var(--text); }
+.contact-modal__form-title {
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 3.6vw, 44px);
+  font-weight: 400;
+  line-height: 1.08;
+  margin-bottom: 24px;
+}
+.contact-modal__form {
+  min-height: 592px;
+  height: min(592px, calc(94vh - 210px));
   overflow: hidden;
   border-radius: 8px;
   background: var(--warm-white);
 }
-.contact-modal.has-confirmed .contact-modal__form { display: block; }
 
 /* ── Footer ── */
 .footer {
@@ -574,7 +611,10 @@ body.modal-open { overflow: hidden; }
   .cta-banner { flex-direction: column; align-items: flex-start; }
   .cta-banner__inner { flex-direction: column; align-items: flex-start; }
   .contact-modal__dialog { max-height: 94vh; }
-  .contact-modal__form { margin-inline: 18px; }
+  .contact-modal__form {
+    height: min(592px, calc(94vh - 190px));
+    min-height: 520px;
+  }
 }
 @media (max-width: 600px) {
   :root { --pad-x: clamp(22px, 6vw, 28px); }
@@ -588,4 +628,12 @@ body.modal-open { overflow: hidden; }
   .numbered-item { grid-template-columns: 1fr; }
   .numbered-item > *:last-child { grid-column: auto; }
   .numbered-item__num { font-size: 36px; }
+  .contact-modal { padding: 10px; }
+  .contact-modal__intro,
+  .contact-modal__form-step { padding: 28px 18px; }
+  .contact-modal__confirm { padding: 16px; }
+  .contact-modal__form {
+    height: calc(94vh - 170px);
+    min-height: 480px;
+  }
 }
