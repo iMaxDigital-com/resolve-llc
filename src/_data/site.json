@@ -1,0 +1,82 @@
+{
+  "contactModal": {
+    "closeLabel": "Close",
+    "eyebrow": "Before you continue",
+    "title": "Before You Schedule a Conversation",
+    "introParagraphs": [
+      "Thank you for your interest in Resolve Advisory.",
+      "Resolve works with individuals, business owners, investors, and families facing difficult situations involving relationships, money, ownership, leadership, and family matters.",
+      "Many clients come to Resolve because they feel stuck. Conversations have become difficult. Trust has eroded. Important decisions need to be made, but emotions, uncertainty, or conflict are making it hard to move forward."
+    ],
+    "sections": [
+      {
+        "heading": "What Resolve Does",
+        "paragraphs": [
+          "I advise one side in a conflict or difficult situation.",
+          "I help clients think clearly, evaluate options, prepare for important conversations, communicate more effectively, and move toward resolution.",
+          "Depending on the situation, I may remain entirely in the background as an advisor, or I may participate more directly in discussions and negotiations."
+        ],
+        "items": [],
+        "closingParagraphs": []
+      },
+      {
+        "heading": "What Resolve Is Not",
+        "paragraphs": [
+          "Resolve is not mediation. I do not represent both sides.",
+          "Resolve is not therapy.",
+          "Resolve is not legal representation.",
+          "While I often work alongside attorneys, accountants, therapists, financial advisors, and other professionals, my role is different. I provide independent advice, perspective, and judgment to help clients navigate difficult situations."
+        ],
+        "items": [],
+        "closingParagraphs": []
+      },
+      {
+        "heading": "Typical Situations",
+        "paragraphs": [],
+        "items": [
+          "Business partnership disputes",
+          "Ownership and investor conflicts",
+          "Leadership disagreements",
+          "Family business issues",
+          "Divorce-related decision support",
+          "Inheritance and estate conflicts",
+          "Family conflict and estrangement",
+          "Difficult conversations where significant relationships or financial interests are involved"
+        ],
+        "closingParagraphs": []
+      },
+      {
+        "heading": "Working Together",
+        "paragraphs": [
+          "Every situation is different.",
+          "The process begins with a Short Initial Conversation, typically lasting 15-20 minutes. The purpose is to understand the situation, answer questions, and determine whether there is a potential fit.",
+          "I am selective about the matters I accept and do not take every engagement.",
+          "If we decide to work together, most engagements begin with a minimum commitment of $2,500, which is applied toward future advisory work. I also maintain office hours at $650 per hour for clients seeking limited guidance or a second opinion."
+        ],
+        "items": [],
+        "closingParagraphs": []
+      },
+      {
+        "heading": "A Good Fit",
+        "paragraphs": [
+          "You may be a good fit for Resolve if:"
+        ],
+        "items": [
+          "You want clarity, not just validation.",
+          "You are open to candid advice.",
+          "You are looking for resolution, not unnecessary escalation.",
+          "You are willing to consider perspectives beyond your own.",
+          "You value judgment, discretion, and practical guidance."
+        ],
+        "closingParagraphs": [
+          "If this sounds like your situation, I invite you to schedule a Short Initial Conversation."
+        ]
+      }
+    ],
+    "confirmationLabel": "I've read the above text.",
+    "continueButtonLabel": "Continue to the form",
+    "backButtonLabel": "Back to note",
+    "formTitle": "Schedule a Short Initial Conversation",
+    "successMessage": "Thank you for scheduling this appointment.  I look forward to speaking with you."
+  }
+}

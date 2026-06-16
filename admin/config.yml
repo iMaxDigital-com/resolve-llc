@@ -669,6 +669,89 @@ collections:
                 name: ctaLabel
                 widget: string
 
+  - name: settings
+    label: Site Settings
+    files:
+      - label: Contact Modal
+        name: contactModal
+        file: src/_data/site.json
+        format: json
+        fields:
+          - label: Contact Modal
+            name: contactModal
+            widget: object
+            hint: "Controls the text inside the modal opened by Request a conversation buttons."
+            fields:
+              - label: Close Button Label
+                name: closeLabel
+                widget: string
+                hint: "Accessible label for the modal close button."
+
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                hint: "Small label at the top of the modal intro."
+
+              - label: Modal Title
+                name: title
+                widget: string
+                hint: "Large title at the top of the modal intro."
+
+              - label: Intro Paragraphs
+                name: introParagraphs
+                widget: list
+                hint: "Opening paragraphs before the modal subsections. Each item becomes one paragraph."
+
+              - label: Content Sections
+                name: sections
+                widget: list
+                summary: "{{heading}}"
+                hint: "Repeated content sections in the modal. The design and order are controlled by the template."
+                fields:
+                  - label: Section Heading
+                    name: heading
+                    widget: string
+
+                  - label: Paragraphs Before List
+                    name: paragraphs
+                    widget: list
+                    hint: "Paragraphs shown below this section heading."
+
+                  - label: Bullet Items
+                    name: items
+                    widget: list
+                    hint: "Optional bullet items for this section."
+
+                  - label: Paragraphs After List
+                    name: closingParagraphs
+                    widget: list
+                    hint: "Optional paragraphs shown after the bullet list."
+
+              - label: Confirmation Checkbox Text
+                name: confirmationLabel
+                widget: string
+                hint: "Text beside the checkbox the user must select before continuing."
+
+              - label: Continue Button Label
+                name: continueButtonLabel
+                widget: string
+                hint: "Button text that moves from the note to the embedded form."
+
+              - label: Back Button Label
+                name: backButtonLabel
+                widget: string
+                hint: "Button text shown above the embedded form."
+
+              - label: Form Step Title
+                name: formTitle
+                widget: string
+                hint: "Heading shown above the embedded scheduling form."
+
+              - label: Success Message
+                name: successMessage
+                widget: text
+                hint: "Message shown after the embedded form reports a completed submission."
+
   - name: insights
     label: Insights
     label_singular: Insight
