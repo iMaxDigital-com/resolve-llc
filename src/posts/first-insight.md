@@ -1,9 +1,9 @@
 ---
-title: First Insight
+title: Second Insight
 slug: first-insight
 description: This is a test article for the Resolve insights section.
 date: 2026-06-16
-coverImage: https://picsum.photos/id/24/1920/1280.webp
+coverImage: /uploads/Ectoplasm_mockup_sem cor de fundo.png
 published: true
 ---
 
