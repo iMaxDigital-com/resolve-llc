@@ -256,6 +256,7 @@ collections:
                 name: paragraphs
                 widget: list
                 hint: "Paragraphs under the main About headline. Each list item becomes one paragraph."
+                required: false
 
               - label: Pullquote
                 name: pullquote
@@ -412,16 +413,19 @@ collections:
                     name: bodyBefore
                     widget: list
                     hint: "Paragraphs shown before the bullet list in this step."
+                    required: false
 
                   - label: Bullet Items
                     name: items
                     widget: list
                     hint: "Bullet items for this process step."
+                    required: false
 
                   - label: Closing Paragraphs
                     name: bodyAfter
                     widget: list
                     hint: "Paragraphs shown after the bullet list in this step."
+                    required: false
 
           - label: Selectivity and Engagement Section
             name: engagement
@@ -445,6 +449,7 @@ collections:
                     name: items
                     widget: list
                     hint: "Optional bullet list for this column."
+                    required: false
 
           - label: CTA Banner
             name: ctaBanner
@@ -716,16 +721,19 @@ collections:
                     name: paragraphs
                     widget: list
                     hint: "Paragraphs shown below this section heading."
+                    required: false
 
                   - label: Bullet Items
                     name: items
                     widget: list
                     hint: "Optional bullet items for this section."
+                    required: false
 
                   - label: Paragraphs After List
                     name: closingParagraphs
                     widget: list
                     hint: "Optional paragraphs shown after the bullet list."
+                    required: false
 
               - label: Confirmation Checkbox Text
                 name: confirmationLabel
