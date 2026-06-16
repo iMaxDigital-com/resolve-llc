@@ -1,0 +1,25 @@
+{
+  "name": "resolve-llc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonhbretas/resolve-llc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonhbretas/resolve-llc/issues"
+  },
+  "homepage": "https://github.com/jonhbretas/resolve-llc#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}
