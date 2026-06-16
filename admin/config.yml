@@ -16,183 +16,198 @@ collections:
       - label: Home
         name: home
         file: src/_data/pages/home.json
+        format: json
         fields:
-          - label: SEO
+          - label: SEO Settings
             name: seo
             widget: object
+            hint: "Controls the browser title and search/social description for the homepage. This content is not visible in the page body."
             fields:
               - label: SEO Title
                 name: title
                 widget: string
+                hint: "Appears in the browser tab and search results as the homepage title."
 
               - label: SEO Description
                 name: description
                 widget: text
+                hint: "Used as the homepage meta description for search engines and previews."
 
-          - label: Hero
+          - label: Hero Section
             name: hero
             widget: object
+            hint: "Controls the first full-screen section at the top of the homepage."
             fields:
-              - label: Hero Title
+              - label: Main Headline
                 name: title
                 widget: object
+                hint: "The large headline over the hero image. Each field appears on its own line."
                 fields:
-                  - label: Line 1
+                  - label: Headline Line 1
                     name: line1
                     widget: string
+                    hint: "First line of the large hero headline."
 
-                  - label: Line 2
+                  - label: Headline Line 2
                     name: line2
                     widget: string
+                    hint: "Second line of the large hero headline."
 
-                  - label: Emphasized Line
+                  - label: Italic Headline Line
                     name: emphasis
                     widget: string
+                    hint: "Final italic line of the large hero headline."
 
-              - label: Hero Description Paragraphs
+              - label: Hero Body Paragraphs
                 name: paragraphs
                 widget: list
-                field:
-                  label: Paragraph
-                  name: paragraph
-                  widget: text
+                hint: "Short paragraphs below the hero headline. Each list item becomes one paragraph."
 
               - label: Hero CTA Label
                 name: ctaLabel
                 widget: string
+                hint: "Text on the hero button below the opening paragraphs."
 
-          - label: A Different Way Section
+          - label: Intro Section
             name: approach
             widget: object
+            hint: "Controls the section immediately below the hero, beside the second homepage image."
             fields:
               - label: Section Heading
                 name: heading
                 widget: object
+                hint: "Main heading for the intro section. The emphasized word appears in italic."
                 fields:
                   - label: Heading Text
                     name: text
                     widget: string
+                    hint: "The normal text before the italic word in the intro heading."
 
                   - label: Emphasized Word
                     name: emphasis
                     widget: string
+                    hint: "The italic word at the end of the intro heading."
 
               - label: Section Paragraphs
                 name: paragraphs
                 widget: list
-                field:
-                  label: Paragraph
-                  name: paragraph
-                  widget: text
+                hint: "Paragraphs under the intro heading. Each list item becomes one paragraph."
 
               - label: Footer Tagline
                 name: footerTag
                 widget: string
+                hint: "Small uppercase tagline at the bottom of the intro section."
 
-          - label: One Side Section
+          - label: Featured/Advisory Section
             name: oneSide
             widget: object
+            hint: "Controls the section explaining that Resolve advises one side, next to the third homepage image."
             fields:
               - label: Section Heading
                 name: heading
                 widget: object
+                hint: "Two-line heading for the advisory section."
                 fields:
-                  - label: Line 1
+                  - label: Heading Line 1
                     name: line1
                     widget: string
+                    hint: "First line of the advisory section heading."
 
-                  - label: Line 2
+                  - label: Heading Line 2
                     name: line2
                     widget: string
+                    hint: "Second line of the advisory section heading."
 
               - label: Section Paragraphs
                 name: paragraphs
                 widget: list
-                field:
-                  label: Paragraph
-                  name: paragraph
-                  widget: text
+                hint: "Paragraphs explaining the advisory role. Each list item becomes one paragraph."
 
               - label: Italic Closing Line
                 name: italic
                 widget: string
+                hint: "Italic sentence shown below the advisory section paragraphs."
 
-          - label: Escalation Section
+          - label: Conflict Escalation Section
             name: escalation
             widget: object
+            hint: "Controls the full-width section about why conflicts escalate, with a quote on the right."
             fields:
               - label: Section Heading
                 name: heading
                 widget: object
+                hint: "Three-line heading on the left side of the conflict escalation section."
                 fields:
-                  - label: Line 1
+                  - label: Heading Line 1
                     name: line1
                     widget: string
+                    hint: "First line of the escalation section heading."
 
-                  - label: Line 2
+                  - label: Heading Line 2
                     name: line2
                     widget: string
+                    hint: "Second line of the escalation section heading."
 
-                  - label: Line 3
+                  - label: Heading Line 3
                     name: line3
                     widget: string
+                    hint: "Third line of the escalation section heading."
 
               - label: Section Paragraphs
                 name: paragraphs
                 widget: list
-                field:
-                  label: Paragraph
-                  name: paragraph
-                  widget: text
+                hint: "Body paragraphs on the left side of the escalation section. Each list item becomes one paragraph."
 
               - label: Quote
                 name: quote
                 widget: text
+                hint: "Large italic quote shown on the right side of the escalation section."
 
-          - label: Use Cases Section
+          - label: Situations Section
             name: useCases
             widget: object
+            hint: "Controls the three-column section describing where this work is most useful."
             fields:
               - label: Section Heading
                 name: heading
                 widget: string
+                hint: "Large heading above the three situations columns."
 
               - label: Intro Paragraphs
                 name: intro
                 widget: list
-                field:
-                  label: Paragraph
-                  name: paragraph
-                  widget: text
+                hint: "Short intro paragraphs below the situations heading. Each list item becomes one paragraph."
 
               - label: Columns
                 name: columns
                 widget: list
-                summary: "{{fields.title}}"
+                summary: "{{title}}"
+                hint: "The three visible columns in the situations section. Keep these aligned with the existing layout."
                 fields:
                   - label: Column Heading
                     name: title
                     widget: string
+                    hint: "Heading shown at the top of this situations column."
 
                   - label: Items
                     name: items
                     widget: list
-                    field:
-                      label: Item
-                      name: item
-                      widget: text
+                    hint: "Bullet items in this situations column. Each list item becomes one bullet."
 
           - label: CTA Banner
             name: ctaBanner
             widget: object
+            hint: "Controls the call-to-action strip near the bottom of the homepage, just above the footer."
             fields:
               - label: CTA Text
                 name: text
                 widget: string
+                hint: "Sentence shown on the left side of the bottom CTA banner."
 
               - label: CTA Button Label
                 name: ctaLabel
                 widget: string
+                hint: "Text on the button in the bottom CTA banner."
 
   - name: insights
     label: Insights
