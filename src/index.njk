@@ -509,23 +509,8 @@
       <a href="#">Privacy</a>
     </div>
   </footer>
-
-    // Nav scroll behavior: dark on hero, light below
-    const nav = document.getElementById('nav');
-    const hero = document.getElementById('hero');
-    function updateNav() {
-      const heroBottom = hero.offsetHeight;
-      if (window.scrollY > heroBottom - 80) {
-        nav.classList.remove('nav--dark');
-        nav.classList.add('nav--light');
-      } else {
-        nav.classList.remove('nav--light');
-        nav.classList.add('nav--dark');
-      }
-    }
-    window.addEventListener('scroll', updateNav, { passive: true });
-    updateNav();
-  </script>
+</script>
   <script src="/assets/js/contact-modal.js"></script>
+  <script src="/assets/js/nav-scroll.js"></script>
 </body>
 </html>
