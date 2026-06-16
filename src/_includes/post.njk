@@ -3,41 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} | Resolve</title>
-  <meta name="description" content="{{ description }}">
+
+  <title>{{ title }} | Resolve Advisory</title>
+
+  {% if description %}
+    <meta name="description" content="{{ description }}">
+  {% endif %}
+
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
+
 <body>
 
-  <main class="post-page">
-    <section class="post-hero">
-      <div class="container">
-        <a href="/insights/" class="back-link">← Back to Insights</a>
+  {% include "site-header.njk" %}
 
-        <p class="eyebrow">Insight</p>
-        <h1>{{ title }}</h1>
+  <main class="blog-post-page">
+
+    <section id="hero" class="blog-post-hero">
+      <div class="blog-post-hero__inner">
+
+        <a href="/insights/" class="blog-post-back">← Back to Insights</a>
+
+        <span class="label">Insight</span>
+        <div class="rule"></div>
+
+        <h1 class="blog-post-title">{{ title }}</h1>
 
         {% if description %}
-          <p class="post-description">{{ description }}</p>
+          <p class="blog-post-description">{{ description }}</p>
         {% endif %}
 
         {% if date %}
-          <p class="post-date">{{ date }}</p>
+          <p class="blog-post-date">{{ date }}</p>
         {% endif %}
 
-        {% if coverImage %}
-          <img src="{{ coverImage }}" alt="{{ title }}" class="post-cover">
-        {% endif %}
       </div>
     </section>
 
-    <section class="post-content-section">
-      <div class="container post-content">
+    {% if coverImage %}
+      <section class="blog-post-cover-section">
+        <div class="blog-post-cover-wrap">
+          <img src="{{ coverImage }}" alt="{{ title }}" class="blog-post-cover">
+        </div>
+      </section>
+    {% endif %}
+
+    <section class="blog-post-content-section">
+      <article class="blog-post-content">
         {{ content | safe }}
+      </article>
+    </section>
+
+    <section class="blog-post-related-cta">
+      <div class="blog-post-related-cta__inner">
+        <span class="label">Resolve Advisory</span>
+        <div class="rule"></div>
+
+        <h2>Need help navigating a complex situation?</h2>
+        <p>Learn how Resolve Advisory helps individuals, families, and organizations approach sensitive decisions with clarity.</p>
+
+        <a href="/how-it-works/" class="blog-post-cta-link">See how it works</a>
       </div>
     </section>
+
   </main>
 
+  {% include "site-footer.njk" %}
+
   <script src="/assets/js/contact-modal.js"></script>
+  <script src="/assets/js/nav-scroll.js"></script>
 </body>
 </html>
