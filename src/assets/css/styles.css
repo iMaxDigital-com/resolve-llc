@@ -601,14 +601,15 @@ body.modal-open { overflow: hidden; }
 }
 .footer__newsletter {
   max-width: var(--max-w);
-  margin: 0 auto 40px;
-  padding: 34px 0 38px;
+  margin: 0 auto 28px;
+  padding: 28px 0 30px;
   border-top: 1px solid rgba(253,250,247,0.09);
   border-bottom: 1px solid rgba(253,250,247,0.09);
   display: grid;
-  grid-template-columns: minmax(220px, 0.35fr) minmax(0, 0.65fr);
-  gap: 48px;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 520px);
+  gap: 40px;
   align-items: start;
+  justify-content: space-between;
 }
 .footer__newsletter-text {
   font-size: 13.5px;
@@ -618,7 +619,7 @@ body.modal-open { overflow: hidden; }
   max-width: 360px;
 }
 .footer__newsletter-form {
-  min-height: 400px;
+  height: 230px;
   overflow: hidden;
   border-radius: 4px;
   background: rgba(253,250,247,0.04);
