@@ -1,6 +1,6 @@
 ---
 title: Second Insight
-slug: first-insight
+slug: second-insight
 description: This is a test article for the Resolve insights section.
 date: 2026-06-16
 coverImage: /uploads/Ectoplasm_mockup_sem cor de fundo.png
