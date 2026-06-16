@@ -11,7 +11,7 @@ public_folder: /uploads
 
 collections:
   - name: pages
-    label: Site Pages
+    label: Pages
     files:
       - label: Home
         name: home
@@ -208,6 +208,466 @@ collections:
                 name: ctaLabel
                 widget: string
                 hint: "Text on the button in the bottom CTA banner."
+
+      - label: About
+        name: about
+        file: src/_data/pages/about.json
+        format: json
+        fields:
+          - label: SEO Settings
+            name: seo
+            widget: object
+            hint: "Controls the browser title and search/social description for the About page."
+            fields:
+              - label: SEO Title
+                name: title
+                widget: string
+                hint: "Appears in the browser tab and search results for the About page."
+
+              - label: SEO Description
+                name: description
+                widget: text
+                hint: "Used as the About page meta description."
+
+          - label: Hero Section
+            name: hero
+            widget: object
+            hint: "Controls the opening About section with the portrait background, pullquote, pillars, and button."
+            fields:
+              - label: Small Label
+                name: label
+                widget: string
+                hint: "Small label above the main About headline."
+
+              - label: Main Headline
+                name: heading
+                widget: object
+                hint: "Two-line headline in the About hero."
+                fields:
+                  - label: Headline Line 1
+                    name: line1
+                    widget: string
+
+                  - label: Headline Line 2
+                    name: line2
+                    widget: string
+
+              - label: Intro Paragraphs
+                name: paragraphs
+                widget: list
+                hint: "Paragraphs under the main About headline. Each list item becomes one paragraph."
+
+              - label: Pullquote
+                name: pullquote
+                widget: object
+                hint: "Italic pullquote below the intro paragraphs."
+                fields:
+                  - label: Pullquote Line 1
+                    name: line1
+                    widget: string
+
+                  - label: Pullquote Line 2
+                    name: line2
+                    widget: string
+
+                  - label: Emphasized Word
+                    name: emphasis
+                    widget: string
+                    hint: "Italic final word in the pullquote."
+
+              - label: Pillars
+                name: pillars
+                widget: list
+                summary: "{{title}}"
+                hint: "The three small text blocks beneath the About hero intro. Icons are fixed by the template."
+                fields:
+                  - label: Pillar Title
+                    name: title
+                    widget: string
+
+                  - label: Pillar Body
+                    name: body
+                    widget: text
+
+              - label: Hero Button Label
+                name: ctaLabel
+                widget: string
+                hint: "Text on the About hero button."
+
+          - label: Conflict Section
+            name: conflict
+            widget: object
+            hint: "Controls the 'How I see conflict' section beside the second About image."
+            fields:
+              - label: Small Label
+                name: label
+                widget: string
+
+              - label: Section Heading
+                name: heading
+                widget: string
+
+              - label: Section Paragraphs
+                name: paragraphs
+                widget: list
+                hint: "Paragraphs in the conflict section. Each list item becomes one paragraph."
+
+          - label: Principles Section
+            name: principles
+            widget: list
+            summary: "{{number}} — {{heading}}"
+            hint: "The repeated numbered principles near the bottom of the About page."
+            fields:
+              - label: Number
+                name: number
+                widget: string
+                hint: "Visible number for this principle, such as 01."
+
+              - label: Heading
+                name: heading
+                widget: string
+
+              - label: Paragraphs
+                name: paragraphs
+                widget: list
+                hint: "Body paragraphs for this principle."
+
+          - label: CTA Banner
+            name: ctaBanner
+            widget: object
+            hint: "Controls the call-to-action banner above the footer."
+            fields:
+              - label: CTA Text
+                name: text
+                widget: string
+
+              - label: CTA Button Label
+                name: ctaLabel
+                widget: string
+
+      - label: How It Works
+        name: howItWorks
+        file: src/_data/pages/howItWorks.json
+        format: json
+        fields:
+          - label: SEO Settings
+            name: seo
+            widget: object
+            hint: "Controls the browser title and search/social description for the How It Works page."
+            fields:
+              - label: SEO Title
+                name: title
+                widget: string
+
+              - label: SEO Description
+                name: description
+                widget: text
+
+          - label: Hero Section
+            name: hero
+            widget: object
+            hint: "Controls the opening How It Works hero beside the hero image."
+            fields:
+              - label: Small Label
+                name: label
+                widget: string
+
+              - label: Kicker Text
+                name: kicker
+                widget: string
+                hint: "Small line under the label. It currently begins with a line break to match the existing layout."
+
+              - label: Main Headline
+                name: heading
+                widget: string
+
+              - label: Body Paragraphs
+                name: paragraphs
+                widget: list
+                hint: "Paragraphs below the hero headline."
+
+          - label: Process Section
+            name: process
+            widget: object
+            hint: "Controls the three process steps."
+            fields:
+              - label: Section Label
+                name: label
+                widget: string
+
+              - label: Steps
+                name: steps
+                widget: list
+                summary: "{{number}} — {{title}}"
+                fields:
+                  - label: Number
+                    name: number
+                    widget: string
+
+                  - label: Step Title
+                    name: title
+                    widget: string
+
+                  - label: Intro Paragraphs
+                    name: bodyBefore
+                    widget: list
+                    hint: "Paragraphs shown before the bullet list in this step."
+
+                  - label: Bullet Items
+                    name: items
+                    widget: list
+                    hint: "Bullet items for this process step."
+
+                  - label: Closing Paragraphs
+                    name: bodyAfter
+                    widget: list
+                    hint: "Paragraphs shown after the bullet list in this step."
+
+          - label: Selectivity and Engagement Section
+            name: engagement
+            widget: object
+            hint: "Controls the two dark columns below the process section."
+            fields:
+              - label: Columns
+                name: columns
+                widget: list
+                summary: "{{title}}"
+                fields:
+                  - label: Column Title
+                    name: title
+                    widget: string
+
+                  - label: Paragraphs
+                    name: paragraphs
+                    widget: list
+
+                  - label: Bullet Items
+                    name: items
+                    widget: list
+                    hint: "Optional bullet list for this column."
+
+          - label: CTA Banner
+            name: ctaBanner
+            widget: object
+            hint: "Controls the call-to-action banner above the footer."
+            fields:
+              - label: CTA Text
+                name: text
+                widget: string
+
+              - label: CTA Button Label
+                name: ctaLabel
+                widget: string
+
+      - label: Situations
+        name: situations
+        file: src/_data/pages/situations.json
+        format: json
+        fields:
+          - label: SEO Settings
+            name: seo
+            widget: object
+            hint: "Controls the browser title and search/social description for the Situations page."
+            fields:
+              - label: SEO Title
+                name: title
+                widget: string
+
+              - label: SEO Description
+                name: description
+                widget: text
+
+          - label: Hero Section
+            name: hero
+            widget: object
+            hint: "Controls the opening Situations hero beside the hero image."
+            fields:
+              - label: Small Label
+                name: label
+                widget: string
+
+              - label: Main Headline
+                name: heading
+                widget: string
+
+              - label: Body Paragraphs
+                name: paragraphs
+                widget: list
+
+          - label: Situation Cards
+            name: cards
+            widget: list
+            summary: "{{title}}"
+            hint: "The six cards in the Situations grid. Icons and card layout are fixed by the template."
+            fields:
+              - label: Card Title
+                name: title
+                widget: string
+
+              - label: Card Body
+                name: body
+                widget: text
+
+          - label: Closing CTA
+            name: closingCta
+            widget: object
+            hint: "Controls the text link section below the Situations cards."
+            fields:
+              - label: CTA Text
+                name: text
+                widget: string
+
+              - label: CTA Link Label
+                name: ctaLabel
+                widget: string
+                hint: "Text for the text-style link. The arrow spacing is preserved in this value."
+
+      - label: FAQ
+        name: faq
+        file: src/_data/pages/faq.json
+        format: json
+        fields:
+          - label: SEO Settings
+            name: seo
+            widget: object
+            hint: "Controls the browser title and search/social description for the FAQ page."
+            fields:
+              - label: SEO Title
+                name: title
+                widget: string
+
+              - label: SEO Description
+                name: description
+                widget: text
+
+          - label: Hero Section
+            name: hero
+            widget: object
+            hint: "Controls the opening FAQ hero beside the hero image."
+            fields:
+              - label: Small Label
+                name: label
+                widget: string
+
+              - label: Main Headline
+                name: heading
+                widget: string
+
+              - label: Body Paragraphs
+                name: paragraphs
+                widget: list
+
+          - label: FAQ Groups
+            name: groups
+            widget: list
+            summary: "{{label}}"
+            hint: "Question groups in the accordion. The accordion behavior is fixed by the template."
+            fields:
+              - label: Group Label
+                name: label
+                widget: string
+
+              - label: Questions
+                name: items
+                widget: list
+                summary: "{{question}}"
+                fields:
+                  - label: Question
+                    name: question
+                    widget: string
+
+                  - label: Answer Paragraphs
+                    name: answer
+                    widget: list
+                    hint: "Each list item becomes one paragraph in the answer."
+
+          - label: CTA Banner
+            name: ctaBanner
+            widget: object
+            hint: "Controls the bottom CTA section above the footer."
+            fields:
+              - label: CTA Text
+                name: text
+                widget: string
+                hint: "Text supports the existing <br> line break used in this banner."
+
+              - label: CTA Button Label
+                name: ctaLabel
+                widget: string
+
+      - label: Insights Page
+        name: insights
+        file: src/_data/pages/insights.json
+        format: json
+        fields:
+          - label: SEO Settings
+            name: seo
+            widget: object
+            hint: "Controls the browser title and search/social description for the Insights landing page."
+            fields:
+              - label: SEO Title
+                name: title
+                widget: string
+
+              - label: SEO Description
+                name: description
+                widget: text
+
+          - label: Hero Section
+            name: hero
+            widget: object
+            hint: "Controls the opening Insights hero beside the hero image."
+            fields:
+              - label: Small Label
+                name: label
+                widget: string
+
+              - label: Main Headline
+                name: heading
+                widget: string
+
+              - label: Body Paragraphs
+                name: paragraphs
+                widget: list
+
+          - label: Featured Insight Section
+            name: featured
+            widget: object
+            hint: "Controls the static featured text block above the blog post list."
+            fields:
+              - label: Featured Title
+                name: title
+                widget: string
+
+              - label: Featured Excerpt
+                name: excerpt
+                widget: text
+
+          - label: Blog List Heading
+            name: listIntro
+            widget: object
+            hint: "Controls the label and heading immediately above the dynamic blog post cards."
+            fields:
+              - label: Small Label
+                name: label
+                widget: string
+
+              - label: Heading
+                name: heading
+                widget: string
+
+          - label: CTA Banner
+            name: ctaBanner
+            widget: object
+            hint: "Controls the call-to-action banner above the footer."
+            fields:
+              - label: CTA Text
+                name: text
+                widget: string
+
+              - label: CTA Button Label
+                name: ctaLabel
+                widget: string
 
   - name: insights
     label: Insights

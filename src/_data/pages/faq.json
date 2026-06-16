@@ -1,0 +1,144 @@
+{
+  "seo": {
+    "title": "FAQ — Resolve Advisory",
+    "description": "Questions about working with Resolve."
+  },
+  "hero": {
+    "label": "FAQ",
+    "heading": "Frequently asked questions.",
+    "paragraphs": [
+      "Questions about working with Resolve."
+    ]
+  },
+  "groups": [
+    {
+      "label": "Working Together",
+      "items": [
+        {
+          "question": "What kinds of situations do you work on?",
+          "answer": [
+            "Resolve works with individuals, business owners,\ninvestors, and leaders navigating conflict, difficult\nrelationships, or difficult decisions.",
+            "Common situations include business partnership disputes, leadership and ownership issues, investor conflicts, family conflict, divorce and separation, and difficult conversations where the stakes are significant.",
+            "If your situation is not listed, it is still worth a conversation. Every situation is unique."
+          ]
+        },
+        {
+          "question": "What happens during the initial conversation?",
+          "answer": [
+            "It begins with a Short Initial Conversation, typically lasting 10-15 minutes.",
+            "The purpose is to understand the situation, answer questions, and determine whether Resolve is the right fit.",
+            "If there is a fit, we discuss the most appropriate path forward."
+          ]
+        },
+        {
+          "question": "Do you work with both sides?",
+          "answer": [
+            "No. Resolve works with one side only. This is not mediation.",
+            "Resolve works with individuals, business owners,\ninvestors, and leaders navigating conflict, difficult\nrelationships, or difficult decisions.",
+            "That requires an undivided focus on your circumstances, your interests, and your path forward."
+          ]
+        },
+        {
+          "question": "Do you accept every client?",
+          "answer": [
+            "Intentionally selective.",
+            "Not every situation is appropriate for this kind of advisory relationship, and not every engagement is accepted.",
+            "The work is most effective when clients are willing to approach a situation with honesty, openness, discipline, and a genuine desire for clarity rather than escalation."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Engagement Structure",
+      "items": [
+        {
+          "question": "What makes Resolve different from a lawyer, mediator, therapist, or coach?",
+          "answer": [
+            "Lawyers, mediators, therapists, and coaches each serve important but different roles.",
+            "Resolve works with individuals, business owners,\ninvestors, and leaders navigating conflict, difficult\nrelationships, or difficult decisions.",
+            "My role is to help clients think clearly, evaluate options, communicate effectively, and navigate difficult situations with greater perspective and judgment.",
+            "Many clients work with attorneys, financial advisors, therapists, or other professionals at the same time. Resolve complements their expertise by focusing on the human, strategic, and decision-making aspects of the situation."
+          ]
+        },
+        {
+          "question": "Is this mediation?",
+          "answer": [
+            "No.",
+            "Mediation is a process in which a neutral third party works with all sides to help them reach a shared resolution.",
+            "Resolve advises one side in a conflict.",
+            "My role is to provide perspective, strategy, and guidance to help clients think clearly, communicate effectively, and move toward resolution where possible."
+          ]
+        },
+        {
+          "question": "Do you work alongside attorneys or other advisors?",
+          "answer": [
+            "Yes.",
+            "Resolve often works alongside attorneys, financial advisors, therapists, and other professionals.",
+            "Each brings a different perspective. My role is to help clients think clearly, navigate the human dynamics involved, and make better decisions throughout the process."
+          ]
+        },
+        {
+          "question": "Can you stay behind the scenes?",
+          "answer": [
+            "Yes.",
+            "Many clients prefer that the advisory relationship remain entirely private.",
+            "Resolve can work fully behind the scenes, helping clients think clearly, prepare for important conversations, and navigate difficult situations without any external visibility."
+          ]
+        },
+        {
+          "question": "Can you participate directly in conversations with the other side?",
+          "answer": [
+            "Yes, when appropriate.",
+            "Most of my work takes place behind the scenes, helping clients think clearly, prepare for important conversations, and evaluate options.",
+            "In some situations, however, direct involvement can be helpful. The appropriate role depends on the circumstances and what is most likely to support clarity, communication, and resolution."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Confidentiality",
+      "items": [
+        {
+          "question": "Are conversations confidential?",
+          "answer": [
+            "Yes.",
+            "All conversations and engagements are treated as strictly confidential.",
+            "Discretion is fundamental to this work."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Fees & Engagements",
+      "items": [
+        {
+          "question": "How are engagements structured?",
+          "answer": [
+            "Engagements begin with a Short Initial Conversation.s",
+            "There is no typical engagement. Some clients need a single strategic conversation. Others require ongoing advisory work over weeks or months as a situation develops.",
+            "Every situation is unique, but most clients invest between $2,500 and $5,000.",
+            "Some matters involving businesses, ownership interests, family wealth, or other significant financial considerations are broader in scope and may require a more extensive engagement.",
+            "If we decide to work together, I typically begin with a $2,500 retainer that is applied toward future advisory work."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Fit",
+      "items": [
+        {
+          "question": "What if my situation is not listed?",
+          "answer": [
+            "Every situation is unique.",
+            "The examples throughout the website represent some of the more common situations that bring people to Resolve, but they are not exhaustive.",
+            "If you are unsure whether Resolve is the right fit, the best next step is a Short Initial Conversation."
+          ]
+        }
+      ]
+    }
+  ],
+  "ctaBanner": {
+    "text": "If it feels like the right fit,<br>let's start a conversation.",
+    "ctaLabel": "Request a conversation"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "seo": {
+    "title": "Insights — Resolve Advisory",
+    "description": "Essays, observations, and principles drawn from decades of advising people through difficult conversations and high-stakes situations."
+  },
+  "hero": {
+    "label": "Insights",
+    "heading": "How I think about conflict",
+    "paragraphs": [
+      "Essays, observations, and principles drawn from decades of advising people through difficult conversations and high-stakes situations."
+    ]
+  },
+  "featured": {
+    "title": "Most conflicts escalate for a simple reason.",
+    "excerpt": "Escalation is rarely about what people are arguing about. It's about what's underneath it."
+  },
+  "listIntro": {
+    "label": "Latest insights",
+    "heading": "Recent thinking"
+  },
+  "ctaBanner": {
+    "text": "Thoughtful perspective can change the direction of a situation.",
+    "ctaLabel": "Request a conversation"
+  }
+}

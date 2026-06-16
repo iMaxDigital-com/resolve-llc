@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Resolve Advisory</title>
+  <title>{{ pages.about.seo.title }}</title>
+  <meta name="description" content="{{ pages.about.seo.description }}">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <style>
     /* ── About Hero: split portrait ── */
@@ -187,20 +188,16 @@
   <section class="about-hero">
     <div class="about-hero__text">
       <div class="about-hero__main">
-        <span class="label">About</span>
+        <span class="label">{{ pages.about.hero.label }}</span>
         <div class="rule"></div>
-        <h1 class="h1" style="margin-bottom:28px;">Who I am.<br>How I think.</h1>
+        <h1 class="h1" style="margin-bottom:28px;">{{ pages.about.hero.heading.line1 }}<br>{{ pages.about.hero.heading.line2 }}</h1>
         <div class="body-text" style="max-width:620px;">
-          <p>For more than four decades I have advised individuals, business owners, investors, and leaders through high-stakes decisions involving risk, relationships, ownership, and uncertainty.</p>
-          <p>My background is in investing. My experience is in
-people. My perspective is shaped by both professional
-experience and life experience. Today, I help clients
-move forward with greater clarity, perspective, and
-confidence.</p>
-          <p></p>
+          {% for paragraph in pages.about.hero.paragraphs %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
         </div>
         <div class="about-hero__pullquote">
-          Most conflicts don't need to be won.<br>They need to be <em>resolved.</em>
+          {{ pages.about.hero.pullquote.line1 }}<br>{{ pages.about.hero.pullquote.line2 }} <em>{{ pages.about.hero.pullquote.emphasis }}</em>
           <div class="rule" style="margin-top:12px;margin-bottom:0;"></div>
         </div>
       </div>
@@ -210,28 +207,28 @@ confidence.</p>
             <svg class="about-hero__pillar-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1" style="color:var(--gold);">
               <circle cx="16" cy="10" r="5"/><path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10"/>
             </svg>
-            <div class="about-hero__pillar-title">Investor Perspective</div>
-            <div class="about-hero__pillar-body">Clarity, discipline, risk assessment, and long-term thinking applied to human situations.</div>
+            <div class="about-hero__pillar-title">{{ pages.about.hero.pillars[0].title }}</div>
+            <div class="about-hero__pillar-body">{{ pages.about.hero.pillars[0].body }}</div>
           </div>
           <div class="about-hero__pillar">
             <svg class="about-hero__pillar-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1" style="color:var(--gold);">
               <circle cx="11" cy="10" r="4"/><circle cx="21" cy="10" r="4"/>
               <path d="M3 28c0-4.418 3.582-8 8-8"/><path d="M21 20c4.418 0 8 3.582 8 8"/>
             </svg>
-            <div class="about-hero__pillar-title">Human Understanding</div>
-            <div class="about-hero__pillar-body">Understanding that behind every conflict are people, relationships, and competing interests.</div>
+            <div class="about-hero__pillar-title">{{ pages.about.hero.pillars[1].title }}</div>
+            <div class="about-hero__pillar-body">{{ pages.about.hero.pillars[1].body }}</div>
           </div>
           <div class="about-hero__pillar">
             <svg class="about-hero__pillar-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1" style="color:var(--gold);">
               <path d="M16 4 C10 8 6 12 6 18 C6 24 10 28 16 28 C22 28 26 24 26 18 C26 12 22 8 16 4Z"/>
               <path d="M16 14 C14 16 14 20 16 22 C18 20 18 16 16 14Z"/>
             </svg>
-            <div class="about-hero__pillar-title">Life Experience</div>
-            <div class="about-hero__pillar-body">Business, marriage, divorce, parenting, and partnership. Perspective comes from experience.</div>
+            <div class="about-hero__pillar-title">{{ pages.about.hero.pillars[2].title }}</div>
+            <div class="about-hero__pillar-body">{{ pages.about.hero.pillars[2].body }}</div>
           </div>
         </div>
         <div class="about-hero__cta">
-          <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">Request a conversation</a>
+          <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">{{ pages.about.hero.ctaLabel }}</a>
         </div>
       </div>
     </div>
@@ -241,21 +238,13 @@ confidence.</p>
   <!-- ABOUT 2: How I see conflict -->
   <section class="about-2">
     <div class="about-2__text">
-      <span class="label">About</span>
+      <span class="label">{{ pages.about.conflict.label }}</span>
       <div class="rule"></div>
-      <h2 class="h2" style="margin-bottom:32px;">How I see conflict</h2>
+      <h2 class="h2" style="margin-bottom:32px;">{{ pages.about.conflict.heading }}</h2>
       <div class="body-text" style="max-width:500px;">
-        <p>Conflict is a natural part of business and life.</p>
-        <p>The real danger begins when conflict starts to impair judgment.</p>
-        <p>People react before they fully understand what is happening. Emotions rise. Assumptions harden. Communication becomes reactive.</p>
-        <p>Over time, the conflict itself often becomes the central problem.</p>
-        <p>Communication narrows.</p>
-        <p>Trust deteriorates.</p>
-        <p>Perspective narrows.</p>
-        <p>But even difficult situations often become more workable once they are understood clearly.</p>
-        <p>That does not mean every conflict resolves easily.</p>
-        <p>It means clarity changes what becomes possible.</p>
-        <p>Clarity before escalation.</p>
+        {% for paragraph in pages.about.conflict.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
       </div>
     </div>
     <div class="about-2__image">
@@ -266,51 +255,28 @@ confidence.</p>
   <!-- PRINCIPLES -->
   <div style="background:var(--cream);">
     <div class="principles">
+      {% for principle in pages.about.principles %}
       <div class="principle">
         <div>
-          <div class="principle__num">01</div>
+          <div class="principle__num">{{ principle.number }}</div>
           <div class="principle__num-line"></div>
         </div>
-        <div class="principle__heading">Conflict is rarely only about the surface issue.</div>
+        <div class="principle__heading">{{ principle.heading }}</div>
         <div class="principle__body">
-          <p>Business conflicts often involve trust, identity, control, fear, or years of accumulated misunderstanding.</p>
-          <p>Family conflicts frequently carry decades of history beneath a single conversation or event.</p>
-          <p>Part of the work is recognizing what is truly driving the situation, not just what appears on the surface.</p>
+          {% for paragraph in principle.paragraphs %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
         </div>
       </div>
-      <div class="principle">
-        <div>
-          <div class="principle__num">02</div>
-          <div class="principle__num-line"></div>
-        </div>
-        <div class="principle__heading">The objective is not victory.</div>
-        <div class="principle__body">
-          <p>Winning can come at a significant cost: relationships, reputation, emotional exhaustion, and years of unnecessary escalation.</p>
-          <p>The goal is not surrender. And it is not passivity.</p>
-          <p>The goal is resolution that restores movement, clarity, dignity, and perspective.</p>
-        </div>
-      </div>
-      <div class="principle">
-        <div>
-          <div class="principle__num">03</div>
-          <div class="principle__num-line"></div>
-        </div>
-        <div class="principle__heading">Clarity changes what becomes possible.</div>
-        <div class="principle__body">
-          <p>When people feel heard, understood, and respected, new options emerge.</p>
-          <p>When perspective returns, decisions improve.</p>
-          <p>When communication opens, relationships can heal and situations can move forward.</p>
-          <p>This is the foundation of the work I do.</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 
   <!-- CTA BANNER -->
   <div class="cta-banner">
     <div class="cta-banner__inner">
-      <p class="cta-banner__text">If it feels like the right fit, let's start a conversation.</p>
-      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">Request a conversation</a>
+      <p class="cta-banner__text">{{ pages.about.ctaBanner.text }}</p>
+      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">{{ pages.about.ctaBanner.ctaLabel }}</a>
     </div>
   </div>
 

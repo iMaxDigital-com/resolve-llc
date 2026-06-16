@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ — Resolve Advisory</title>
+  <title>{{ pages.faq.seo.title }}</title>
+  <meta name="description" content="{{ pages.faq.seo.description }}">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <style>
     .faq-hero {
@@ -154,12 +155,14 @@
   <!-- HERO -->
   <section class="faq-hero">
     <div class="faq-hero__text">
-      <span class="label">FAQ</span>
+      <span class="label">{{ pages.faq.hero.label }}</span>
       <div class="rule"></div>
-      <h1 class="h1" style="margin-bottom:28px;">Frequently asked questions.</h1>
+      <h1 class="h1" style="margin-bottom:28px;">{{ pages.faq.hero.heading }}</h1>
       <div class="rule" style="width:28px;"></div>
       <div class="body-text" style="max-width:380px;">
-        <p>Questions about working with Resolve.</p>
+        {% for paragraph in pages.faq.hero.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
       </div>
     </div>
     <div class="faq-hero__image">
@@ -171,192 +174,28 @@
   <div class="faq-body">
     <div class="faq-body__inner">
 
-      <!-- Working Together -->
+      {% for group in pages.faq.groups %}
       <div class="faq-group">
         <div class="faq-group__header">
-          <div class="faq-group__label">Working Together</div>
+          <div class="faq-group__label">{{ group.label }}</div>
           <div class="faq-items">
+            {% for item in group.items %}
             <div class="faq-item">
               <button class="faq-question" onclick="toggleFaq(this)">
-                What kinds of situations do you work on?
+                {{ item.question }}
                 <span class="faq-question__icon">+</span>
               </button>
               <div class="faq-answer">
-                <p>Resolve works with individuals, business owners,
-investors, and leaders navigating conflict, difficult
-relationships, or difficult decisions.</p>
-                <p>Common situations include business partnership disputes, leadership and ownership issues, investor conflicts, family conflict, divorce and separation, and difficult conversations where the stakes are significant.</p>
-                <p>If your situation is not listed, it is still worth a conversation. Every situation is unique.</p>
+                {% for paragraph in item.answer %}
+                <p>{{ paragraph }}</p>
+                {% endfor %}
               </div>
             </div>
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                What happens during the initial conversation?
-                <span class="faq-question__icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>It begins with a Short Initial Conversation, typically lasting 10-15 minutes.</p>
-                <p>The purpose is to understand the situation, answer questions, and determine whether Resolve is the right fit.</p>
-                <p>If there is a fit, we discuss the most appropriate path forward.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                Do you work with both sides?
-                <span class="faq-question__icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>No. Resolve works with one side only. This is not mediation.</p>
-                <p>Resolve works with individuals, business owners,
-investors, and leaders navigating conflict, difficult
-relationships, or difficult decisions.</p>
-                <p>That requires an undivided focus on your circumstances, your interests, and your path forward.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                Do you accept every client?
-                <span class="faq-question__icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>Intentionally selective.</p>
-                <p>Not every situation is appropriate for this kind of advisory relationship, and not every engagement is accepted.</p>
-                <p>The work is most effective when clients are willing to approach a situation with honesty, openness, discipline, and a genuine desire for clarity rather than escalation.</p>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
-
-      <!-- Engagement Structure -->
-      <div class="faq-group">
-        <div class="faq-group__header">
-          <div class="faq-group__label">Engagement Structure</div>
-          <div class="faq-items">
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                What makes Resolve different from a lawyer, mediator, therapist, or coach?
-                <span class="faq-question__icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>Lawyers, mediators, therapists, and coaches each serve important but different roles.</p>
-                <p>Resolve works with individuals, business owners,
-investors, and leaders navigating conflict, difficult
-relationships, or difficult decisions.</p>
-                <p>My role is to help clients think clearly, evaluate options, communicate effectively, and navigate difficult situations with greater perspective and judgment.</p>
-                <p>Many clients work with attorneys, financial advisors, therapists, or other professionals at the same time. Resolve complements their expertise by focusing on the human, strategic, and decision-making aspects of the situation.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                Is this mediation?
-                <span class="faq-question__icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>No.</p>
-                <p>Mediation is a process in which a neutral third party works with all sides to help them reach a shared resolution.</p>
-                <p>Resolve advises one side in a conflict.</p>
-                <p>My role is to provide perspective, strategy, and guidance to help clients think clearly, communicate effectively, and move toward resolution where possible.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                Do you work alongside attorneys or other advisors?
-                <span class="faq-question__icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>Yes.</p>
-                <p>Resolve often works alongside attorneys, financial advisors, therapists, and other professionals.</p>
-                <p>Each brings a different perspective. My role is to help clients think clearly, navigate the human dynamics involved, and make better decisions throughout the process.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                Can you stay behind the scenes?
-                <span class="faq-question__icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>Yes.</p>
-                <p>Many clients prefer that the advisory relationship remain entirely private.</p>
-                <p>Resolve can work fully behind the scenes, helping clients think clearly, prepare for important conversations, and navigate difficult situations without any external visibility.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                Can you participate directly in conversations with the other side?
-                <span class="faq-question__icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>Yes, when appropriate.</p>
-                <p>Most of my work takes place behind the scenes, helping clients think clearly, prepare for important conversations, and evaluate options.</p>
-                <p>In some situations, however, direct involvement can be helpful. The appropriate role depends on the circumstances and what is most likely to support clarity, communication, and resolution.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Confidentiality -->
-      <div class="faq-group">
-        <div class="faq-group__header">
-          <div class="faq-group__label">Confidentiality</div>
-          <div class="faq-items">
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                Are conversations confidential?
-                <span class="faq-question__icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>Yes.</p>
-                <p>All conversations and engagements are treated as strictly confidential.</p>
-                <p>Discretion is fundamental to this work.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fees & Engagements -->
-      <div class="faq-group">
-        <div class="faq-group__header">
-          <div class="faq-group__label">Fees &amp; Engagements</div>
-          <div class="faq-items">
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                How are engagements structured?
-                <span class="faq-question__icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>Engagements begin with a Short Initial Conversation.s</p>
-                <p>There is no typical engagement. Some clients need a single strategic conversation. Others require ongoing advisory work over weeks or months as a situation develops.</p>
-                <p>Every situation is unique, but most clients invest between $2,500 and $5,000.</p>
-                <p>Some matters involving businesses, ownership interests, family wealth, or other significant financial considerations are broader in scope and may require a more extensive engagement.</p>
-                <p>If we decide to work together, I typically begin with a $2,500 retainer that is applied toward future advisory work.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fit -->
-      <div class="faq-group">
-        <div class="faq-group__header">
-          <div class="faq-group__label">Fit</div>
-          <div class="faq-items">
-            <div class="faq-item">
-              <button class="faq-question" onclick="toggleFaq(this)">
-                What if my situation is not listed?
-                <span class="faq-question__icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>Every situation is unique.</p>
-                <p>The examples throughout the website represent some of the more common situations that bring people to Resolve, but they are not exhaustive.</p>
-                <p>If you are unsure whether Resolve is the right fit, the best next step is a Short Initial Conversation.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
   </div>
@@ -364,8 +203,8 @@ relationships, or difficult decisions.</p>
   <!-- BOTTOM CTA -->
   <div class="faq-footer-cta">
     <div class="faq-footer-cta__inner">
-      <p class="faq-footer-cta__text">If it feels like the right fit,<br>let's start a conversation.</p>
-      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">Request a conversation</a>
+      <p class="faq-footer-cta__text">{{ pages.faq.ctaBanner.text | safe }}</p>
+      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">{{ pages.faq.ctaBanner.ctaLabel }}</a>
     </div>
   </div>
 

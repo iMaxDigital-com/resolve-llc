@@ -1,0 +1,89 @@
+{
+  "seo": {
+    "title": "About — Resolve Advisory",
+    "description": "For more than four decades I have advised individuals, business owners, investors, and leaders through high-stakes decisions involving risk, relationships, ownership, and uncertainty."
+  },
+  "hero": {
+    "label": "About",
+    "heading": {
+      "line1": "Who I am.",
+      "line2": "How I think."
+    },
+    "paragraphs": [
+      "For more than four decades I have advised individuals, business owners, investors, and leaders through high-stakes decisions involving risk, relationships, ownership, and uncertainty.",
+      "My background is in investing. My experience is in\npeople. My perspective is shaped by both professional\nexperience and life experience. Today, I help clients\nmove forward with greater clarity, perspective, and\nconfidence.",
+      ""
+    ],
+    "pullquote": {
+      "line1": "Most conflicts don't need to be won.",
+      "line2": "They need to be",
+      "emphasis": "resolved."
+    },
+    "pillars": [
+      {
+        "title": "Investor Perspective",
+        "body": "Clarity, discipline, risk assessment, and long-term thinking applied to human situations."
+      },
+      {
+        "title": "Human Understanding",
+        "body": "Understanding that behind every conflict are people, relationships, and competing interests."
+      },
+      {
+        "title": "Life Experience",
+        "body": "Business, marriage, divorce, parenting, and partnership. Perspective comes from experience."
+      }
+    ],
+    "ctaLabel": "Request a conversation"
+  },
+  "conflict": {
+    "label": "About",
+    "heading": "How I see conflict",
+    "paragraphs": [
+      "Conflict is a natural part of business and life.",
+      "The real danger begins when conflict starts to impair judgment.",
+      "People react before they fully understand what is happening. Emotions rise. Assumptions harden. Communication becomes reactive.",
+      "Over time, the conflict itself often becomes the central problem.",
+      "Communication narrows.",
+      "Trust deteriorates.",
+      "Perspective narrows.",
+      "But even difficult situations often become more workable once they are understood clearly.",
+      "That does not mean every conflict resolves easily.",
+      "It means clarity changes what becomes possible.",
+      "Clarity before escalation."
+    ]
+  },
+  "principles": [
+    {
+      "number": "01",
+      "heading": "Conflict is rarely only about the surface issue.",
+      "paragraphs": [
+        "Business conflicts often involve trust, identity, control, fear, or years of accumulated misunderstanding.",
+        "Family conflicts frequently carry decades of history beneath a single conversation or event.",
+        "Part of the work is recognizing what is truly driving the situation, not just what appears on the surface."
+      ]
+    },
+    {
+      "number": "02",
+      "heading": "The objective is not victory.",
+      "paragraphs": [
+        "Winning can come at a significant cost: relationships, reputation, emotional exhaustion, and years of unnecessary escalation.",
+        "The goal is not surrender. And it is not passivity.",
+        "The goal is resolution that restores movement, clarity, dignity, and perspective."
+      ]
+    },
+    {
+      "number": "03",
+      "heading": "Clarity changes what becomes possible.",
+      "paragraphs": [
+        "When people feel heard, understood, and respected, new options emerge.",
+        "When perspective returns, decisions improve.",
+        "When communication opens, relationships can heal and situations can move forward.",
+        "This is the foundation of the work I do."
+      ]
+    }
+  ],
+  "ctaBanner": {
+    "text": "If it feels like the right fit, let's start a conversation.",
+    "ctaLabel": "Request a conversation"
+  }
+}

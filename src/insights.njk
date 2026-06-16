@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insights — Resolve Advisory</title>
+  <title>{{ pages.insights.seo.title }}</title>
+  <meta name="description" content="{{ pages.insights.seo.description }}">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <style>
     /* Hero */
@@ -102,12 +103,14 @@
   <!-- HERO -->
   <section class="ins-hero">
     <div class="ins-hero__text">
-      <span class="label">Insights</span>
+      <span class="label">{{ pages.insights.hero.label }}</span>
       <div class="rule"></div>
-      <h1 class="h1" style="margin-bottom:28px;">How I think about conflict</h1>
+      <h1 class="h1" style="margin-bottom:28px;">{{ pages.insights.hero.heading }}</h1>
       <div class="rule" style="width:28px;"></div>
       <div class="body-text" style="max-width:380px;">
-        <p>Essays, observations, and principles drawn from decades of advising people through difficult conversations and high-stakes situations.</p>
+        {% for paragraph in pages.insights.hero.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
       </div>
     </div>
     <div class="ins-hero__image">
@@ -122,9 +125,9 @@
         <img class="site-image" src="/assets/images/home-page-4.webp" alt="Quiet architectural doorway with warm light and shadow">
       </div>
       <div class="featured__text">
-        <h2 class="featured__title">Most conflicts escalate for a simple reason.</h2>
+        <h2 class="featured__title">{{ pages.insights.featured.title }}</h2>
         <div class="featured__rule"></div>
-        <p class="featured__excerpt">Escalation is rarely about what people are arguing about. It's about what's underneath it.</p>
+        <p class="featured__excerpt">{{ pages.insights.featured.excerpt }}</p>
       </div>
     </div>
   </div>
@@ -134,9 +137,9 @@
   <section class="featured">
     <div class="featured__inner" style="display:block;">
       <div style="max-width:680px;margin-bottom:48px;">
-        <span class="label">Latest insights</span>
+        <span class="label">{{ pages.insights.listIntro.label }}</span>
         <div class="rule"></div>
-        <h2 class="featured__title">Recent thinking</h2>
+        <h2 class="featured__title">{{ pages.insights.listIntro.heading }}</h2>
       </div>
 
       <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;">
@@ -164,8 +167,8 @@
   <!-- CTA BANNER -->
   <div class="cta-banner">
     <div class="cta-banner__inner">
-      <p class="cta-banner__text">Thoughtful perspective can change the direction of a situation.</p>
-      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">Request a conversation</a>
+      <p class="cta-banner__text">{{ pages.insights.ctaBanner.text }}</p>
+      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">{{ pages.insights.ctaBanner.ctaLabel }}</a>
     </div>
   </div>
 

@@ -1,0 +1,43 @@
+{
+  "seo": {
+    "title": "Situations — Resolve Advisory",
+    "description": "While every situation is unique, these are some of the circumstances that most often lead people to seek help."
+  },
+  "hero": {
+    "label": "Situations",
+    "heading": "Every situation is unique.",
+    "paragraphs": [
+      "While every situation is unique, these are some of the circumstances that most often lead people to seek help."
+    ]
+  },
+  "cards": [
+    {
+      "title": "Business Disputes",
+      "body": "Disagreements between partners involving trust, communication, decision-making, ownership, or the future direction of a business."
+    },
+    {
+      "title": "Leadership and Ownership Changes",
+      "body": "Founder conflict, succession challenges, leadership transitions, governance questions, or competing visions for the future."
+    },
+    {
+      "title": "Family Conflict",
+      "body": "Estrangement, inheritance and estate disputes, communication breakdowns, caregiving responsibilities, and long-standing family tensions."
+    },
+    {
+      "title": "Divorce and Separation",
+      "body": "Complex financial, parenting, and relationship dynamics that benefit from calm judgment and thoughtful strategy.\n"
+    },
+    {
+      "title": "Investor Conflicts",
+      "body": "Tensions involving investors, capital partners, financial expectations, control, transparency, or alignment of interests."
+    },
+    {
+      "title": "Ongoing Advisory",
+      "body": "Situations that benefit from ongoing perspective and strategic guidance over time."
+    }
+  ],
+  "closingCta": {
+    "text": "If your situation is not listed, it's still worth a conversation.",
+    "ctaLabel": "Request a conversation &nbsp;→"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "seo": {
+    "title": "How It Works — Resolve Advisory",
+    "description": "Every conflict is different. The process begins the same way."
+  },
+  "hero": {
+    "label": "How It Works",
+    "kicker": "<br>Every conflict is different. The process begins the same way.",
+    "heading": "How the work begins.",
+    "paragraphs": [
+      "Every situation is different.",
+      "Some clients need a single strategic conversation. Others benefit from ongoing guidance over time.",
+      "The work begins with a short initial conversation.",
+      "Most people contact Resolve when a conflict has become the central problem. The purpose of the conversation is to understand the situation, answer questions, and determine whether I can help.",
+      "I work with a limited number of clients and do not accept every engagement.",
+      "If there is a fit, we discuss the most appropriate next steps.",
+      "The goal is not immediate answers.",
+      "The goal is clarity before escalation."
+    ]
+  },
+  "process": {
+    "label": "The Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Short Initial Conversation",
+        "bodyBefore": [
+          "A brief discussion to understand:"
+        ],
+        "items": [
+          "the situation",
+          "what feels unresolved",
+          "whether Resolve is the right fit"
+        ],
+        "bodyAfter": []
+      },
+      {
+        "number": "02",
+        "title": "Clarity and Strategy",
+        "bodyBefore": [
+          "Together we may explore:"
+        ],
+        "items": [
+          "what is driving the conflict",
+          "options and risks",
+          "possible paths forward"
+        ],
+        "bodyAfter": [
+          "Helping you think clearly before acting reactively."
+        ]
+      },
+      {
+        "number": "03",
+        "title": "Ongoing Advisory",
+        "bodyBefore": [
+          "Some situations resolve quickly."
+        ],
+        "items": [],
+        "bodyAfter": [
+          "Others unfold over time. Support may continue behind the scenes as circumstances evolve."
+        ]
+      }
+    ]
+  },
+  "engagement": {
+    "columns": [
+      {
+        "title": "Selectivity",
+        "paragraphs": [
+          "Resolve is intentionally selective.",
+          "Not every situation is appropriate for this kind of advisory relationship, and not every engagement is accepted.",
+          "The work is most effective when clients approach a situation with:"
+        ],
+        "items": [
+          "honesty",
+          "openness",
+          "discipline",
+          "a genuine desire for clarity rather than escalation"
+        ]
+      },
+      {
+        "title": "Engagement",
+        "paragraphs": [
+          "All engagements begin with a complimentary Short Initial Conversation.",
+          "There is no typical engagement. Some clients need a single strategic conversation. Others benefit from ongoing advisory support over weeks or months as a situation develops.",
+          "Most client engagements involve several conversations over a period of time and typically range between $2,500 and $5,000.",
+          "Some matters involving businesses, ownership interests, family wealth, investor relationships, or other significant financial considerations are broader in scope and may require a more extensive engagement.",
+          "For situations that do not require a broader engagement, Office Hours are available at $650 per hour."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "ctaBanner": {
+    "text": "Some situations simply benefit from thoughtful outside perspective.",
+    "ctaLabel": "Request a conversation"
+  }
+}

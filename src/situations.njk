@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Situations — Resolve Advisory</title>
+  <title>{{ pages.situations.seo.title }}</title>
+  <meta name="description" content="{{ pages.situations.seo.description }}">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <style>
     .sit-hero {
@@ -121,12 +122,14 @@
   <!-- HERO -->
   <section class="sit-hero">
     <div class="sit-hero__text">
-      <span class="label">Situations</span>
+      <span class="label">{{ pages.situations.hero.label }}</span>
       <div class="rule"></div>
-      <h1 class="h1" style="margin-bottom:28px;">Every situation is unique.</h1>
+      <h1 class="h1" style="margin-bottom:28px;">{{ pages.situations.hero.heading }}</h1>
       <div class="rule" style="width:28px;"></div>
       <div class="body-text" style="max-width:380px;">
-        <p>While every situation is unique, these are some of the circumstances that most often lead people to seek help.</p>
+        {% for paragraph in pages.situations.hero.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
       </div>
     </div>
     <div class="sit-hero__image">
@@ -138,69 +141,47 @@
   <div class="situations-grid">
     <div class="situations-grid__inner">
 
+      {% for card in pages.situations.cards %}
       <div class="sit-card">
+        {% if loop.index == 1 %}
         <svg class="sit-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.1">
           <circle cx="13" cy="11" r="5"/><circle cx="23" cy="11" r="5"/>
           <path d="M3 32c0-5.523 4.477-10 10-10"/><path d="M23 22c5.523 0 10 4.477 10 10"/>
         </svg>
-        <div class="sit-card__title">Business Disputes</div>
-        <div class="sit-card__rule"></div>
-        <div class="sit-card__body">Disagreements between partners involving trust, communication, decision-making, ownership, or the future direction of a business.</div>
-      </div>
-
-      <div class="sit-card">
+        {% elif loop.index == 2 %}
         <svg class="sit-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.1">
           <rect x="14" y="4" width="8" height="28" rx="1"/>
           <path d="M14 12 L6 18 L14 24"/><path d="M22 12 L30 18 L22 24"/>
         </svg>
-        <div class="sit-card__title">Leadership and Ownership Changes</div>
-        <div class="sit-card__rule"></div>
-        <div class="sit-card__body">Founder conflict, succession challenges, leadership transitions, governance questions, or competing visions for the future.</div>
-      </div>
-
-      <div class="sit-card">
+        {% elif loop.index == 3 %}
         <svg class="sit-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.1">
           <path d="M4 32 L4 16 L18 6 L32 16 L32 32"/>
           <path d="M12 32 L12 22 L24 22 L24 32"/>
           <circle cx="18" cy="20" r="3"/>
         </svg>
-        <div class="sit-card__title">Family Conflict</div>
-        <div class="sit-card__rule"></div>
-        <div class="sit-card__body">Estrangement, inheritance and estate disputes, communication breakdowns, caregiving responsibilities, and long-standing family tensions.</div>
-      </div>
-
-      <div class="sit-card">
+        {% elif loop.index == 4 %}
         <svg class="sit-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.1">
           <circle cx="18" cy="11" r="6"/>
           <path d="M8 32c0-5.523 4.477-10 10-10s10 4.477 10 10"/>
           <path d="M12 20 L6 28 M24 20 L30 28"/>
         </svg>
-        <div class="sit-card__title">Divorce and Separation</div>
-        <div class="sit-card__rule"></div>
-        <div class="sit-card__body">Complex financial, parenting, and relationship dynamics that benefit from calm judgment and thoughtful strategy.
-</div>
-      </div>
-
-      <div class="sit-card">
+        {% elif loop.index == 5 %}
         <svg class="sit-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.1">
           <path d="M6 14 Q6 6 18 6 Q30 6 30 14 Q30 22 18 22 L12 28 L14 22 Q6 22 6 14Z"/>
         </svg>
-        <div class="sit-card__title">Investor Conflicts</div>
-        <div class="sit-card__rule"></div>
-        <div class="sit-card__body">Tensions involving investors, capital partners, financial expectations, control, transparency, or alignment of interests.</div>
-      </div>
-
-      <div class="sit-card">
+        {% elif loop.index == 6 %}
         <svg class="sit-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.1">
           <rect x="4" y="4" width="12" height="12" rx="2"/>
           <rect x="20" y="4" width="12" height="12" rx="2"/>
           <rect x="4" y="20" width="12" height="12" rx="2"/>
           <rect x="20" y="20" width="12" height="12" rx="2"/>
         </svg>
-        <div class="sit-card__title">Ongoing Advisory</div>
+        {% endif %}
+        <div class="sit-card__title">{{ card.title }}</div>
         <div class="sit-card__rule"></div>
-        <div class="sit-card__body">Situations that benefit from ongoing perspective and strategic guidance over time.</div>
+        <div class="sit-card__body">{{ card.body }}</div>
       </div>
+      {% endfor %}
 
     </div>
   </div>
@@ -208,8 +189,8 @@
   <!-- CLOSING CTA -->
   <div class="sit-cta">
     <div class="sit-cta__inner">
-      <p class="sit-cta__text">If your situation is not listed, it's still worth a conversation.</p>
-      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn--text-link">Request a conversation &nbsp;→</a>
+      <p class="sit-cta__text">{{ pages.situations.closingCta.text }}</p>
+      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn--text-link">{{ pages.situations.closingCta.ctaLabel | safe }}</a>
     </div>
   </div>
 

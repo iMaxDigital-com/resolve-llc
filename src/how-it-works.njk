@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How It Works — Resolve Advisory</title>
+  <title>{{ pages.howItWorks.seo.title }}</title>
+  <meta name="description" content="{{ pages.howItWorks.seo.description }}">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <style>
     /* Hero split */
@@ -195,20 +196,15 @@
   <!-- HERO -->
   <section class="hiw-hero">
     <div class="hiw-hero__text">
-      <span class="label">How It Works</span>
-        <p><br>Every conflict is different. The process begins the same way.</p>
+      <span class="label">{{ pages.howItWorks.hero.label }}</span>
+        <p>{{ pages.howItWorks.hero.kicker | safe }}</p>
       <div class="rule"></div>
-      <h1 class="h1" style="margin-bottom:28px;">How the work begins.</h1>
+      <h1 class="h1" style="margin-bottom:28px;">{{ pages.howItWorks.hero.heading }}</h1>
       <div class="rule" style="width:28px;"></div>
       <div class="body-text" style="max-width:400px;">
-        <p>Every situation is different.</p>
-        <p>Some clients need a single strategic conversation. Others benefit from ongoing guidance over time.</p>
-        <p>The work begins with a short initial conversation.</p>
-        <p>Most people contact Resolve when a conflict has become the central problem. The purpose of the conversation is to understand the situation, answer questions, and determine whether I can help.</p>
-        <p>I work with a limited number of clients and do not accept every engagement.</p>
-        <p>If there is a fit, we discuss the most appropriate next steps.</p>
-        <p>The goal is not immediate answers.</p>
-        <p>The goal is clarity before escalation.</p>
+        {% for paragraph in pages.howItWorks.hero.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
       </div>
     </div>
     <div class="hiw-hero__image">
@@ -219,46 +215,37 @@
   <!-- PROCESS -->
   <div class="process">
     <div class="process__inner">
-      <div class="process__label">The Process</div>
+      <div class="process__label">{{ pages.howItWorks.process.label }}</div>
       <div class="process__rule"></div>
       <div class="process__cols">
-        <div class="process__step">
-          <div class="process__num">01</div>
+        {% for step in pages.howItWorks.process.steps %}
+        <div class="process__step"{% if not loop.first %} style="padding-left:40px;"{% endif %}>
+          <div class="process__num">{{ step.number }}</div>
           <div class="process__num-rule"></div>
-          <div class="process__step-title">Short Initial Conversation</div>
+          <div class="process__step-title">{{ step.title }}</div>
+          {% if step.bodyBefore.length %}
           <div class="process__step-body">
-            <p>A brief discussion to understand:</p>
+            {% for paragraph in step.bodyBefore %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
           </div>
+          {% endif %}
+          {% if step.items.length %}
           <ul class="process__step-list">
-            <li>the situation</li>
-            <li>what feels unresolved</li>
-            <li>whether Resolve is the right fit</li>
+            {% for item in step.items %}
+            <li>{{ item }}</li>
+            {% endfor %}
           </ul>
-        </div>
-        <div class="process__step" style="padding-left:40px;">
-          <div class="process__num">02</div>
-          <div class="process__num-rule"></div>
-          <div class="process__step-title">Clarity and Strategy</div>
-          <div class="process__step-body"><p>Together we may explore:</p></div>
-          <ul class="process__step-list">
-            <li>what is driving the conflict</li>
-            <li>options and risks</li>
-            <li>possible paths forward</li>
-          </ul>
-          <div class="process__step-body" style="margin-top:18px;">
-            <p>Helping you think clearly before acting reactively.</p>
+          {% endif %}
+          {% if step.bodyAfter.length %}
+          <div class="process__step-body" style="margin-top:{% if loop.index == 2 %}18{% else %}12{% endif %}px;">
+            {% for paragraph in step.bodyAfter %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
           </div>
+          {% endif %}
         </div>
-        <div class="process__step" style="padding-left:40px;">
-          <div class="process__num">03</div>
-          <div class="process__num-rule"></div>
-          <div class="process__step-title">Ongoing Advisory</div>
-          <div class="process__step-body">
-            <p>Some situations resolve quickly.</p>
-          </div>
-          <div class="process__step-body" style="margin-top:12px;"><p>Others unfold over time. Support may continue behind the scenes as circumstances evolve.</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -266,41 +253,32 @@
   <!-- SELECTIVITY + ENGAGEMENT -->
   <div class="engagement">
     <div class="engagement__inner">
+      {% for column in pages.howItWorks.engagement.columns %}
       <div class="engagement__col">
-        <div class="engagement__title">Selectivity</div>
+        <div class="engagement__title">{{ column.title }}</div>
         <div class="engagement__rule"></div>
         <div class="engagement__body">
-          <p>Resolve is intentionally selective.</p>
-          <p>Not every situation is appropriate for this kind of advisory relationship, and not every engagement is accepted.</p>
-          <p>The work is most effective when clients approach a situation with:</p>
+          {% for paragraph in column.paragraphs %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
         </div>
+        {% if column.items.length %}
         <ul class="engagement__list">
-          <li>honesty</li>
-          <li>openness</li>
-          <li>discipline</li>
-          <li>a genuine desire for clarity rather than escalation</li>
+          {% for item in column.items %}
+          <li>{{ item }}</li>
+          {% endfor %}
         </ul>
+        {% endif %}
       </div>
-      <div class="engagement__col">
-        <div class="engagement__title">Engagement</div>
-        <div class="engagement__rule"></div>
-        <div class="engagement__body">
-          <p>All engagements begin with a complimentary Short Initial Conversation.</p>
-          <p>There is no typical engagement. Some clients need a single strategic conversation. Others benefit from ongoing advisory support over weeks or months as a situation develops.</p>
-          <p>Most client engagements involve several conversations over a period of time and typically range between $2,500 and $5,000.</p>
-          <p>Some matters involving businesses, ownership interests, family wealth, investor relationships, or other significant financial considerations are broader in scope and may require a more extensive engagement.
-          <p>For situations that do not require a broader engagement, Office Hours are available at $650 per hour.</p>
-          </p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 
   <!-- CTA BANNER -->
   <div class="cta-banner">
     <div class="cta-banner__inner">
-      <p class="cta-banner__text">Some situations simply benefit from thoughtful outside perspective.</p>
-      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">Request a conversation</a>
+      <p class="cta-banner__text">{{ pages.howItWorks.ctaBanner.text }}</p>
+      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">{{ pages.howItWorks.ctaBanner.ctaLabel }}</a>
     </div>
   </div>
 
