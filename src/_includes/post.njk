@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | Resolve</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+
+  <main class="post-page">
+    <section class="post-hero">
+      <div class="container">
+        <a href="/insights/" class="back-link">← Back to Insights</a>
+
+        <p class="eyebrow">Insight</p>
+        <h1>{{ title }}</h1>
+
+        {% if description %}
+          <p class="post-description">{{ description }}</p>
+        {% endif %}
+
+        {% if date %}
+          <p class="post-date">{{ date }}</p>
+        {% endif %}
+
+        {% if coverImage %}
+          <img src="{{ coverImage }}" alt="{{ title }}" class="post-cover">
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="post-content-section">
+      <div class="container post-content">
+        {{ content | safe }}
+      </div>
+    </section>
+  </main>
+
+  <script src="/assets/js/contact-modal.js"></script>
+</body>
+</html>

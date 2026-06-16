@@ -129,6 +129,38 @@
     </div>
   </div>
 
+  
+  <!-- INSIGHTS LIST -->
+  <section class="featured">
+    <div class="featured__inner" style="display:block;">
+      <div style="max-width:680px;margin-bottom:48px;">
+        <span class="label">Latest insights</span>
+        <div class="rule"></div>
+        <h2 class="featured__title">Recent thinking</h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;">
+        {% for post in collections.posts | reverse %}
+          {% if post.data.published %}
+            <a href="{{ post.url }}" style="display:block;text-decoration:none;color:inherit;background:#fff;">
+              {% if post.data.coverImage %}
+                <img src="{{ post.data.coverImage }}" alt="{{ post.data.title }}" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;">
+              {% endif %}
+
+              <div style="padding:28px;">
+                <h3 class="featured__title" style="font-size:28px;">{{ post.data.title }}</h3>
+
+                {% if post.data.description %}
+                  <p class="featured__excerpt">{{ post.data.description }}</p>
+                {% endif %}
+              </div>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
   <!-- CTA BANNER -->
   <div class="cta-banner">
     <div class="cta-banner__inner">
@@ -175,7 +207,6 @@
     </div>
   </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="/assets/js/contact-modal.js"></script>
 </body>
 </html>
