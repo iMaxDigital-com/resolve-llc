@@ -10,6 +10,190 @@ media_folder: uploads
 public_folder: /uploads
 
 collections:
+  - name: pages
+    label: Site Pages
+    files:
+      - label: Home
+        name: home
+        file: src/_data/pages/home.json
+        fields:
+          - label: SEO
+            name: seo
+            widget: object
+            fields:
+              - label: SEO Title
+                name: title
+                widget: string
+
+              - label: SEO Description
+                name: description
+                widget: text
+
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - label: Hero Title
+                name: title
+                widget: object
+                fields:
+                  - label: Line 1
+                    name: line1
+                    widget: string
+
+                  - label: Line 2
+                    name: line2
+                    widget: string
+
+                  - label: Emphasized Line
+                    name: emphasis
+                    widget: string
+
+              - label: Hero Description Paragraphs
+                name: paragraphs
+                widget: list
+                field:
+                  label: Paragraph
+                  name: paragraph
+                  widget: text
+
+              - label: Hero CTA Label
+                name: ctaLabel
+                widget: string
+
+          - label: A Different Way Section
+            name: approach
+            widget: object
+            fields:
+              - label: Section Heading
+                name: heading
+                widget: object
+                fields:
+                  - label: Heading Text
+                    name: text
+                    widget: string
+
+                  - label: Emphasized Word
+                    name: emphasis
+                    widget: string
+
+              - label: Section Paragraphs
+                name: paragraphs
+                widget: list
+                field:
+                  label: Paragraph
+                  name: paragraph
+                  widget: text
+
+              - label: Footer Tagline
+                name: footerTag
+                widget: string
+
+          - label: One Side Section
+            name: oneSide
+            widget: object
+            fields:
+              - label: Section Heading
+                name: heading
+                widget: object
+                fields:
+                  - label: Line 1
+                    name: line1
+                    widget: string
+
+                  - label: Line 2
+                    name: line2
+                    widget: string
+
+              - label: Section Paragraphs
+                name: paragraphs
+                widget: list
+                field:
+                  label: Paragraph
+                  name: paragraph
+                  widget: text
+
+              - label: Italic Closing Line
+                name: italic
+                widget: string
+
+          - label: Escalation Section
+            name: escalation
+            widget: object
+            fields:
+              - label: Section Heading
+                name: heading
+                widget: object
+                fields:
+                  - label: Line 1
+                    name: line1
+                    widget: string
+
+                  - label: Line 2
+                    name: line2
+                    widget: string
+
+                  - label: Line 3
+                    name: line3
+                    widget: string
+
+              - label: Section Paragraphs
+                name: paragraphs
+                widget: list
+                field:
+                  label: Paragraph
+                  name: paragraph
+                  widget: text
+
+              - label: Quote
+                name: quote
+                widget: text
+
+          - label: Use Cases Section
+            name: useCases
+            widget: object
+            fields:
+              - label: Section Heading
+                name: heading
+                widget: string
+
+              - label: Intro Paragraphs
+                name: intro
+                widget: list
+                field:
+                  label: Paragraph
+                  name: paragraph
+                  widget: text
+
+              - label: Columns
+                name: columns
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Column Heading
+                    name: title
+                    widget: string
+
+                  - label: Items
+                    name: items
+                    widget: list
+                    field:
+                      label: Item
+                      name: item
+                      widget: text
+
+          - label: CTA Banner
+            name: ctaBanner
+            widget: object
+            fields:
+              - label: CTA Text
+                name: text
+                widget: string
+
+              - label: CTA Button Label
+                name: ctaLabel
+                widget: string
+
   - name: insights
     label: Insights
     label_singular: Insight

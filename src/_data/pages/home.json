@@ -1,0 +1,101 @@
+{
+  "seo": {
+    "title": "Resolve Advisory",
+    "description": "Resolve is a private advisory practice for people navigating difficult conflicts involving business relationships, leadership, money, and family matters."
+  },
+  "hero": {
+    "title": {
+      "line1": "Most conflicts",
+      "line2": "don't need to be won.",
+      "emphasis": "They need to be resolved."
+    },
+    "paragraphs": [
+      "Resolve is a private advisory practice for people navigating difficult conflicts involving business relationships, leadership, money, and family matters.",
+      "I advise one side in a conflict, helping clients think clearly when emotions, emotions and competing interests.",
+      "Together we develop practical strategies, and next steps that move difficult situations toward resolution without unnecessary escalation.<br>This is not about victory.",
+      "It is about clarity, dignity, and a path forward."
+    ],
+    "ctaLabel": "Request a conversation"
+  },
+  "approach": {
+    "heading": {
+      "text": "A different way to approach",
+      "emphasis": "conflict"
+    },
+    "paragraphs": [
+      "Conflict is a normal part of business and life.<br>The real danger begins when conflict starts to impair judgment.",
+      "Emotions rise. Assumptions harden. Communication becomes reactive. Decisions become harder to make. Over time, the conflict itself often becomes the central problem.",
+      "Resolve exists to help clients regain perspective, evaluate options clearly, and move toward practical resolution before conflict causes additional damage."
+    ],
+    "footerTag": "Deliberate.&nbsp;&nbsp;Structured.&nbsp;&nbsp;Clear."
+  },
+  "oneSide": {
+    "heading": {
+      "line1": "I work with",
+      "line2": "one side."
+    },
+    "paragraphs": [
+      "This is not mediation.",
+      "I do not attempt to balance competing interests or facilitate a neutral outcome.",
+      "My role is to advise you — bringing perspective, judgment, and structure to situations where clarity is often lost.",
+      "Sometimes the work happens quietly behind the scenes. Sometimes it requires more direct involvement.",
+      "The approach depends on the situation.",
+      "The objective is not simply to win, punish, or provesomeone wrong."
+    ],
+    "italic": "The objective is to help you move forward clearly and deliberately."
+  },
+  "escalation": {
+    "heading": {
+      "line1": "Most conflicts",
+      "line2": "escalate for a",
+      "line3": "simple reason."
+    },
+    "paragraphs": [
+      "People react before they understand.",
+      "Emotions rise. Assumptions harden. Communication becomes reactive.",
+      "Over time, the conflict itself becomes the central problem. Decisions that once seemed straightforward become harder to make. Options narrow. Judgment becomes impaired.",
+      "Part of my role is helping clients slow the situation down long enough to regain perspective, evaluate options clearly, and move forward deliberately.",
+      "This requires discipline, timing, and restraint."
+    ],
+    "quote": "\"The goal is neither surrender nor passivity. The goal is resolution that allows movement, clarity, dignity, and perspective.\""
+  },
+  "useCases": {
+    "heading": "Some conflicts appear suddenly. Others develop slowly over time.",
+    "intro": [
+      "What they share is a growing loss of clarity, trust, communication, or alignment.",
+      "These situations are often emotionally charged, financially meaningful, or both."
+    ],
+    "columns": [
+      {
+        "title": "Business",
+        "items": [
+          "Partnerships that are no longer aligned.",
+          "Leadership tension that has become structural.",
+          "Investor relationships where trust or direction has broken down.",
+          "Negotiations that have stalled or turned adversarial."
+        ]
+      },
+      {
+        "title": "Personal / Family",
+        "items": [
+          "Situations where relationships and financial interests intersect.",
+          "Long-standing dynamics that have reached a breaking point.",
+          "Relationships that have become distant or estranged where resolution may still be possible.",
+          "Divorce or pre-divorce moments where early decisions matter."
+        ]
+      },
+      {
+        "title": "Before things escalate",
+        "items": [
+          "Situations where something feels off — but is not yet clear.",
+          "Moments where a conversation, decision, or response may shape what happens next.",
+          "This is often when perspective matters most."
+        ]
+      }
+    ]
+  },
+  "ctaBanner": {
+    "text": "If it feels like the right fit, let's start a conversation.",
+    "ctaLabel": "Request a conversation"
+  }
+}

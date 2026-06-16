@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resolve Advisory</title>
+  <title>{{ pages.home.seo.title }}</title>
+  <meta name="description" content="{{ pages.home.seo.description }}">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <style>
     /* ── Hero ── */
@@ -342,18 +343,16 @@
   <section class="hero" id="hero">
     <div class="hero__text">
       <h1 class="hero__headline">
-        Most conflicts<br>don't need to be won.<br><em>They need to be resolved.</em>
+        {{ pages.home.hero.title.line1 }}<br>{{ pages.home.hero.title.line2 }}<br><em>{{ pages.home.hero.title.emphasis }}</em>
       </h1>
       <div class="hero__rule"></div>
       <div class="hero__body">
-        <p>Resolve is a private advisory practice for people navigating difficult conflicts involving business relationships, leadership, money, and family matters.</p>
-        <p>I advise one side in a conflict, helping clients think clearly when emotions, emotions and competing interests.</p>
-        <p>Together we develop practical strategies, and next steps that move difficult situations toward resolution without unnecessary escalation.
-          <br>This is not about victory.</p>
-        <p>It is about clarity, dignity, and a path forward.</p>
+        {% for paragraph in pages.home.hero.paragraphs %}
+        <p>{{ paragraph | safe }}</p>
+        {% endfor %}
       </div>
       <div class="hero__cta">
-        <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--hero-light">Request a conversation</a>
+        <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--hero-light">{{ pages.home.hero.ctaLabel }}</a>
       </div>
     </div>
     <div class="hero__image">
@@ -365,13 +364,13 @@
   <section class="home-2">
     <div class="home-2__text">
       <div class="rule"></div>
-      <h2 class="home-2__heading">A different way to approach <em>conflict</em></h2>
+      <h2 class="home-2__heading">{{ pages.home.approach.heading.text }} <em>{{ pages.home.approach.heading.emphasis }}</em></h2>
       <div class="body-text">
-        <p>Conflict is a normal part of business and life.<br>The real danger begins when conflict starts to impair judgment.</p>
-        <p>Emotions rise. Assumptions harden. Communication becomes reactive. Decisions become harder to make. Over time, the conflict itself often becomes the central problem.</p>
-        <p>Resolve exists to help clients regain perspective, evaluate options clearly, and move toward practical resolution before conflict causes additional damage.</p>
+        {% for paragraph in pages.home.approach.paragraphs %}
+        <p>{{ paragraph | safe }}</p>
+        {% endfor %}
       </div>
-      <div class="home-2__footer-tag">Deliberate.&nbsp;&nbsp;Structured.&nbsp;&nbsp;Clear.</div>
+      <div class="home-2__footer-tag">{{ pages.home.approach.footerTag | safe }}</div>
       <div class="home-2__footer-rule"></div>
     </div>
     <div class="home-2__image">
@@ -386,17 +385,14 @@
     </div>
     <div class="home-3__text">
       <div class="rule"></div>
-      <h2 class="h2" style="max-width:400px;">I work with<br>one side.</h2>
+      <h2 class="h2" style="max-width:400px;">{{ pages.home.oneSide.heading.line1 }}<br>{{ pages.home.oneSide.heading.line2 }}</h2>
       <div class="rule"></div>
       <div class="body-text" style="max-width:440px;">
-        <p>This is not mediation.</p>
-        <p>I do not attempt to balance competing interests or facilitate a neutral outcome.</p>
-        <p>My role is to advise you — bringing perspective, judgment, and structure to situations where clarity is often lost.</p>
-        <p>Sometimes the work happens quietly behind the scenes. Sometimes it requires more direct involvement.</p>
-        <p>The approach depends on the situation.</p>
-        <p>The objective is not simply to win, punish, or provesomeone wrong.</p>
+        {% for paragraph in pages.home.oneSide.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
       </div>
-      <p class="home-3__italic">The objective is to help you move forward clearly and deliberately.</p>
+      <p class="home-3__italic">{{ pages.home.oneSide.italic }}</p>
     </div>
   </section>
 
@@ -406,17 +402,15 @@
     <div class="home-4__inner">
       <div class="home-4__left">
         <div class="rule" style="background:rgba(184,145,106,0.6);"></div>
-        <h2 class="home-4__heading">Most conflicts<br>escalate for a<br>simple reason.</h2>
+        <h2 class="home-4__heading">{{ pages.home.escalation.heading.line1 }}<br>{{ pages.home.escalation.heading.line2 }}<br>{{ pages.home.escalation.heading.line3 }}</h2>
         <div class="home-4__body">
-          <p>People react before they understand.</p>
-          <p>Emotions rise. Assumptions harden. Communication becomes reactive.</p>
-          <p>Over time, the conflict itself becomes the central problem. Decisions that once seemed straightforward become harder to make. Options narrow. Judgment becomes impaired.</p>
-          <p>Part of my role is helping clients slow the situation down long enough to regain perspective, evaluate options clearly, and move forward deliberately.</p>
-          <p>This requires discipline, timing, and restraint.</p>
+          {% for paragraph in pages.home.escalation.paragraphs %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
         </div>
       </div>
       <div class="home-4__right">
-        <p class="home-4__quote">"The goal is neither surrender nor passivity. The goal is resolution that allows movement, clarity, dignity, and perspective."</p>
+        <p class="home-4__quote">{{ pages.home.escalation.quote }}</p>
         <div class="home-4__quote-rule"></div>
       </div>
     </div>
@@ -428,42 +422,25 @@
     <div class="home-5__inner">
       <div class="home-5__header">
         <div class="rule"></div>
-        <h2 class="home-5__heading">Some conflicts appear suddenly. Others develop slowly over time.</h2>
+        <h2 class="home-5__heading">{{ pages.home.useCases.heading }}</h2>
         <div class="home-5__intro">
-          <p>What they share is a growing loss of clarity, trust, communication, or alignment.</p>
-          <p>These situations are often emotionally charged, financially meaningful, or both.</p>
+          {% for paragraph in pages.home.useCases.intro %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
         </div>
       </div>
       <div class="home-5__cols">
-        <div class="home-5__col">
-          <h3>Business</h3>
+        {% for column in pages.home.useCases.columns %}
+        <div class="home-5__col"{% if not loop.first %} style="padding-left:40px;"{% endif %}>
+          <h3>{{ column.title }}</h3>
           <div class="home-5__col-rule"></div>
           <ul>
-            <li>Partnerships that are no longer aligned.</li>
-            <li>Leadership tension that has become structural.</li>
-            <li>Investor relationships where trust or direction has broken down.</li>
-            <li>Negotiations that have stalled or turned adversarial.</li>
+            {% for item in column.items %}
+            <li>{{ item }}</li>
+            {% endfor %}
           </ul>
         </div>
-        <div class="home-5__col" style="padding-left:40px;">
-          <h3>Personal / Family</h3>
-          <div class="home-5__col-rule"></div>
-          <ul>
-            <li>Situations where relationships and financial interests intersect.</li>
-            <li>Long-standing dynamics that have reached a breaking point.</li>
-            <li>Relationships that have become distant or estranged where resolution may still be possible.</li>
-            <li>Divorce or pre-divorce moments where early decisions matter.</li>
-          </ul>
-        </div>
-        <div class="home-5__col" style="padding-left:40px;">
-          <h3>Before things escalate</h3>
-          <div class="home-5__col-rule"></div>
-          <ul>
-            <li>Situations where something feels off — but is not yet clear.</li>
-            <li>Moments where a conversation, decision, or response may shape what happens next.</li>
-            <li>This is often when perspective matters most.</li>
-          </ul>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -471,8 +448,8 @@
   <!-- CTA BANNER -->
   <div class="cta-banner">
     <div class="cta-banner__inner">
-      <p class="cta-banner__text">If it feels like the right fit, let's start a conversation.</p>
-      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">Request a conversation</a>
+      <p class="cta-banner__text">{{ pages.home.ctaBanner.text }}</p>
+      <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">{{ pages.home.ctaBanner.ctaLabel }}</a>
     </div>
   </div>
 
