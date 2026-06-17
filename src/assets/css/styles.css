@@ -529,11 +529,17 @@ body.modal-open { overflow: hidden; }
   margin-bottom: 24px;
 }
 .contact-modal__form {
-  min-height: 592px;
-  height: min(592px, calc(94vh - 210px));
-  overflow: hidden;
+  min-height: 720px;
+  height: min(720px, calc(94vh - 190px));
+  overflow: auto;
   border-radius: 8px;
   background: var(--warm-white);
+}
+.contact-modal__form iframe {
+  display: block;
+  width: 100%;
+  min-height: 720px;
+  border-radius: 8px;
 }
 
 /* ── Footer ── */
@@ -619,7 +625,7 @@ body.modal-open { overflow: hidden; }
   max-width: 360px;
 }
 .footer__newsletter-form {
-  height: 230px;
+  height: 460px;
   overflow: hidden;
   border-radius: 4px;
   background: rgba(253,250,247,0.04);
@@ -654,8 +660,8 @@ body.modal-open { overflow: hidden; }
   .cta-banner__inner { flex-direction: column; align-items: flex-start; }
   .contact-modal__dialog { max-height: 94vh; }
   .contact-modal__form {
-    height: min(592px, calc(94vh - 190px));
-    min-height: 520px;
+    height: calc(94vh - 190px);
+    min-height: 560px;
   }
 }
 @media (max-width: 600px) {
@@ -676,7 +682,7 @@ body.modal-open { overflow: hidden; }
   .contact-modal__confirm { padding: 16px; }
   .contact-modal__form {
     height: calc(94vh - 170px);
-    min-height: 480px;
+    min-height: 540px;
   }
 }
 
