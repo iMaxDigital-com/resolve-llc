@@ -187,7 +187,7 @@
     formContainer.innerHTML = `
       <iframe
         src="https://link.msgsndr.com/widget/booking/${FORM_ID}"
-        style="width:100%;border:none;overflow:hidden;"
+        style="width:100%;height:1280px;border:none;overflow:hidden;"
         scrolling="no"
         id="${FORM_ID}_1781704016269"
         title="Schedule a Short Initial Conversation">
