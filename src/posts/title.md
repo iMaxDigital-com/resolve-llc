@@ -4,7 +4,7 @@ slug: 'this is how you want the url to be displayed: https://www.resolve-advisor
 description: Generate an SEO Description with Chatgpt and paste here.
 date: 2026-07-03T16:09
 coverImage: /uploads/unnamed.png
-published: false
+published: true
 ---
 
 <article class="blog-content">
