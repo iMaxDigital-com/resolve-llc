@@ -798,3 +798,20 @@ collections:
       - label: Body
         name: body
         widget: markdown
+        modes:
+          - raw
+          - rich_text
+        buttons:
+          - heading-one
+          - heading-two
+          - heading-three
+          - bold
+          - italic
+          - link
+          - bulleted-list
+          - numbered-list
+          - quote
+        editor_components:
+          - image
+          - code-block
+        hint: "Paste the full article here. In Raw mode, you can paste HTML or Markdown from ChatGPT, including <h1>, <h2>, <h3>, <p>, <ul>, and <a> tags. Switch to Rich text mode if you are pasting formatted text and want headings, bold text, links, and lists preserved visually."

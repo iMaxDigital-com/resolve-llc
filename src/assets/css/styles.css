@@ -1116,6 +1116,15 @@ body.modal-open { overflow: hidden; }
   line-height: 1.82;
 }
 
+.blog-post-content h1 {
+  margin: 72px 0 24px;
+  color: #18211e;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.02;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
 .blog-post-content h2 {
   margin: 64px 0 22px;
   color: #18211e;
