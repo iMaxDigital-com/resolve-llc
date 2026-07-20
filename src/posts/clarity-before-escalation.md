@@ -114,3 +114,7 @@ published: true
 <p>The earlier people gain that clarity, the more freedom they usually have to choose their path forward.</p>
 
 <p>Because once escalation narrows the available options, those options are often difficult to recover.</p>
+
+<hr>
+
+<p><em>Andrew Akers is the Founder of Resolve Advisory, where he advises business owners, executives, investors, and families through high-stakes situations involving conflict, uncertainty, and important decisions. Learn more at <a href="https://www.resolve-advisory.com">www.resolve-advisory.com</a>.</em></p>
