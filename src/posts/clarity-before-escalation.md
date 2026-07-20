@@ -1,5 +1,5 @@
 ---
-title: Clarity Before Escalation<br>
+title: Clarity Before Escalation
 slug: clarity-before-escalation
 description: Conflict often impairs judgment before it becomes obvious. Discover why gaining clarity before escalation helps preserve perspective, improve decisions, and protect your options.
 date: 2026-07-20T18:10
