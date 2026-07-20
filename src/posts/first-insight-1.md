@@ -126,3 +126,8 @@ published: true
 <p>The objective is not victory for its own sake. The objective is clarity, resolution, dignity, and peace wherever possible.</p>
 
 <p>Because people often need clarity before they need intervention.</p>.
+
+
+<hr>
+
+<p><em>Andrew Akers is the Founder of Resolve Advisory, where he advises business owners, executives, investors, and families through high-stakes situations involving conflict, uncertainty, and important decisions. Learn more at <a href="https://www.resolve-advisory.com">www.resolve-advisory.com</a>.</em></p>
