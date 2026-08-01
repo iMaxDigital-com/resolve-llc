@@ -58,3 +58,5 @@ published: true
 <p>The next time you find yourself becoming certain about another person&#x27;s intentions, begin with what can be objectively verified before deciding what it means. The objective is not perfect certainty. It is preserving enough perspective to make a thoughtful decision under imperfect conditions.</p>
 
 <p>Smart people rarely make poor decisions because they stop thinking. More often, they make them because emotional pressure causes them to become certain before they have finished examining what they can objectively verify.</p>
+
+<p><em>Andrew Akers is the Founder of Resolve Advisory, where he advises business owners, executives, investors, and families through high-stakes situations involving conflict, uncertainty, and important decisions. Learn more at <a href="https://www.resolve-advisory.com">www.resolve-advisory.com</a>.</em></p>
