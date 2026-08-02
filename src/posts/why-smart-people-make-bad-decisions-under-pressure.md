@@ -2,7 +2,7 @@
 title: Why Smart People Make Bad Decisions Under Pressure
 slug: why_smart_people_make_bad_decisions_under_pressure
 description: Why do intelligent people make poor decisions when the stakes are personal? Explore how emotional pressure narrows perspective and how to think more clearly.
-date: 2026-08-01T15:37
+date: 2026-08-02T09:13
 coverImage: /uploads/ChatGPT Image Aug 1, 2026, 03_49_30 PM.png
 published: true
 ---
