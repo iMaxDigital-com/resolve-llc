@@ -84,3 +84,5 @@ published: true
 <p>Each can be the right decision. Each can be the wrong one.</p>
 
 <p><strong>And each belongs to me.</strong></p>
+
+<p><em>Andrew Akers is the Founder of Resolve Advisory, where he advises business owners, executives, investors, and families through high-stakes situations involving conflict, uncertainty, and important decisions. Learn more at <a href="https://www.resolve-advisory.com">www.resolve-advisory.com</a>.</em></p>
