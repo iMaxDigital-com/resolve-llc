@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: jonhbretas/resolve-llc
+  repo: iMaxDigital-com/resolve-llc
   branch: main
   base_url: https://sveltia-cms-auth.jonathanbretas.workers.dev
   auth_methods:
