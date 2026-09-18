@@ -441,40 +441,8 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <span class="footer__wordmark"><img src="/assets/images/resolve-white-logo.png" alt="Resolve Advisory"></span>
-        <p class="footer__tagline">Strategic advisory for complex situations and difficult conversations.</p>
-      </div>
-      <div>
-        <span class="footer__col-head">Navigation</span>
-        <div class="footer__links">
-          <a href="/about/">About</a>
-          <a href="/situations/">Situations</a>
-          <a href="/how-it-works/">How It Works</a>
-          <a href="/faq/">FAQ</a>
-        </div>
-      </div>
-      <div>
-        <span class="footer__col-head">Disclaimer</span>
-        <p class="footer__disclaimer">Resolve Advisory does not provide legal, tax, investment, psychological, or therapeutic advice.</p>
-      </div>
-      <div>
-        <span class="footer__col-head">Contact</span>
-        <div class="footer__links">
-          <a href="tel:+19177508987">P: +1 917 750 8987</a>
-          <a href="mailto:aakers@resolve-advisory.com">E: aakers@resolve-advisory.com</a>
-        </div>
-      </div>
-    </div>
-    {% include "footer-newsletter.njk" %}
-
-    <div class="footer__bottom">
-      <span>© 2026 Resolve Advisory. All rights reserved.</span>
-      <a href="#">Privacy</a>
-    </div>
-  </footer>
+  {% set footerMiddle = "disclaimer" %}
+  {% include "site-footer.njk" %}
 </script>
   <script src="/assets/js/contact-modal-data.js"></script>
   <script src="/assets/js/contact-modal.js"></script>

@@ -4,13 +4,9 @@
       <img class="nav__logo nav__logo--light" src="/assets/images/resolve-white-logo.png" alt="Resolve Advisory">
     </a>
     <div class="nav__links" id="primary-navigation">
-      <a href="/about/"{% if navActive == 'about' %} class="active" aria-current="page"{% endif %}>About</a>
-      <a href="/situations/"{% if navActive == 'situations' %} class="active" aria-current="page"{% endif %}>Situations</a>
-      <a href="/approach/"{% if navActive == 'approach' %} class="active" aria-current="page"{% endif %}>Approach</a>
-      <a href="/how-it-works/"{% if navActive == 'how-it-works' %} class="active" aria-current="page"{% endif %}>How It Works</a>
-      <a href="/faq/"{% if navActive == 'faq' %} class="active" aria-current="page"{% endif %}>FAQ</a>
-      <a href="/insights/"{% if navActive == 'insights' %} class="active" aria-current="page"{% endif %}>Insights</a>
-      <a href="/case-studies/"{% if navActive == 'case-studies' %} class="active" aria-current="page"{% endif %}>Case Studies</a>
+      {% for item in navigation %}
+      <a href="{{ item.url }}"{% if navActive == item.key %} class="active" aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
     </div>
     <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="nav__cta">Request a conversation</a>
     <button class="nav__hamburger" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false" onclick="const nav=this.closest('.nav'); nav.classList.toggle('open'); this.setAttribute('aria-expanded', nav.classList.contains('open'))">
