@@ -1,4 +1,11 @@
 {
+  "name": "Resolve Advisory",
+  "url": "https://www.resolve-advisory.com",
+  "description": "Strategic advisory for complex situations and difficult conversations.",
+  "defaultOgImage": "/assets/images/hero-page-1.webp",
+  "founder": {
+    "name": "Andrew Akers"
+  },
   "contactModal": {
     "closeLabel": "Close",
     "eyebrow": "Before you continue",

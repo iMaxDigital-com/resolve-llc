@@ -674,6 +674,164 @@ collections:
                 name: ctaLabel
                 widget: string
 
+      - label: Approach
+        name: approach
+        file: src/_data/pages/approach.json
+        format: json
+        fields:
+          - label: SEO Settings
+            name: seo
+            widget: object
+            fields:
+              - { label: SEO Title, name: title, widget: string }
+              - { label: SEO Description, name: description, widget: text }
+              - { label: Social Image, name: image, widget: image }
+
+          - label: Hero Section
+            name: hero
+            widget: object
+            fields:
+              - { label: Small Label, name: label, widget: string }
+              - { label: Main Headline, name: heading, widget: string }
+              - { label: Introductory Line, name: dek, widget: text }
+              - { label: Hero Image Alt Text, name: imageAlt, widget: string }
+
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: Paragraphs, name: paragraphs, widget: list }
+              - { label: Definition Statements, name: definition, widget: list }
+
+          - label: What a Judgment Advisor Does
+            name: what
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Opening Paragraphs, name: paragraphsBefore, widget: list }
+              - { label: Pullquote Line 1, name: pullquoteLine1, widget: string }
+              - { label: Pullquote Line 2, name: pullquoteLine2, widget: string }
+              - { label: Closing Paragraphs, name: paragraphsAfter, widget: list }
+              - { label: Closing Question, name: question, widget: string }
+
+          - label: Judgment Under Pressure Section
+            name: pressure
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Paragraphs, name: paragraphs, widget: list }
+              - label: Related Insight
+                name: relatedInsight
+                widget: object
+                fields:
+                  - { label: Existing Insight Title, name: title, widget: string }
+                  - { label: Link Summary, name: summary, widget: text }
+
+          - label: When It Can Help Section
+            name: when
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Paragraphs, name: paragraphs, widget: list }
+              - label: Related Insight
+                name: relatedInsight
+                widget: object
+                fields:
+                  - { label: Existing Insight Title, name: title, widget: string }
+                  - { label: Link Summary, name: summary, widget: text }
+
+          - label: Comparison Section
+            name: comparison
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - label: Comparison Cards
+                name: cards
+                widget: list
+                summary: "{{title}}"
+                fields:
+                  - { label: Small Label, name: kicker, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: body, widget: text }
+              - label: Related Insight
+                name: relatedInsight
+                widget: object
+                fields:
+                  - { label: Existing Insight Title, name: title, widget: string }
+                  - { label: Link Summary, name: summary, widget: text }
+
+          - label: Resolve Method Section
+            name: method
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Introduction, name: intro, widget: text }
+              - label: Steps
+                name: steps
+                widget: list
+                summary: "{{number}} — {{title}}"
+                fields:
+                  - { label: Number, name: number, widget: string }
+                  - { label: Title, name: title, widget: string }
+              - { label: Paragraphs, name: paragraphs, widget: list }
+              - { label: Tagline Line 1, name: taglineLine1, widget: string }
+              - { label: Tagline Line 2, name: taglineLine2, widget: string }
+              - label: Related Insight
+                name: relatedInsight
+                widget: object
+                fields:
+                  - { label: Existing Insight Title, name: title, widget: string }
+                  - { label: Link Summary, name: summary, widget: text }
+
+          - label: Closing CTA
+            name: cta
+            widget: object
+            fields:
+              - { label: Small Label, name: label, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Paragraph, name: paragraph, widget: text }
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Button Label, name: buttonLabel, widget: string }
+
+      - label: Case Studies Page
+        name: caseStudies
+        file: src/_data/pages/caseStudies.json
+        format: json
+        fields:
+          - label: SEO Settings
+            name: seo
+            widget: object
+            fields:
+              - { label: SEO Title, name: title, widget: string }
+              - { label: SEO Description, name: description, widget: text }
+              - { label: Social Image, name: image, widget: image }
+
+          - label: Hero Section
+            name: hero
+            widget: object
+            fields:
+              - { label: Small Label, name: label, widget: string }
+              - { label: Main Headline, name: heading, widget: string }
+              - { label: Body Paragraphs, name: paragraphs, widget: list }
+              - { label: Hero Image Alt Text, name: imageAlt, widget: string }
+
+          - label: Case Study List Heading
+            name: listIntro
+            widget: object
+            fields:
+              - { label: Small Label, name: label, widget: string }
+              - { label: Heading, name: heading, widget: string }
+
+          - { label: Empty State Text, name: emptyState, widget: string }
+
+          - label: CTA Banner
+            name: ctaBanner
+            widget: object
+            fields:
+              - { label: CTA Text, name: text, widget: string }
+              - { label: CTA Button Label, name: ctaLabel, widget: string }
+
   - name: settings
     label: Site Settings
     files:
@@ -682,6 +840,16 @@ collections:
         file: src/_data/site.json
         format: json
         fields:
+          - { label: Site Name, name: name, widget: string }
+          - { label: Production URL, name: url, widget: string }
+          - { label: Site Description, name: description, widget: text }
+          - { label: Default Social Image, name: defaultOgImage, widget: image }
+          - label: Founder
+            name: founder
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string }
+
           - label: Contact Modal
             name: contactModal
             widget: object
@@ -815,3 +983,66 @@ collections:
           - image
           - code-block
         hint: "Paste the full article here. In Raw mode, you can paste HTML or Markdown from ChatGPT, including <h1>, <h2>, <h3>, <p>, <ul>, and <a> tags. Switch to Rich text mode if you are pasting formatted text and want headings, bold text, links, and lists preserved visually."
+
+  - name: caseStudies
+    label: Case Studies
+    label_singular: Case Study
+    folder: src/case-studies
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Slug
+        name: slug
+        widget: string
+        pattern:
+          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          - "Use lowercase letters, numbers, and hyphens only. Example: resolving-a-business-partnership-dispute"
+        hint: "This becomes the permanent URL. Use lowercase letters, numbers, and hyphens only."
+
+      - label: Description
+        name: description
+        widget: text
+        hint: "A concise summary used on the Case Studies index and in search/social metadata."
+
+      - label: Publish Date
+        name: date
+        widget: datetime
+
+      - label: Cover Image
+        name: coverImage
+        widget: image
+        required: false
+
+      - label: Cover Image Alt Text
+        name: coverImageAlt
+        widget: string
+        required: false
+        hint: "Describe the meaningful visual content of the cover image."
+
+      - label: Published
+        name: published
+        widget: boolean
+        default: true
+
+      - label: Body
+        name: body
+        widget: markdown
+        modes:
+          - raw
+          - rich_text
+        buttons:
+          - heading-two
+          - heading-three
+          - bold
+          - italic
+          - link
+          - bulleted-list
+          - numbered-list
+          - quote
+        editor_components:
+          - image
+        hint: "Write the Case Study using descriptive H2 and H3 headings. The page title is already rendered as the H1."

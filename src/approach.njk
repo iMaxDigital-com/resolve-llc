@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% set seoTitle = pages.approach.seo.title %}
+  {% set seoDescription = pages.approach.seo.description %}
+  {% set seoImage = pages.approach.seo.image %}
+  {% set seoImageAlt = pages.approach.hero.imageAlt %}
+  {% set schemaType = "WebPage" %}
+  {% include "seo.njk" %}
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    .approach-hero { display:grid; grid-template-columns:50fr 50fr; min-height:calc(100vh - var(--nav-h)); }
+    .approach-hero__text { padding:clamp(60px,8vw,100px) var(--pad-x); display:flex; flex-direction:column; justify-content:center; }
+    .approach-hero__dek { font-family:var(--font-serif); font-size:clamp(22px,2.3vw,30px); line-height:1.35; max-width:520px; }
+    .approach-hero__image { min-width:0; overflow:hidden; }
+    .approach-hero__image img { width:100%; height:100%; object-fit:cover; object-position:center; }
+    .approach-section { padding:clamp(70px,8vw,112px) var(--pad-x); border-top:1px solid var(--divider); }
+    .approach-section__inner { max-width:820px; margin:0 auto; }
+    .approach-copy p { font-size:16px; line-height:1.9; margin-top:18px; }
+    .approach-copy p:first-child { margin-top:0; }
+    .approach-intro__lead { font-family:var(--font-serif); font-size:clamp(26px,3vw,38px) !important; line-height:1.35 !important; }
+    .approach-definition { max-width:960px; margin:56px auto 0; padding:clamp(34px,5vw,58px); background:var(--charcoal); color:var(--warm-white); }
+    .approach-definition p { font-family:var(--font-serif); font-size:clamp(23px,2.5vw,31px); line-height:1.4; margin-top:22px; }
+    .approach-definition p:first-child { margin-top:0; }
+    .approach-pullquote { font-family:var(--font-serif); font-size:clamp(27px,3.2vw,40px); line-height:1.25; margin:38px 0; }
+    .approach-question { font-family:var(--font-serif); font-size:clamp(31px,4vw,50px); text-align:center; margin-top:46px; }
+    .approach-related { margin-top:42px; padding:22px 0; border-top:1px solid var(--gold); border-bottom:1px solid var(--divider); display:grid; grid-template-columns:145px 1fr; gap:20px; }
+    .approach-related a { font-family:var(--font-serif); font-size:24px; line-height:1.25; }
+    .approach-related a:hover { color:var(--gold); }
+    .approach-related span { display:block; margin-top:5px; font-family:var(--font-sans); font-size:14px; line-height:1.55; color:rgba(28,28,40,.65); }
+    .approach-compare { background:var(--cream-mid); }
+    .approach-compare__inner { max-width:var(--max-w); margin:0 auto; }
+    .approach-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-top:42px; background:var(--divider); border:1px solid var(--divider); }
+    .approach-card { background:var(--warm-white); padding:36px 30px; }
+    .approach-card h3 { margin:14px 0 18px; }
+    .approach-card p { font-size:15px; line-height:1.8; }
+    .approach-method { background:var(--charcoal); color:var(--warm-white); }
+    .approach-method .h2, .approach-method .h3 { color:var(--warm-white); }
+    .approach-method__inner { max-width:var(--max-w); margin:0 auto; }
+    .approach-method__copy { max-width:790px; }
+    .approach-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; margin:50px 0; }
+    .approach-step__number { color:var(--gold); font-size:11px; letter-spacing:.16em; margin-bottom:18px; }
+    .approach-method .approach-related { border-bottom-color:rgba(253,250,247,.16); }
+    .approach-method .approach-related span { color:rgba(253,250,247,.62); }
+    .approach-tagline { font-family:var(--font-serif); font-size:clamp(32px,4vw,52px); line-height:1.2; margin-top:40px; }
+    .approach-cta { padding:clamp(70px,8vw,104px) var(--pad-x); background:var(--cream-mid); }
+    .approach-cta__inner { max-width:var(--max-w); margin:0 auto; display:grid; grid-template-columns:1.4fr .6fr; gap:70px; align-items:center; }
+    .approach-cta p { max-width:760px; font-size:16px; line-height:1.8; margin-top:20px; }
+    @media (max-width:840px) {
+      .approach-hero { grid-template-columns:1fr; min-height:0; }
+      .approach-hero__text { min-height:62vh; padding-top:calc(var(--nav-h) + 56px); }
+      .approach-hero__image { height:52vw; min-height:300px; max-height:500px; }
+      .approach-cards, .approach-steps, .approach-cta__inner { grid-template-columns:1fr; }
+      .approach-steps { gap:32px; }
+      .approach-related { grid-template-columns:1fr; gap:8px; }
+    }
+  </style>
+</head>
+<body class="page">
+  {% set navTheme = "light" %}
+  {% set navActive = "approach" %}
+  {% include "site-header.njk" %}
+
+  {% macro relatedInsight(reference) %}
+    {% for post in collections.posts %}
+      {% if post.data.title == reference.title %}
+      <aside class="approach-related" aria-label="Related Insight">
+        <div class="label">Related Insight</div>
+        <a href="{{ post.url | encodeUrlPath }}">{{ reference.title }}<span>{{ reference.summary }} &rarr;</span></a>
+      </aside>
+      {% endif %}
+    {% endfor %}
+  {% endmacro %}
+
+  <main>
+    <section class="approach-hero">
+      <div class="approach-hero__text">
+        <span class="label">{{ pages.approach.hero.label }}</span>
+        <div class="rule"></div>
+        <h1 class="h1">{{ pages.approach.hero.heading }}</h1>
+        <div class="rule" style="width:28px;"></div>
+        <p class="approach-hero__dek">{{ pages.approach.hero.dek }}</p>
+      </div>
+      <div class="approach-hero__image">
+        <img src="/assets/images/approach-hero.jpg" alt="{{ pages.approach.hero.imageAlt }}" width="1891" height="831" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="approach-section">
+      <div class="approach-section__inner approach-copy">
+        {% for paragraph in pages.approach.intro.paragraphs %}<p{% if loop.first %} class="approach-intro__lead"{% endif %}>{{ paragraph }}</p>{% endfor %}
+      </div>
+      <div class="approach-definition">
+        {% for paragraph in pages.approach.intro.definition %}<p><strong>{{ paragraph }}</strong></p>{% endfor %}
+      </div>
+    </section>
+
+    <section class="approach-section">
+      <div class="approach-section__inner approach-copy">
+        <h2 class="h2">{{ pages.approach.what.heading }}</h2>
+        <div class="rule"></div>
+        {% for paragraph in pages.approach.what.paragraphsBefore %}<p>{{ paragraph }}</p>{% endfor %}
+        <p class="approach-pullquote">{{ pages.approach.what.pullquoteLine1 }}<br><strong>{{ pages.approach.what.pullquoteLine2 }}</strong></p>
+        {% for paragraph in pages.approach.what.paragraphsAfter %}<p>{{ paragraph }}</p>{% endfor %}
+        <p class="approach-question">{{ pages.approach.what.question }}</p>
+      </div>
+    </section>
+
+    <section class="approach-section">
+      <div class="approach-section__inner approach-copy">
+        <h2 class="h2">{{ pages.approach.pressure.heading }}</h2>
+        <div class="rule"></div>
+        {% for paragraph in pages.approach.pressure.paragraphs %}<p{% if loop.index == 2 %}><strong>{{ paragraph }}</strong></p>{% else %}>{{ paragraph }}</p>{% endif %}{% endfor %}
+        {{ relatedInsight(pages.approach.pressure.relatedInsight) }}
+      </div>
+    </section>
+
+    <section class="approach-section">
+      <div class="approach-section__inner approach-copy">
+        <h2 class="h2">{{ pages.approach.when.heading }}</h2>
+        <div class="rule"></div>
+        {% for paragraph in pages.approach.when.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+        {{ relatedInsight(pages.approach.when.relatedInsight) }}
+      </div>
+    </section>
+
+    <section class="approach-section approach-compare">
+      <div class="approach-compare__inner">
+        <h2 class="h2">{{ pages.approach.comparison.heading }}</h2>
+        <div class="approach-cards">
+          {% for card in pages.approach.comparison.cards %}
+          <article class="approach-card">
+            <span class="label">{{ card.kicker }}</span>
+            <h3 class="h3">{{ card.title }}</h3>
+            <p>{{ card.body }}</p>
+          </article>
+          {% endfor %}
+        </div>
+        <div class="approach-section__inner">{{ relatedInsight(pages.approach.comparison.relatedInsight) }}</div>
+      </div>
+    </section>
+
+    <section class="approach-section approach-method">
+      <div class="approach-method__inner">
+        <h2 class="h2">{{ pages.approach.method.heading }}</h2>
+        <div class="rule rule--light"></div>
+        <div class="approach-copy approach-method__copy"><p>{{ pages.approach.method.intro }}</p></div>
+        <div class="approach-steps">
+          {% for step in pages.approach.method.steps %}
+          <div class="approach-step"><div class="approach-step__number">{{ step.number }}</div><h3 class="h3">{{ step.title }}</h3></div>
+          {% endfor %}
+        </div>
+        <div class="approach-copy approach-method__copy">
+          {% for paragraph in pages.approach.method.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+          <p class="approach-tagline">{{ pages.approach.method.taglineLine1 }}<br><strong>{{ pages.approach.method.taglineLine2 }}</strong></p>
+          {{ relatedInsight(pages.approach.method.relatedInsight) }}
+        </div>
+      </div>
+    </section>
+
+    <section class="approach-cta" id="conversation">
+      <div class="approach-cta__inner">
+        <div>
+          <span class="label">{{ pages.approach.cta.label }}</span>
+          <div class="rule"></div>
+          <h2 class="h2">{{ pages.approach.cta.heading }}</h2>
+          <p>{{ pages.approach.cta.paragraph }}</p>
+          <p><strong><a href="/about/">{{ pages.approach.cta.name }}</a></strong><br>{{ pages.approach.cta.role }}</p>
+        </div>
+        <div><a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">{{ pages.approach.cta.buttonLabel }}</a></div>
+      </div>
+    </section>
+  </main>
+
+  {% include "site-footer.njk" %}
+  <script src="/assets/js/contact-modal-data.js"></script>
+  <script src="/assets/js/contact-modal.js"></script>
+  <script src="/assets/js/nav-scroll.js"></script>
+</body>
+</html>
