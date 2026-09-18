@@ -1,0 +1,55 @@
+<title>{{ seoTitle }}</title>
+<meta name="description" content="{{ seoDescription }}">
+<link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}">
+
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:type" content="{{ seoType or 'website' }}">
+<meta property="og:title" content="{{ seoTitle }}">
+<meta property="og:description" content="{{ seoDescription }}">
+<meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}">
+{% set resolvedSeoImage = seoImage or site.defaultOgImage %}
+{% set resolvedSchemaType = schemaType or "WebPage" %}
+{% if resolvedSeoImage %}
+<meta property="og:image" content="{{ resolvedSeoImage | absoluteUrl(site.url) }}">
+<meta property="og:image:alt" content="{{ seoImageAlt or seoTitle }}">
+{% endif %}
+
+<meta name="twitter:card" content="{% if resolvedSeoImage %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:title" content="{{ seoTitle }}">
+<meta name="twitter:description" content="{{ seoDescription }}">
+{% if resolvedSeoImage %}<meta name="twitter:image" content="{{ resolvedSeoImage | absoluteUrl(site.url) }}">{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {{ resolvedSchemaType | dump | safe }},
+  "name": {{ seoTitle | dump | safe }},
+  "description": {{ seoDescription | dump | safe }},
+  "url": {{ page.url | absoluteUrl(site.url) | dump | safe }},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ site.name | dump | safe }},
+    "url": {{ site.url | dump | safe }}
+  }{% if schemaType == 'Article' %},
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.name | dump | safe }},
+    "url": {{ site.url | dump | safe }}
+  }{% if date %},
+  "datePublished": {{ date.toISOString() | dump | safe }}{% endif %}{% if resolvedSeoImage %},
+  "image": {{ resolvedSeoImage | absoluteUrl(site.url) | dump | safe }}{% endif %}{% endif %}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": {{ (site.url ~ '/#organization') | dump | safe }},
+  "name": {{ site.name | dump | safe }},
+  "url": {{ site.url | dump | safe }},
+  "founder": {
+    "@type": "Person",
+    "name": {{ site.founder.name | dump | safe }}
+  }
+}
+</script>

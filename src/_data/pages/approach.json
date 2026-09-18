@@ -1,0 +1,117 @@
+{
+  "seo": {
+    "title": "Approach | What Is a Judgment Advisor? | Resolve Advisory",
+    "description": "Resolve Advisory is a judgment advisory practice for people facing difficult conflicts and consequential decisions. Learn what a judgment advisor does and how Resolve works.",
+    "image": "/assets/images/approach-hero.jpg"
+  },
+  "hero": {
+    "label": "Approach",
+    "heading": "What Is a Judgment Advisor?",
+    "dek": "When another set of eyes can help you see more clearly and decide what to do next.",
+    "imageAlt": "Quiet architectural interior opening toward a clear distant landscape"
+  },
+  "intro": {
+    "paragraphs": [
+      "Good judgment can be much harder to exercise when you're standing inside the situation.",
+      "The stakes may be financial. A business relationship may be deteriorating. Family history may be influencing a disagreement. You may be angry, worried about what you could lose, or uncertain about what the other person will do next.",
+      "The closer you are to the situation, the harder it can become to see it clearly.",
+      "That is where a judgment advisor can help."
+    ],
+    "definition": [
+      "Resolve Advisory is a judgment advisory practice for people facing difficult conflicts and consequential decisions.",
+      "I serve as a judgment advisor, working privately with one person to help them see a difficult situation more clearly, understand their options, and decide what to do next."
+    ]
+  },
+  "what": {
+    "heading": "What does a judgment advisor do?",
+    "paragraphsBefore": [
+      "A judgment advisor brings experienced, independent, and emotionally detached eyes to a situation where your own judgment may be affected by pressure, uncertainty, relationships, money, history, or emotion."
+    ],
+    "pullquoteLine1": "The objective isn't to make the decision for you.",
+    "pullquoteLine2": "It's to help you make the decision better.",
+    "paragraphsAfter": [
+      "That begins with understanding what happened and separating that, as much as possible, from how you feel about what happened.",
+      "Then we look at what you want, what the other people involved may want, what options are available, what you may be missing, and the likely consequences of different choices.",
+      "Sometimes the most important question is not How do I resolve this conflict?"
+    ],
+    "question": "What should I do next?"
+  },
+  "pressure": {
+    "heading": "Why does judgment become harder under pressure?",
+    "paragraphs": [
+      "Most people facing difficult situations don't suddenly become less intelligent or capable.",
+      "But pressure changes how we see.",
+      "When something important is at stake, emotion, history, relationships, money, and fear of what we might lose can affect how we interpret the facts and narrow the possibilities we're willing to consider.",
+      "An independent perspective doesn't eliminate those factors. It can help you recognize them — and make better decisions despite them."
+    ],
+    "relatedInsight": {
+      "title": "Judgment Under Pressure",
+      "summary": "Why good judgment becomes harder when the stakes become personal."
+    }
+  },
+  "when": {
+    "heading": "When can a judgment advisor help?",
+    "paragraphs": [
+      "Sometimes there is already a conflict.",
+      "A business partnership is deteriorating. Owners or investors disagree about money, strategy, control, or the future of a company. Family members are struggling over an inheritance, shared property, or the care of an aging parent.",
+      "Sometimes the conflict hasn't happened yet.",
+      "You may need to have a difficult conversation or make a decision that will affect an important relationship. You may be deciding whether to make an offer, reject one, confront someone, wait, walk away, involve a lawyer — or do nothing at all.",
+      "And sometimes there is no conflict in the traditional sense. You simply have a consequential decision to make and would benefit from another set of experienced eyes before making it."
+    ],
+    "relatedInsight": {
+      "title": "When Doing Nothing Is Actually a Decision",
+      "summary": "Because choosing not to act is still a choice."
+    }
+  },
+  "comparison": {
+    "heading": "How is a judgment advisor different?",
+    "cards": [
+      {
+        "kicker": "Compared with a",
+        "title": "Mediator",
+        "body": "A mediator works with two or more parties and is expected to remain neutral. A judgment advisor works privately with one person, helping them understand their objectives, alternatives, boundaries, and choices."
+      },
+      {
+        "kicker": "Compared with a",
+        "title": "Lawyer",
+        "body": "A lawyer provides legal advice and protects legal rights. A judgment advisor helps you think through what you're trying to accomplish, the options available, and the likely consequences. Sometimes good judgment means recognizing that it's time to call a lawyer."
+      },
+      {
+        "kicker": "Compared with a",
+        "title": "Therapist",
+        "body": "A therapist focuses on emotional and psychological wellbeing. Feelings matter in judgment advisory because they affect how we see situations and make decisions, but the focus is the situation in front of you and what you're going to do about it."
+      }
+    ],
+    "relatedInsight": {
+      "title": "The Space Between Therapy, Mediation, and Litigation",
+      "summary": "When none of the traditional choices quite fits."
+    }
+  },
+  "method": {
+    "heading": "How does Resolve work?",
+    "intro": "Resolve works privately with one person. We begin with the facts, consider how your response to those facts may be affecting what you see, and then turn to choice.",
+    "steps": [
+      { "number": "01", "title": "What happened?" },
+      { "number": "02", "title": "How do you feel about what happened?" },
+      { "number": "03", "title": "Given all of that, what are you going to do?" }
+    ],
+    "paragraphs": [
+      "Sometimes the answer is to find common ground. Sometimes it is to stand your ground, wait, walk away, bring in a mediator, or call a lawyer.",
+      "And sometimes there is another option you simply couldn't see from where you were standing."
+    ],
+    "taglineLine1": "The goal isn't certainty.",
+    "taglineLine2": "It's clarity before escalation.",
+    "relatedInsight": {
+      "title": "Clarity Before Escalation",
+      "summary": "Why seeing clearly before acting can change what happens next."
+    }
+  },
+  "cta": {
+    "label": "A confidential first conversation",
+    "heading": "Not sure what to do next?",
+    "paragraph": "If you're facing a difficult conflict or consequential decision, we can begin with a short, confidential conversation. We'll talk about what's happening, what you're trying to accomplish, and whether Resolve is likely to be helpful.",
+    "name": "Andrew Akers",
+    "role": "Founder, Resolve Advisory",
+    "buttonLabel": "Request a conversation"
+  }
+}

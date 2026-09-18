@@ -1,0 +1,24 @@
+{
+  "seo": {
+    "title": "Case Studies | Resolve Advisory",
+    "description": "Selected case studies showing how Resolve Advisory helps people think clearly through difficult conflicts and consequential decisions.",
+    "image": "/assets/images/case-studies-hero.jpg"
+  },
+  "hero": {
+    "label": "Case Studies",
+    "heading": "Case Studies",
+    "paragraphs": [
+      "Selected examples of how independent perspective can help people navigate difficult conflicts and consequential decisions."
+    ],
+    "imageAlt": "Quiet table and chair in a sunlit stone interior opening onto a garden"
+  },
+  "listIntro": {
+    "label": "Case Studies",
+    "heading": "Selected engagements"
+  },
+  "emptyState": "Case studies will appear here as they are published.",
+  "ctaBanner": {
+    "text": "A clearer perspective can change what happens next.",
+    "ctaLabel": "Request a conversation"
+  }
+}
