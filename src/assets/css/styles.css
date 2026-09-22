@@ -92,6 +92,12 @@ p, li, h1, h2, h3, h4, a, button {
   white-space: nowrap;
 }
 .nav__links a:hover { opacity: 0.55; }
+.nav__links a:focus-visible,
+.nav__cta:focus-visible,
+.nav__hamburger:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 5px;
+}
 .nav__links a.active::after {
   content: '';
   position: absolute;
@@ -135,7 +141,7 @@ p, li, h1, h2, h3, h4, a, button {
 }
 
 /* ── Mobile nav ── */
-@media (max-width: 840px) {
+@media (max-width: 1120px) {
   .nav__links, .nav__cta { display: none; }
   .nav__hamburger { display: flex; }
   .nav.open {

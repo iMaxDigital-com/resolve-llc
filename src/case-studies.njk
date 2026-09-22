@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% set seoTitle = pages.caseStudies.seo.title %}
+  {% set seoDescription = pages.caseStudies.seo.description %}
+  {% set seoImage = pages.caseStudies.seo.image %}
+  {% set seoImageAlt = pages.caseStudies.hero.imageAlt %}
+  {% set schemaType = "CollectionPage" %}
+  {% include "seo.njk" %}
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    .cs-hero { display:grid; grid-template-columns:50fr 50fr; min-height:calc(100vh - var(--nav-h)); }
+    .cs-hero__text { padding:clamp(60px,8vw,100px) var(--pad-x); display:flex; flex-direction:column; justify-content:center; }
+    .cs-hero__image { min-width:0; overflow:hidden; }
+    .cs-hero__image img { width:100%; height:100%; object-fit:cover; object-position:center; }
+    .case-studies-list { padding:clamp(72px,8vw,112px) var(--pad-x); background:var(--warm-white); }
+    .case-studies-list__inner { max-width:var(--max-w); margin:0 auto; }
+    .case-studies-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(24px,4vw,48px); margin-top:46px; }
+    .case-study-card { display:block; background:var(--cream); border:1px solid var(--divider); transition:transform .25s ease, box-shadow .25s ease; }
+    .case-study-card:hover { transform:translateY(-3px); box-shadow:0 16px 40px rgba(28,28,40,.08); }
+    .case-study-card__cover { width:100%; aspect-ratio:16/9; object-fit:cover; }
+    .case-study-card__body { padding:clamp(26px,4vw,42px); }
+    .case-study-card__body h2 { margin:12px 0 16px; }
+    .case-study-card__body p { font-size:15px; line-height:1.75; color:rgba(28,28,40,.72); }
+    .case-studies-empty { padding:38px 0; border-top:1px solid var(--divider); font-family:var(--font-serif); font-size:28px; }
+    @media (max-width:840px) {
+      .cs-hero { grid-template-columns:1fr; min-height:0; }
+      .cs-hero__text { min-height:58vh; padding-top:calc(var(--nav-h) + 56px); }
+      .cs-hero__image { height:72vw; min-height:320px; max-height:560px; }
+      .case-studies-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body class="page">
+  {% set navTheme = "light" %}
+  {% set navActive = "case-studies" %}
+  {% include "site-header.njk" %}
+
+  <main>
+    <section class="cs-hero">
+      <div class="cs-hero__text">
+        <span class="label">{{ pages.caseStudies.hero.label }}</span>
+        <div class="rule"></div>
+        <h1 class="h1" style="margin-bottom:28px;">{{ pages.caseStudies.hero.heading }}</h1>
+        <div class="rule" style="width:28px;"></div>
+        <div class="body-text" style="max-width:420px;">
+          {% for paragraph in pages.caseStudies.hero.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+        </div>
+      </div>
+      <div class="cs-hero__image">
+        <img src="/assets/images/case-studies-hero.jpg" alt="{{ pages.caseStudies.hero.imageAlt }}" width="800" height="800" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="case-studies-list" aria-labelledby="case-studies-heading">
+      <div class="case-studies-list__inner">
+        <span class="label">{{ pages.caseStudies.listIntro.label }}</span>
+        <div class="rule"></div>
+        <h2 class="h2" id="case-studies-heading">{{ pages.caseStudies.listIntro.heading }}</h2>
+
+        {% if collections.publishedCaseStudies.length %}
+        <div class="case-studies-grid">
+          {% for study in collections.publishedCaseStudies | reverse %}
+          <a href="{{ study.url }}" class="case-study-card">
+            {% if study.data.coverImage %}<img src="{{ study.data.coverImage }}" alt="{{ study.data.coverImageAlt or study.data.title }}" class="case-study-card__cover" loading="lazy">{% endif %}
+            <div class="case-study-card__body">
+              <span class="label">Case Study</span>
+              <h2 class="h3">{{ study.data.title }}</h2>
+              {% if study.data.description %}<p>{{ study.data.description }}</p>{% endif %}
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+        {% else %}
+        <p class="case-studies-empty">{{ pages.caseStudies.emptyState }}</p>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="cta-banner__inner">
+        <p class="cta-banner__text">{{ pages.caseStudies.ctaBanner.text }}</p>
+        <a href="mailto:aakers@resolve-advisory.com?subject=Request%20a%20conversation" class="btn btn--dark">{{ pages.caseStudies.ctaBanner.ctaLabel }}</a>
+      </div>
+    </section>
+  </main>
+
+  {% include "site-footer.njk" %}
+  <script src="/assets/js/contact-modal-data.js"></script>
+  <script src="/assets/js/contact-modal.js"></script>
+  <script src="/assets/js/nav-scroll.js"></script>
+</body>
+</html>

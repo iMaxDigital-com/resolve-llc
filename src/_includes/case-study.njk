@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% set seoTitle = title ~ " | Case Study | Resolve Advisory" %}
+  {% set seoDescription = description %}
+  {% set seoImage = coverImage %}
+  {% set seoImageAlt = coverImageAlt or title %}
+  {% set seoType = "article" %}
+  {% set schemaType = "Article" %}
+  {% include "seo.njk" %}
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  {% set navTheme = "light" %}
+  {% set navActive = "case-studies" %}
+  {% include "site-header.njk" %}
+
+  <main class="blog-post-page">
+    <section class="blog-post-hero">
+      <div class="blog-post-hero__inner">
+        <a href="/case-studies/" class="blog-post-back">&larr; Back to Case Studies</a>
+        <span class="label">Case Study</span>
+        <div class="rule"></div>
+        <h1 class="blog-post-title">{{ title }}</h1>
+        {% if description %}<p class="blog-post-description">{{ description }}</p>{% endif %}
+        {% if date %}<time class="blog-post-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>{% endif %}
+      </div>
+    </section>
+
+    {% if coverImage %}
+    <section class="blog-post-cover-section">
+      <div class="blog-post-cover-wrap">
+        <img src="{{ coverImage }}" alt="{{ coverImageAlt or title }}" class="blog-post-cover">
+      </div>
+    </section>
+    {% endif %}
+
+    <section class="blog-post-content-section">
+      <article class="blog-post-content">{{ content | safe }}</article>
+    </section>
+
+    <section class="blog-post-related-cta">
+      <div class="blog-post-related-cta__inner">
+        <span class="label">Resolve Advisory</span>
+        <div class="rule"></div>
+        <h2>Facing a difficult situation?</h2>
+        <p>Learn how Resolve Advisory helps people approach consequential decisions with greater clarity.</p>
+        <a href="/approach/" class="blog-post-cta-link">Explore the approach</a>
+      </div>
+    </section>
+  </main>
+
+  {% include "site-footer.njk" %}
+  <script src="/assets/js/contact-modal-data.js"></script>
+  <script src="/assets/js/contact-modal.js"></script>
+  <script src="/assets/js/nav-scroll.js"></script>
+</body>
+</html>

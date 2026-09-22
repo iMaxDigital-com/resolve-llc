@@ -1,0 +1,9 @@
+[
+  { "key": "about", "label": "About", "url": "/about/" },
+  { "key": "situations", "label": "Situations", "url": "/situations/" },
+  { "key": "approach", "label": "Approach", "url": "/approach/" },
+  { "key": "how-it-works", "label": "How It Works", "url": "/how-it-works/" },
+  { "key": "faq", "label": "FAQ", "url": "/faq/" },
+  { "key": "insights", "label": "Insights", "url": "/insights/" },
+  { "key": "case-studies", "label": "Case Studies", "url": "/case-studies/" }
+]
