@@ -19,6 +19,7 @@
   --nav-h:        68px;
   --max-w:        1200px;
   --pad-x:        clamp(28px, 6vw, 80px);
+  --internal-hero-top: clamp(42px, 5vw, 68px);
 }
 
 /* ── Reset ── */
@@ -179,6 +180,12 @@ p, li, h1, h2, h3, h4, a, button {
 /* ── Page offset ── */
 .page { padding-top: var(--nav-h); }
 .page--hero { padding-top: 0; }
+
+/* Match About's top spacing without changing hero layouts or images. */
+.page .internal-hero__text {
+  padding-top: var(--internal-hero-top);
+  justify-content: flex-start;
+}
 
 /* ── Rule ── */
 .rule {
