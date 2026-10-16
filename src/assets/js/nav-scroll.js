@@ -1,19 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const nav = document.getElementById('nav');
-  const hero = document.getElementById('hero');
+  const nav = document.querySelector('.nav');
 
-  if (!nav || !hero) return;
+  if (!nav) return;
+
+  const topThemeIsDark = nav.classList.contains('nav--dark');
 
   function updateNav() {
-    const heroBottom = hero.offsetHeight;
-
-    if (window.scrollY > heroBottom - 80) {
-      nav.classList.remove('nav--dark');
-      nav.classList.add('nav--light');
-    } else {
-      nav.classList.remove('nav--light');
-      nav.classList.add('nav--dark');
-    }
+    const isDark = topThemeIsDark && window.scrollY <= 0;
+    nav.classList.toggle('nav--dark', isDark);
+    nav.classList.toggle('nav--light', !isDark);
   }
 
   window.addEventListener('scroll', updateNav, { passive: true });
