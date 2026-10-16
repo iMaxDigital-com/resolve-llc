@@ -1,6 +1,6 @@
 ---
 title: Separating What's Real from What We Feel
-slug: separating_whats_real_from_What_We_Feel
+slug: separating-whats-real-from-what-we-feel
 description: When emotions run high, our interpretations can begin to feel like facts. Drawing on my own experience, I explore how questioning assumptions and seeking a trusted perspective can help us see a difficult situation more clearly - and then decide what to do next.
 date: 2026-10-15T21:52:00
 coverImage: /uploads/Where Reflection Meets Reality.png
