@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% include "google-analytics.njk" %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ pages.about.seo.title }}</title>
@@ -19,7 +20,7 @@
       overflow: visible;
     }
     .about-hero__text {
-      padding: clamp(42px, 5vw, 68px) var(--pad-x);
+      padding: var(--internal-hero-top) var(--pad-x);
       display: flex;
       flex-direction: column;
       justify-content: space-between;

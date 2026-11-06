@@ -1,4 +1,5 @@
 [
+  { "key": "home", "label": "Home", "url": "/" },
   { "key": "about", "label": "About", "url": "/about/" },
   { "key": "situations", "label": "Situations", "url": "/situations/" },
   { "key": "approach", "label": "Approach", "url": "/approach/" },
